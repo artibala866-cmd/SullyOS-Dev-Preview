@@ -78,6 +78,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Verify Halloween annex is reachable and preserves saved rooms
+        run: pnpm exec vitest run apps/room3d/halloweenActivity.test.js utils/room3dHalloweenActivityRoom.test.ts
+
       - name: Build Vite site for GitHub Pages
         shell: bash
         env:
