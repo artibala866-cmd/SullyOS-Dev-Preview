@@ -39,8 +39,8 @@ jobs:
           fi
           echo "sha=$sha" >> "$GITHUB_OUTPUT"
           url='https://artibala866-cmd.github.io/SullyOS-Dev-Preview/preview-source.json'
-          published="$(curl -fsSL --max-time 12 "${url}?check=${GITHUB_RUN_ID}" 2>/dev/null | jq -r '.sourceCommit // empty' 2>/dev/null || true)"
-          if [[ "$published" == "$sha" ]]; then
+          published="$(curl -fsSL --max-time 12 "${url}?check=${GITHUB_RUN_ID}" 2>/dev/null | jq -r '(.sourceCommit // "") + ":" + (.brandingVersion // "")' 2>/dev/null || true)"
+          if [[ "$published" == "$sha:baby-dog-v1" ]]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "Already published the latest commit: $sha"
           else
@@ -63,6 +63,76 @@ jobs:
           repository: artibala866-cmd/SullyOS
           ref: ${{ needs.check-source.outputs.sha }}
           persist-credentials: false
+
+      - name: Checkout test-site-only branding files
+        uses: actions/checkout@v4
+        with:
+          repository: artibala866-cmd/SullyOS-Dev-Preview
+          ref: main
+          path: .preview-branding
+          persist-credentials: false
+
+      - name: Set up Python for icon generation
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Apply 宝宝狗 branding to this temporary preview build only
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet --disable-pip-version-check Pillow==11.3.0
+          python - <<'PY'
+          import json
+          import re
+          from pathlib import Path
+          from PIL import Image
+
+          image = Image.open('.preview-branding/branding/baby-dog.webp').convert('RGB')
+          icon_dir = Path('public/icons')
+          icon_dir.mkdir(parents=True, exist_ok=True)
+          for side in (180, 192, 512):
+              image.resize((side, side), Image.Resampling.LANCZOS).save(
+                  icon_dir / f'baby-dog-{side}.png', optimize=True
+              )
+          maskable = Image.new('RGB', (512, 512), 'white')
+          maskable.paste(image.resize((384, 384), Image.Resampling.LANCZOS), (64, 64))
+          maskable.save(icon_dir / 'baby-dog-maskable-512.png', optimize=True)
+
+          manifest_path = Path('public/manifest.webmanifest')
+          manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
+          manifest.update(name='宝宝狗', short_name='宝宝狗', id='./')
+          manifest['icons'] = [
+              dict(src='./icons/baby-dog-192.png?v=1', sizes='192x192', type='image/png'),
+              dict(src='./icons/baby-dog-512.png?v=1', sizes='512x512', type='image/png'),
+              dict(src='./icons/baby-dog-maskable-512.png?v=1', sizes='512x512',
+                   type='image/png', purpose='maskable'),
+          ]
+          manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n',
+                                   encoding='utf-8')
+
+          html_path = Path('index.html')
+          html = html_path.read_text(encoding='utf-8')
+          for before, after in [
+              ('<title>SullyOS·糯米机</title>', '<title>宝宝狗</title>'),
+              ('content="SullyOS·糯米机"', 'content="宝宝狗"'),
+          ]:
+              if before not in html:
+                  raise RuntimeError(f'Expected branding source not found: {before}')
+              html = html.replace(before, after)
+          html, n1 = re.subn(
+              r'(<link rel="icon" type="image/png" href=")[^"]+(")',
+              r'\g<1>./icons/baby-dog-192.png?v=1\g<2>', html, count=1
+          )
+          html, n2 = re.subn(
+              r'(<link rel="apple-touch-icon" sizes="180x180" href=")[^"]+(")',
+              r'\g<1>./icons/baby-dog-180.png?v=1\g<2>', html, count=1
+          )
+          if (n1, n2) != (1, 1):
+              raise RuntimeError('Icon HTML tags changed; refuse incomplete branding')
+          html_path.write_text(html, encoding='utf-8')
+          print('Preview-only 宝宝狗 name and PNG icons are ready.')
+          PY
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4
@@ -106,7 +176,7 @@ jobs:
             --arg branch 'remove-checkphone-vrworld-lifesim' \
             --arg sha "$SOURCE_SHA" \
             --arg builtAt "$(date -u '+%Y-%m-%dT%H:%M:%SZ')" \
-            '{sourceRepository:$repository,sourceBranch:$branch,sourceCommit:$sha,builtAt:$builtAt}' \
+            '{sourceRepository:$repository,sourceBranch:$branch,sourceCommit:$sha,builtAt:$builtAt,brandingVersion:"baby-dog-v1"}' \
             > dist/preview-source.json
 
       - name: Configure Pages
