@@ -1,0 +1,119 @@
+name: SullyOS independent development preview
+
+# Isolated publishing repository: this workflow never writes to SullyOS.
+# Source: artibala866-cmd/SullyOS at remove-checkphone-vrworld-lifesim.
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '7,17,27,37,47,57 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: independent-sullyos-pages
+  cancel-in-progress: false
+
+jobs:
+  check-source:
+    runs-on: ubuntu-latest
+    outputs:
+      sha: ${{ steps.source.outputs.sha }}
+      changed: ${{ steps.source.outputs.changed }}
+    steps:
+      - name: Determine exactly which source commit to publish
+        id: source
+        shell: bash
+        run: |
+          set -euo pipefail
+          source_repo='artibala866-cmd/SullyOS'
+          source_branch='remove-checkphone-vrworld-lifesim'
+          sha="$(git ls-remote --exit-code "https://github.com/${source_repo}.git" "refs/heads/${source_branch}" | awk '{print $1}')"
+          if [[ ! "$sha" =~ ^[0-9a-f]{40}$ ]]; then
+            echo 'Cannot confirm the development branch head; do not deploy.' >&2
+            exit 1
+          fi
+          echo "sha=$sha" >> "$GITHUB_OUTPUT"
+          url='https://artibala866-cmd.github.io/SullyOS-Dev-Preview/preview-source.json'
+          published="$(curl -fsSL --max-time 12 "${url}?check=${GITHUB_RUN_ID}" 2>/dev/null | jq -r '.sourceCommit // empty' 2>/dev/null || true)"
+          if [[ "$published" == "$sha" ]]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Already published the latest commit: $sha"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "New commit: $sha; published: ${published:-not available}"
+          fi
+
+  deploy:
+    needs: check-source
+    if: needs.check-source.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    environment:
+      name: github-pages
+      url: ${{ steps.publish.outputs.page_url }}
+    steps:
+      - name: Checkout exact development commit (read-only)
+        uses: actions/checkout@v4
+        with:
+          repository: artibala866-cmd/SullyOS
+          ref: ${{ needs.check-source.outputs.sha }}
+          persist-credentials: false
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build Vite site for GitHub Pages
+        shell: bash
+        env:
+          SOURCE_SHA: ${{ needs.check-source.outputs.sha }}
+        run: |
+          set -euo pipefail
+          # The runner belongs to the preview/main branch; override metadata
+          # so the Vite bundle identifies the ACTUAL SullyOS source branch.
+          env -u GITHUB_REF_NAME -u GITHUB_SHA \
+            CF_PAGES_BRANCH='remove-checkphone-vrworld-lifesim' \
+            CF_PAGES_COMMIT_SHA="$SOURCE_SHA" \
+            GITHUB_PAGES='1' \
+            pnpm run build
+
+      - name: Add verifiable source-revision marker
+        shell: bash
+        env:
+          SOURCE_SHA: ${{ needs.check-source.outputs.sha }}
+        run: |
+          set -euo pipefail
+          jq -n \
+            --arg repository 'artibala866-cmd/SullyOS' \
+            --arg branch 'remove-checkphone-vrworld-lifesim' \
+            --arg sha "$SOURCE_SHA" \
+            --arg builtAt "$(date -u '+%Y-%m-%dT%H:%M:%SZ')" \
+            '{sourceRepository:$repository,sourceBranch:$branch,sourceCommit:$sha,builtAt:$builtAt}' \
+            > dist/preview-source.json
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload preview build
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/
+
+      - name: Deploy the isolated GitHub Pages site
+        id: publish
+        uses: actions/deploy-pages@v4
