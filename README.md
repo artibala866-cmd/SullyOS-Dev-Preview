@@ -71,3 +71,16 @@
 - 阶段 4 真实 Worker fire/outbox 集成测试、手机同轮许可、联系人删除/重建、线程身份、生活事件删除回归均已纳入专用 CI。
 - Worker bundle 版本 **`2026-10-30.3`**，旧 Worker 不支持这些协议字段。独立站发布不升级用户的正式 Worker；实际离线触发与推送仍需用户部署兼容版及端到端测试。
 - 交付源码仍仅在 `artibala866-cmd/SullyOS` 的 `remove-checkphone-vrworld-lifesim`，真实发布的精确源 SHA 以 GitHub Pages 工作流及 `preview-source.json` 为准。
+
+
+## 阶段 4 验证：真实 Worker 触发与联系人同步修复（2026-10-30）
+
+本次隔离预览仍从源码开发分支 `remove-checkphone-vrworld-lifesim` 只读构建，不更改正式部署、生产 Cloudflare Worker、`master` 或其他开发者内容。
+
+- 追加了**真实 Worker onBeforeFire → onLLMOutput** 的自发消息/NPC 同轮回程测试。确认角色选择对 User 静默、仍可生成一次合格 NPC 回复，且工具多轮不丢/不重复；没有 outbox 不预留 NPC 回复。
+- 纠正对结果队列的断言：`fire-skipped` 和 `cloud-phone-reply-v1` 是不同结果，不能把正常跳过回执误看成重复 NPC 互动。
+- 加强联系人主权：NPC 回复绑定稳定联系人生成身份与联系人清除版本；直接重命名、批量保存/删除联系人后由 `saveNpcProfiles` 统一发出原有变更通知，刷新上传到 Worker 的可选 NPC 候选，避免旧联系人快照长期不更新；失败存储不发送假通知。
+- 核心 GitHub Actions `41027539994`：**3 项真实 Worker 钩子测试通过、10 组 170 项相关模块回归通过、相关 TypeScript 检查通过、Worker 打包成功**。阶段 4 不增加独立 AI 轮询或改变默认开关。
+- 尚未实测用户线上 Worker、Cloudflare Cron 或 Android 真实收信；**预览网页的发布不会自动升级用户正式 Worker**。仅保留真实、已授权的有限 NPC 待回复云端回程，非完整离线独立生活。
+- 以本次 workflow 检出源码和发布时的 `preview-source.json` 版本标记为准（预览可能同时包含其他开发者在指定分支提交的无关修改）。
+
