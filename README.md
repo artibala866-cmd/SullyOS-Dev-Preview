@@ -84,3 +84,8 @@
 - 尚未实测用户线上 Worker、Cloudflare Cron 或 Android 真实收信；**预览网页的发布不会自动升级用户正式 Worker**。仅保留真实、已授权的有限 NPC 待回复云端回程，非完整离线独立生活。
 - 以本次 workflow 检出源码和发布时的 `preview-source.json` 版本标记为准（预览可能同时包含其他开发者在指定分支提交的无关修改）。
 
+## 学习室悬浮 Char 聊天窗 · 测试站同步核查（2026-10-30）
+
+- 本次仅触发本独立测试站现有 GitHub Pages 构建，发布源仍为 `artibala866-cmd/SullyOS` 的 `remove-checkphone-vrworld-lifesim` 最新 HEAD；不修改正式部署或开发分支。
+- 核查目标：学习室的可拖动小手机式 Char 悬浮聊天窗、角色快速选择及进入所选 Char 原生私聊的按钮。
+- 是否已经真正上线，必须以本次构建结束后的 `preview-source.json` 中的 `sourceCommit` 和发布工作流结果为准；此说明不构成部署成功声明。
