@@ -89,3 +89,9 @@
 - 本次仅触发本独立测试站现有 GitHub Pages 构建，发布源仍为 `artibala866-cmd/SullyOS` 的 `remove-checkphone-vrworld-lifesim` 最新 HEAD；不修改正式部署或开发分支。
 - 核查目标：学习室的可拖动小手机式 Char 悬浮聊天窗、角色快速选择及进入所选 Char 原生私聊的按钮。
 - 是否已经真正上线，必须以本次构建结束后的 `preview-source.json` 中的 `sourceCommit` 和发布工作流结果为准；此说明不构成部署成功声明。
+
+## 学习室 Char 头像悬浮球与原生手机私聊发布（2026-10-30）
+
+- 本次只触发独立测试站的现有 GitHub Pages 流程，从 SullyOS 唯一正式开发分支 `remove-checkphone-vrworld-lifesim` 检出最新 SHA 进行构建，不向 SullyOS 的 `master` 写入。
+- 学习室旧文字聊天入口改为常驻可点的 Char 圆形悬浮球；点开是真正的手机外框，手机内嵌原生私聊并复用原私聊消息记录，不添加学习室信息到原私聊提示词。已有专注计时期间只显示原学习室限额交流。
+- 发布状态只以本次 CI 的实际源码 SHA、GitHub Pages 发布成功和线上 `preview-source.json` 为准；此文档更新只是触发构建。
