@@ -1,5 +1,14 @@
 # SullyOS-Dev-Preview
 
+## 学习室阶段 2 · 真实反馈与执行计划（2026-10-31）
+
+- 此次独立测试站发布触发来自 SullyOS **既有开发分支** `remove-checkphone-vrworld-lifesim`，已审核源提交 `de26bc88741ce81e31453f0f4f6c5b09c68a61c4`。
+- 主页隐藏重复的「自习室」图标；学习室内仍能进入原 StudyApp，课程与 PDF/测验数据不迁移、不删除。
+- 学习室的真实督促事件支持按 Char 记录「稍后、今天休息、今天不再提醒」；只用已设置的可用时间生成画稿/作业候选计划，用户逐项确认后才会保存。后续提示来自确认过的原计划，不自动标记完成。
+- GitHub Actions [学习室检查](https://github.com/artibala866-cmd/SullyOS/actions/runs/41130272605)：28 个测试文件、162 项测试通过，目标 TypeScript 诊断通过，生产构建通过。
+- 本 README 提交仅触发 **隔离开发测试站** 的原有部署工作流；不是应用源码提交、不触及 SullyOS `master` / 正式站 / 原私聊 / AMSG Worker。
+- 本站真正上线的源码版本，最终仍以线上 `preview-source.json` 及 GitHub Pages 部署成功记录为准。
+
 此仓库只负责发布独立开发测试站：https://artibala866-cmd.github.io/SullyOS-Dev-Preview/
 
 - 应用源码：`artibala866-cmd/SullyOS` 的现有 `remove-checkphone-vrworld-lifesim` 分支。
