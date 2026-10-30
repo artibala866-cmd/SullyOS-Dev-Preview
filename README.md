@@ -95,3 +95,9 @@
 - 本次只触发独立测试站的现有 GitHub Pages 流程，从 SullyOS 唯一正式开发分支 `remove-checkphone-vrworld-lifesim` 检出最新 SHA 进行构建，不向 SullyOS 的 `master` 写入。
 - 学习室旧文字聊天入口改为常驻可点的 Char 圆形悬浮球；点开是真正的手机外框，手机内嵌原生私聊并复用原私聊消息记录，不添加学习室信息到原私聊提示词。已有专注计时期间只显示原学习室限额交流。
 - 发布状态只以本次 CI 的实际源码 SHA、GitHub Pages 发布成功和线上 `preview-source.json` 为准；此文档更新只是触发构建。
+
+## 学习室悬浮手机纵向比例修复 · 2026-10-30
+
+- 独立测试站构建源：SullyOS 现有 `remove-checkphone-vrworld-lifesim` 分支；触发时源 HEAD 为 `f4c6840c91ae9e2b9c6a99bc5137b02f837e2eae`。
+- 原悬浮框宽 326px、独立高度 478px 容易压扁；已改为 9:19.5 竖屏手机比例、最大宽 232px、按 320/360/390 CSS px 和短屏自适应收窄。手机保留完整外框和右侧悬浮位置；窄屏顶部切换改图标避免撑宽。
+- 此处只触发既有的独立预览 Pages 工作流，不更新正式部署或 Cloudflare Worker。是否更新以 Pages 构建成功及 `preview-source.json` 为准。
