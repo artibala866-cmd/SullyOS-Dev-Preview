@@ -11,3 +11,12 @@
 已在 SullyOS 的既有 `remove-checkphone-vrworld-lifesim` 分支完成日程跨页恢复、确认事件驱动的 NPC 手机机会检查、已有 NPC 微信优先续聊。阶段 3 自动化回归 88 项通过；真实离线后台执行仍属于阶段 4 验收。
 
 **是否已真正上线，以测试站的 [preview-source.json](https://artibala866-cmd.github.io/SullyOS-Dev-Preview/preview-source.json) 为准。** 此文档变更只触发当前独立预览构建，不修改应用正式部署。
+
+## 阶段 2/3 安全复查与修复（2026-10-30）
+
+复查并修复：切换角色期间迟到的私人聊天保存、关闭自动回复后旧回调复活、过时 NPC 微信被新事件误触发、无有效手机动作占用冷却、多个角色手机机会同时到达时的排队丢失或堵塞。现有 AMSG / 日程 / 手机 API 预算与用户开关不变。
+
+- 阶段 2 回归：143 项通过，相关 TypeScript 检查通过。
+- 阶段 3 回归：93 项通过，相关 TypeScript 检查通过。
+- 测试入口只用 https://artibala866-cmd.github.io/SullyOS-Dev-Preview/ ，实际源提交号以线上 `preview-source.json` 为准。
+- 真实 Android 杀进程执行、云端/多设备并发预算仍待专项实测，不把自动化测试等同实机验收。
