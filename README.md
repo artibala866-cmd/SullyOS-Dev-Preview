@@ -137,3 +137,10 @@
 - 增量加入全身 9:16、奶油拍立得、爱心大头贴、四格贴纸，主文案/底部文字/字体可编辑，沿用原高清 PNG 导出与相机交互；原四款比例、默认横幅、已选动作均保留。
 - 双人拍照的亲密、亲亲类动作均须明确关系授权，列表过滤与底层执行双重保护。
 - 此文档提交触发独立站现有 Pages 工作流。**实际部署成功与否、准确的来源提交，以本次 GitHub Actions 和线上 `preview-source.json` 为准**，不以源码提交或普通构建通过代替真实场景验收。
+
+## 2026-10-31 · 万圣节双人动作实机复查后更新独立测试站
+
+- 用户要求在 https://artibala866-cmd.github.io/SullyOS-Dev-Preview/ 测试四组万圣节双人动作。
+- 本次只触发独立测试站 `branch-preview.yml`，由工作流只读检出 `artibala866-cmd/SullyOS` 的现有 `remove-checkphone-vrworld-lifesim` 最新 HEAD；触发前源分支为 `3ae086871e367ac6d97c0bc7ccbe9599f696f563`。不创建新分支、不修改 SullyOS 正式站或 Cloudflare Worker。
+- 保留预览仓库已有「宝宝狗」专属名称和图标，发布工作流仍执行原有质量检查。
+- 唯一有效的上线验收标准是 GitHub Pages 发布步骤成功，且线上 `preview-source.json` 返回本次构建真正检出的完整源码 SHA；若构建期间有其他协作提交，以上线 marker 为准。
