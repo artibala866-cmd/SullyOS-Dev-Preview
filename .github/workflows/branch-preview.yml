@@ -6,7 +6,9 @@ on:
   push:
     branches: [main]
   schedule:
-    - cron: '7,17,27,37,47,57 * * * *'
+    # Off-minute polling reduces the chance of dropped high-load scheduled events.
+    # Source pushes cannot directly trigger another repo without an authorized token.
+    - cron: '11,26,41,56 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -151,6 +153,9 @@ jobs:
       - name: Verify Halloween annex is reachable and preserves saved rooms
         run: pnpm exec vitest run apps/room3d/halloweenActivity.test.js utils/room3dHalloweenActivityRoom.test.ts
 
+      - name: Verify private chat voice, history and Android-safe fallback before publication
+        run: pnpm exec vitest run utils/userVoiceMessage.test.ts utils/userVoiceAudio.test.ts utils/userVoiceMessage.wiring.test.ts utils/chatAutoReply.test.ts utils/chatKeyboardViewport.test.ts
+
       - name: Build Vite site for GitHub Pages
         shell: bash
         env:
@@ -190,3 +195,22 @@ jobs:
       - name: Deploy the isolated GitHub Pages site
         id: publish
         uses: actions/deploy-pages@v4
+
+      - name: Verify the PUBLIC test-site source revision
+        shell: bash
+        env:
+          SOURCE_SHA: ${{ needs.check-source.outputs.sha }}
+        run: |
+          set -euo pipefail
+          url='https://artibala866-cmd.github.io/SullyOS-Dev-Preview/preview-source.json'
+          for attempt in $(seq 1 24); do
+            observed="$(curl -fsSL --max-time 15 "${url}?verify=${GITHUB_RUN_ID}-${attempt}" 2>/dev/null | jq -r '.sourceCommit // ""' 2>/dev/null || true)"
+            if [[ "$observed" == "$SOURCE_SHA" ]]; then
+              echo "Verified public test site has source commit $SOURCE_SHA"
+              exit 0
+            fi
+            echo "Propagation check $attempt/24: observed ${observed:-unavailable}, expected $SOURCE_SHA"
+            sleep 5
+          done
+          echo "Test site did not expose the expected source commit; refusing to report a successful verified release." >&2
+          exit 1
