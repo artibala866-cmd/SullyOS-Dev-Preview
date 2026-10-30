@@ -101,3 +101,9 @@
 - 独立测试站构建源：SullyOS 现有 `remove-checkphone-vrworld-lifesim` 分支；触发时源 HEAD 为 `f4c6840c91ae9e2b9c6a99bc5137b02f837e2eae`。
 - 原悬浮框宽 326px、独立高度 478px 容易压扁；已改为 9:19.5 竖屏手机比例、最大宽 232px、按 320/360/390 CSS px 和短屏自适应收窄。手机保留完整外框和右侧悬浮位置；窄屏顶部切换改图标避免撑宽。
 - 此处只触发既有的独立预览 Pages 工作流，不更新正式部署或 Cloudflare Worker。是否更新以 Pages 构建成功及 `preview-source.json` 为准。
+
+## 学习室迷你手机原生聊天内容等比缩放修复（2026-10-30）
+
+- 从 SullyOS 唯一开发分支 `remove-checkphone-vrworld-lifesim` 当前 HEAD (`f97646b5d6af4d020d4bff86efac6745a50a9167`) 重新构建独立测试站；不触动 SullyOS master 或正式部署。
+- 本次重点修复真机截图的严重裁切：先将原生 Chat 在 390 CSS px 的完整逻辑宽度排版，再由 ResizeObserver 测得手机屏幕尺寸，把整个原生聊天画布和输入栏按同一比例缩放；手机壳宽度最多 218px，9:19.5 纵向比例且位于页面右侧。
+- `preview-source.json` 和 Pages 工作流成功状态为发布依据；真实 Android 键盘仍需用户现场验收。
