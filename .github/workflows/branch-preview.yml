@@ -153,6 +153,7 @@ jobs:
       - name: Verify Halloween annex is reachable and preserves saved rooms
         run: pnpm exec vitest run apps/room3d/halloweenActivity.test.js utils/room3dHalloweenActivityRoom.test.ts
 
+      # Voice audit: prevent silent STT hangs, preserve edited recordings, verify forwarding text and themed playback.
       # Private-chat voice checks real spoken-text recognition, keyboard IME
       # dictation fallback, compact composer, and original voice-bar parity.
       # This release must not advertise raw audio as auto-transcribed.
