@@ -243,3 +243,9 @@
 - 本次只触发独立测试站 `branch-preview.yml`，由工作流只读检出 `artibala866-cmd/SullyOS` 的现有 `remove-checkphone-vrworld-lifesim` 最新 HEAD；触发前源分支为 `3ae086871e367ac6d97c0bc7ccbe9599f696f563`。不创建新分支、不修改 SullyOS 正式站或 Cloudflare Worker。
 - 保留预览仓库已有「宝宝狗」专属名称和图标，发布工作流仍执行原有质量检查。
 - 唯一有效的上线验收标准是 GitHub Pages 发布步骤成功，且线上 `preview-source.json` 返回本次构建真正检出的完整源码 SHA；若构建期间有其他协作提交，以上线 marker 为准。
+
+## 2026-10-31 · 无声回信（黑）白框整套美化 · 独立站验收触发
+
+- 源码继续使用 SullyOS 既有 `remove-checkphone-vrworld-lifesim` 分支，本次测试站触发时源 HEAD：`1f52a5225f5f091dcd1c3c676c7c7e37ba07b7a4`；不创建新开发分支，不碰正式站。
+- `无声回信 · 黑（by黛）` CSS 已适配私聊、群聊、黑白气泡、引用、心象、转账、红包及回执，新增白框内置整套入口；不覆盖用户已有美化。
+- 原生组件回归工作流 `41209223408` 通过 28 项测试和 TypeScript 目标检查，真实 Chromium 使用 CJK 字体截图含 360px 手机画面及群聊原生消息、红包与回执。此条记录仅触发预览站，真正上线以 `preview-source.json` 的 `sourceCommit` 与独立部署运行成功为准。
