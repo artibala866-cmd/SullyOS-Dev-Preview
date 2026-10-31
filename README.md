@@ -1,3 +1,9 @@
+## 2026-10-31 · 家园手绘插画画风二次视觉修正与独立测试站部署
+
+- 测试站从 `artibala866-cmd/SullyOS` 的唯一开发分支 `remove-checkphone-vrworld-lifesim` 检出 SHA `c2b0e44b51436f1db7fa566adc1ef536ce913dcf`；不会修改正式站。
+- 本次在原有插画材质上强化脸部暖色颜料、头发丝缎亮面、纹理内部手绘笔触以及暖光/冷影分离，加入更明显的主体焦点式外围虚化与克制颗粒。
+- 完成真实 Chromium/WebGL 人物材质多肤色/发色及原版切换截图检查；最终以独立测试站 `preview-source.json` 的 sourceCommit 和发布工作流为准。
+
 ## 家园完整画风改造：手绘线稿 / 梦核颗粒 / 焦点景深 · 2026-10-31
 
 - 仅触发独立测试站既有工作流，从 SullyOS 唯一开发分支 `remove-checkphone-vrworld-lifesim` 检出当前源码 `c2b0e44b51436f1db7fa566adc1ef536ce913dcf`；原始仓库主分支和正式网址不修改。
