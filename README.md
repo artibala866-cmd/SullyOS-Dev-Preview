@@ -1,3 +1,9 @@
+## 2026-10-31 · Faint Silk 浅丝聊天白框同步
+
+- 使用 SullyOS 唯一开发分支 `remove-checkphone-vrworld-lifesim`，本次浅丝整套白框适配与原生截图回归提交 `103e0a0988251c16bb64d11ee2c7bc7811d8e944`；未创建源代码新分支。
+- 保留「浅丝 by落吟」的磨砂顶栏、双头像、气泡、输入区及转账样式，同时加入群聊红包/回执兼容；原生组件自动化截图及中文字体验收已通过。
+- 此 README 更新仅触发现有独立预览站构建，不调整部署流程或正式站；实际上线以公网 `preview-source.json` 中的 `sourceCommit` 为准。
+
 ## 2026-10-31 · 手绘风梦核：细描线、清透胶片与轻磨砂纸感加强
 - 发布源：SullyOS 已有开发分支 `remove-checkphone-vrworld-lifesim` 的 `ae72472a30582599d20eb380a87e830c20c4e404`；不建新分支，不改正式站。
 - 参考 Joyce Comic.ini 中实际启用的 Comic.fx 描线与阿眠预设的 FilmicPass/Comic 调色：恢复可见但不加粗的单像素手绘轮廓、服装发束内部细线、轻粉青色沿边、奶油暖光和蓝紫暗部、轻磨砂纸颗粒与局部高光扩散。
