@@ -1,5 +1,13 @@
 # SullyOS-Dev-Preview
 
+## 糯米机 3D 家园 · 原版光影保留 + 可关闭的质感增强（2026-10-31）
+
+- 本仓库仅触发独立测试站现有工作流；真实源码始终取自 SullyOS 的 `remove-checkphone-vrworld-lifesim`，没有创建任何开发分支或覆盖其他窗口提交。
+- 本次引用 ReShade qUINT Lightroom / AMD CAS 的小幅局部对比思想，但没有复制或注入 Windows ReShade。保留原版人物 Shader、材质分类、家具、室内灯光、阴影、原始柔光及照片滤镜。
+- 新增的「质感增强」按钮可以即时关闭回到原版；保持原有「柔光调色」独立开关。样式只增加一层轻量局部细节对比，中间暗部得到克制增强；手机省电档自动减弱。
+- 源码提交 `5781cb52a849ebee1e5de7a4962a647e3477ab0c`、`2261ef45e9a38606af39dc6ec9e5e51a041affab`；截图验收提交 `2154bbd87f9e253f2c49c7cc13e446a99ddf9206`。980 帧 WebGL + 36 张材质变体 + 8 张画质开关前后截图已验证，角色区域像素差异记录在构建工件中。
+- 测试站发布成功只以公开 `preview-source.json` 源 SHA 和本仓库 deploy workflow 验证结果为准。
+
 ## 家园人物原版光影恢复 · 2026-10-31
 
 - 仅触发隔离测试站既有发布工作流，重新检出 SullyOS 的 `remove-checkphone-vrworld-lifesim`；不动正式站和源码分支。
