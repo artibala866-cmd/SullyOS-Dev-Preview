@@ -1,3 +1,9 @@
+## 2026-10-31 · 手绘风梦核：细描线、清透胶片与轻磨砂纸感加强
+- 发布源：SullyOS 已有开发分支 `remove-checkphone-vrworld-lifesim` 的 `ae72472a30582599d20eb380a87e830c20c4e404`；不建新分支，不改正式站。
+- 参考 Joyce Comic.ini 中实际启用的 Comic.fx 描线与阿眠预设的 FilmicPass/Comic 调色：恢复可见但不加粗的单像素手绘轮廓、服装发束内部细线、轻粉青色沿边、奶油暖光和蓝紫暗部、轻磨砂纸颗粒与局部高光扩散。
+- 保留全景无景深、近景轻景深，禁止复制偏移背景或多层浮影；性能复用原有渲染管线。
+- 由 Chromium WebGL 原版 / 手绘风人物材质与房间对照截图及相关 CI 验收。最终发布以线上 `preview-source.json` 为准。
+
 ## 2026-10-31 · iOS 6 聊天内置白框测试站同步
 
 - 从 SullyOS 现有分支 `remove-checkphone-vrworld-lifesim` 读取最新源代码；本次白框适配提交 `143d7125d361cf2fbe9bfc18ff897e70e8b7b58e`，不创建开发分支，不触碰正式站。
