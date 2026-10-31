@@ -1,5 +1,12 @@
 # SullyOS-Dev-Preview
 
+## 神经链接 · 酒馆角色卡兼容测试站同步（2026-10-31）
+
+- 本次仅触发独立开发预览仓库已有的发布工作流，源码保持 `artibala866-cmd/SullyOS` 的 `remove-checkphone-vrworld-lifesim` 分支。
+- 新增酒馆 V1/V2/V3 JSON、V2/V3 PNG、世界书启停与挂载、预览确认、数据库原子保存。
+- 第一轮导入回归、TypeScript 检查与完整构建已成功；最新补充的 ContextBuilder 请求断言由源码 CI 继续验证。
+- 实际上线源码提交必须以部署后的 `preview-source.json` 为准；不得以这份 README 的更新代替上线验证。
+
 ## 学习室阶段 2 · 真实反馈与执行计划（2026-10-31）
 
 - 此次独立测试站发布触发来自 SullyOS **既有开发分支** `remove-checkphone-vrworld-lifesim`，已审核源提交 `de26bc88741ce81e31453f0f4f6c5b09c68a61c4`。
