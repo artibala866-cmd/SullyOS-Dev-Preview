@@ -1,5 +1,11 @@
 # SullyOS-Dev-Preview
 
+## 家园人物原版光影恢复 · 2026-10-31
+
+- 仅触发隔离测试站既有发布工作流，重新检出 SullyOS 的 `remove-checkphone-vrworld-lifesim`；不动正式站和源码分支。
+- 回退错误的角色材质阴影变浅、皮肤分类及发丝高光改写，恢复到原版的 `illustration.ts` / `FbxBody.ts` 字节内容，源码恢复提交 `26c943a1226d8d741359f17fe5ea70b379466ba7`。
+- 实际上线版本只以本仓库发布流水线验证的公网 `preview-source.json` 为准。
+
 ## BabyLink 小手机角色卡 · 锁脸和生图配置适配（2026-10-31）
 
 - 仅触发独立测试站的现有 `branch-preview.yml`，从 SullyOS 唯一开发分支 `remove-checkphone-vrworld-lifesim` 检出最新源码；不创建分支，不修改正式站或全局 API 密钥。
