@@ -1,5 +1,12 @@
 # SullyOS-Dev-Preview
 
+## 酒馆角色卡导入 · 深度复查修复（2026-10-31）
+
+- 不修改正式分支，测试站从 SullyOS 的 `remove-checkphone-vrworld-lifesim` 当前 HEAD 构建。
+- 已修正角色 description 在真实 ContextBuilder 中被当作备注、混合 scenario 整段丢失、扩展世界书控制项丢失、zTXt/iTXt PNG 解析及酒馆/ BabyLink 图片判别优先级。
+- 角色头像使用 Blob 资产，失败时清理新建的孤立头像令牌。
+- 实际部署成功与源码版本只以公开 `preview-source.json` 校验为准。
+
 ## 神经链接 · 酒馆角色卡兼容测试站同步（2026-10-31）
 
 - 本次仅触发独立开发预览仓库已有的发布工作流，源码保持 `artibala866-cmd/SullyOS` 的 `remove-checkphone-vrworld-lifesim` 分支。
