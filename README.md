@@ -1,3 +1,10 @@
+## 2026-10-31 · 家园漫画滤镜重影专项修复 · Joyce Comic 参考
+
+- 已在 SullyOS 唯一开发分支 `remove-checkphone-vrworld-lifesim` 修复，源码 SHA `f9461d3fd1ba6b3d63b14c55ed5083a88da58fb0`，不建立任何开发分支，不影响正式站。
+- 对照上传的 Joyce Comic.ini，确认真正启用的是 `Comic@Comic.fx`；取消此前最高 18 像素方向偏移采样混合和新版光晕叠加，改为仅利用邻域检测边缘、原始像素本位落笔的漫画线条。保留原材质的光影层次和轻微静态颗粒，无模拟景深、无运动重影。
+- Chromium 真实 WebGL 验收已通过：原版和漫画版两张清晰轮廓基准截图、四组发色肤色角色截图；防重影断言 `spuriousBright=0`，原版切换恢复逐像素一致。
+- 测试站独立工作流会检出开发分支当前 HEAD，是否上线必须以公开 `preview-source.json` 的 `sourceCommit` 核验。
+
 ## 2026-10-31 · 家园手绘插画画风二次视觉修正与独立测试站部署
 
 - 测试站从 `artibala866-cmd/SullyOS` 的唯一开发分支 `remove-checkphone-vrworld-lifesim` 检出 SHA `c2b0e44b51436f1db7fa566adc1ef536ce913dcf`；不会修改正式站。
