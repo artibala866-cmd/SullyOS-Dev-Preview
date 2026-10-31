@@ -1,3 +1,10 @@
+## 2026-10-31 · 家园「手绘风梦核」景深重影修复 · 测试站同步触发
+
+- 本次只触发独立预览站既有发布工作流；实际源码检出 SullyOS 原开发分支 `remove-checkphone-vrworld-lifesim` 的 `598e8f25646ddaea774bf95628ecc52ce86dfdb4`，绝不更改正式站。
+- 旧八方向 24px 景深采样产生窗框、家具及地板的重复影子，现替换为近距离、深度边缘保护的双向连续高斯虚化。
+- 真实 WebGL 景深开关与窄线防重影截图已生成；自动验收报告 `depthGhostStats.detachedPixels=0`，人物与光影、回归检查通过。安卓真机仍需确认。
+- 实际上线须以 GitHub Pages 工作流中公开 `preview-source.json` 的 sourceCommit 复核。
+
 ## 2026-10-31 · 家园漫画滤镜重影专项修复 · Joyce Comic 参考
 
 - 已在 SullyOS 唯一开发分支 `remove-checkphone-vrworld-lifesim` 修复，源码 SHA `f9461d3fd1ba6b3d63b14c55ed5083a88da58fb0`，不建立任何开发分支，不影响正式站。
