@@ -153,7 +153,9 @@ jobs:
       - name: Verify Halloween annex is reachable and preserves saved rooms
         run: pnpm exec vitest run apps/room3d/halloweenActivity.test.js utils/room3dHalloweenActivityRoom.test.ts
 
-      - name: Verify private chat voice, history and Android-safe fallback before publication
+      # Regression also verifies user sent voice reuses the original Char bar
+      # palette/classes, without a second black text-bubble wrapper.
+      - name: Verify private chat voice UI parity, history and Android-safe fallback before publication
         run: pnpm exec vitest run utils/userVoiceMessage.test.ts utils/userVoiceAudio.test.ts utils/userVoiceMessage.wiring.test.ts utils/chatAutoReply.test.ts utils/chatKeyboardViewport.test.ts
 
       - name: Build Vite site for GitHub Pages
