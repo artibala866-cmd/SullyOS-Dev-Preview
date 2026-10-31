@@ -1,3 +1,9 @@
+## 2026-10-31 · iOS 6 聊天内置白框测试站同步
+
+- 从 SullyOS 现有分支 `remove-checkphone-vrworld-lifesim` 读取最新源代码；本次白框适配提交 `143d7125d361cf2fbe9bfc18ff897e70e8b7b58e`，不创建开发分支，不触碰正式站。
+- 新增「iOS 6 · 复古水晶」内置整套聊天装扮：银灰/冰蓝玻璃气泡、纹理背景、顶栏和输入栏、语音、转账、群聊红包及领取回执。
+- 验收必须核对独立站 `preview-source.json` 的 `sourceCommit` 与 GitHub Actions 构建结果；本 README 提交仅触发独立预览站构建，不等于部署成功。
+
 ## 2026-10-31 · 手绘风梦核：全景清晰、放大轻景深
 
 - 测试站仅发布 SullyOS 原有开发分支 `remove-checkphone-vrworld-lifesim` 的最新快照，审计提交 `75100ce8ce79618ec8fcbcee1e62e741dd7b1a26`。不新建分支，不动正式站。
