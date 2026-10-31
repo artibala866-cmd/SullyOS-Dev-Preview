@@ -249,3 +249,9 @@
 - 源码继续使用 SullyOS 既有 `remove-checkphone-vrworld-lifesim` 分支，本次测试站触发时源 HEAD：`1f52a5225f5f091dcd1c3c676c7c7e37ba07b7a4`；不创建新开发分支，不碰正式站。
 - `无声回信 · 黑（by黛）` CSS 已适配私聊、群聊、黑白气泡、引用、心象、转账、红包及回执，新增白框内置整套入口；不覆盖用户已有美化。
 - 原生组件回归工作流 `41209223408` 通过 28 项测试和 TypeScript 目标检查，真实 Chromium 使用 CJK 字体截图含 360px 手机画面及群聊原生消息、红包与回执。此条记录仅触发预览站，真正上线以 `preview-source.json` 的 `sourceCommit` 与独立部署运行成功为准。
+
+### 无声回信 · 黑｜最终引用对比度修复后重发（2026-10-31）
+
+- 当前源码：`artibala866-cmd/SullyOS` 现有 `remove-checkphone-vrworld-lifesim` HEAD `b0a92887e86c106aa1bea10f3c2cbb9aef59e22e`。没有新建开发分支，也未发布正式站。
+- 修正黑底发出消息中的引用文字对比度。原生群聊/私聊/转账/心象/头像/输入栏回归 `41209554636` 全部通过：28 个 Vitest、目标 TypeScript 与真实 Chromium 中文截图的全部断言。
+- 此提交仅触发独立站重新从开发分支检出构建；公网 `preview-source.json` 验证为准。
