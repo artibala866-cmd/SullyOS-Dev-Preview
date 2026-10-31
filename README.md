@@ -1,5 +1,13 @@
 # SullyOS-Dev-Preview
 
+## 家园 Q 版三渲二黑色手绘线稿 · 2026-10-31
+
+- 测试站源码来自 SullyOS 现有开发分支 `remove-checkphone-vrworld-lifesim`，提交 `b7a5665e5eb737f28b1cfe8e9cceb050fba5f85d`；未创建、切换开发分支。
+- 仅在可选「插画三渲二」风格内加入角色表面轻薄暖黑手绘轮廓，发片根据 alpha cutout 纹理边缘补线。保持原有软萌亮面与昼夜/窗影，不用全场景滤镜或额外双重几何。
+- 原版「风格化」「经典」的 Shader、物体结构、家具、动作、五官、服装、存档及照片滤镜全部保留；原版切换复原的 Chromium WebGL 图像逐像素一致。
+- Chromium SwiftShader 真正渲染四组发色/肤色/服装、近景及四时段，验证浅色衣边出现深色笔线；980 帧双人动作、家具/座位交互、运动回归与其他相关构建全部通过。Android 真机性能仍待实测。
+- 以公开 `preview-source.json` 返回的源码 SHA 与部署 workflow 通过为发布准据。
+
 ## Q版清透日系三渲二修复 · 2026-10-31
 
 - 测试源码 SHA：`341c358e4e25b3b805ec177e8389ded0869581d5`，来自现有分支 `remove-checkphone-vrworld-lifesim`，没有创建或切换开发分支。
