@@ -1,5 +1,11 @@
 # SullyOS-Dev-Preview
 
+## 神经链接联合回归 · 最新开发分支发布校验（2026-10-31）
+
+- 这次仅触发独立测试站现有 Actions，构建 `remove-checkphone-vrworld-lifesim` 最新源码，不修改正式站。
+- 酒馆 V1/V2/V3 + PNG/JSON、BabyLink 共用入口已按本轮审计修复；新版解析与库挂载的联合回归已通过。
+- 最终发布结果必须由公共站 `preview-source.json` 与 workflow 部署校验共同确认。
+
 ## 酒馆角色卡导入 · 深度复查修复（2026-10-31）
 
 - 不修改正式分支，测试站从 SullyOS 的 `remove-checkphone-vrworld-lifesim` 当前 HEAD 构建。
