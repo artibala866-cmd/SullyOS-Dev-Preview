@@ -1,3 +1,9 @@
+## 2026-10-31 · 浅丝情头改为实时用户头像
+
+- 从 SullyOS 已有开发分支 `remove-checkphone-vrworld-lifesim` 检出最新源码；本次顶部成对头像动态绑定修改及原生截图验收提交 `7bdf23c680d4a708bccb6774ab961166b09abb1c`，包含以前已应用的浅丝 CSS 兼容、用户单角色头像覆盖和无头像时的回退显示。
+- 右侧原固定图片改为真实用户头像 BlobRef 组件，不添加叠加图层，不更改其他主题、群聊或聊天功能；原生 Chromium 截图、单元测试和触及文件的 TypeScript 检查通过。
+- 此 README 仅触发既有独立测试站工作流；以公开 `preview-source.json` 中的 `sourceCommit` 和 Actions 核对部署结果。
+
 ## 2026-10-31 · Faint Silk 浅丝聊天白框同步
 
 - 使用 SullyOS 唯一开发分支 `remove-checkphone-vrworld-lifesim`，本次浅丝整套白框最终适配与原生截图回归提交 `773e5184811c0dcda1a1565058ea363eafe4aa85`；未创建源代码新分支。
