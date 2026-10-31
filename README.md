@@ -1,3 +1,11 @@
+## 2026-10-31 · 手绘风梦核：全景清晰、放大轻景深
+
+- 测试站仅发布 SullyOS 原有开发分支 `remove-checkphone-vrworld-lifesim` 的最新快照，审计提交 `75100ce8ce79618ec8fcbcee1e62e741dd7b1a26`。不新建分支，不动正式站。
+- 用户真实书房截图指出全屋糊成马赛克；修复为仅在正交相机可见高度小于 4.25m 时逐渐出现景深，视野大于等于 4.25m 时景深强度为零，放大近景才有轻度虚化。
+- 限制景深最大混合比例为 21%，降低模糊采样范围；保留「手绘风梦核」既有细描线、纸感和梦核配色，不改变角色/家具/存档。
+- 真实 Chromium WebGL 快照覆盖同场景全景与近景的景深开关；测试验证 `zoomStats.wideStrength=0`、`wideDifference=0`，并发现并修复关闭景深时复用旧画面的更新问题。
+- 实际上线与否以该预览站的 `preview-source.json` 中 `sourceCommit`、GitHub Actions 公网校验结果为准。
+
 ## 2026-10-31 · 家园「手绘风梦核」景深重影修复 · 测试站同步触发
 
 - 本次只触发独立预览站既有发布工作流；实际源码检出 SullyOS 原开发分支 `remove-checkphone-vrworld-lifesim` 的 `598e8f25646ddaea774bf95628ecc52ce86dfdb4`，绝不更改正式站。
