@@ -153,6 +153,9 @@ jobs:
       - name: Verify Halloween annex is reachable and preserves saved rooms
         run: pnpm exec vitest run apps/room3d/halloweenActivity.test.js utils/room3dHalloweenActivityRoom.test.ts
 
+      # Private-chat voice checks real spoken-text recognition, keyboard IME
+      # dictation fallback, compact composer, and original voice-bar parity.
+      # This release must not advertise raw audio as auto-transcribed.
       # Private-chat voice regression also guards the compact inline microphone,
       # wide composer and stacked two-mode chooser (without a second outer column).
       # It also verifies sent voice reuses the original Char bar appearance.
