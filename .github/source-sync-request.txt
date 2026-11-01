@@ -22,3 +22,7 @@ Reason: verify functional music release after fixing a one-character build-block
 Music invitation selectable-card validation b17f3ee04e04fe4d68d4edb6b1ba343044d987b5
 Source: artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim
 Verify Chat invitation multi-select deletion, safe pending-state cleanup, explicit Char responses and play commands while together listening.
+
+Music invitation atomic deletion and realtime UI verification:
+Source commit: d6a6c520232dcf1443611372142042fa903a3cf9
+Reason: verify music invitation atomic card deletion, no phantom auto reply, AI-history tombstone exclusion, bounded AI retry, and phone-width checkbox screenshots.
