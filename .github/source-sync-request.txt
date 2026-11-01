@@ -10,3 +10,7 @@ Reason: verify unified Char invitation/acceptance, worker music directive parity
 Music together post-regression source verification:
 Source commit: d57b7c873dbac35932de92559fdfffa90516995e
 Reason: publish integrated immediate invitation responder and updated regression checks from the existing development branch.
+
+Music together latest-source verification:
+Source commit: b3f8e2007d074e387d35da45ce56e1f9a6865b07
+Reason: publish the newest post-test compatibility fixes for the immediate invitation responder.
