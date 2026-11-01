@@ -1,3 +1,8 @@
 SullyOS development branch: remove-checkphone-vrworld-lifesim
 Source SHA: 387262f0bb00d29f2bfb6902deeae57da86dc9ec
 Reason: publish verified Meet story create/save/enter/reopen flow, non-destructive v74-to-v75 IndexedDB migration, chat-origin and shortcut routing fixes. Story regression CI: https://github.com/artibala866-cmd/SullyOS/actions/runs/41335155182
+
+Music together regression verification request:
+Source branch: remove-checkphone-vrworld-lifesim
+Source commit: 7c63836a28cc2943cab92f497c1ba9eae6ae3eb1
+Reason: verify unified Char invitation/acceptance, worker music directive parity and persisted listening state without changing other modules.
