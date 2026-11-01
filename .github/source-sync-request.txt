@@ -1,3 +1,3 @@
 SullyOS development branch: remove-checkphone-vrworld-lifesim
-Source SHA: 2cd36532b4b648dabb3f8b097c56322c7806be32
-Reason: verify original Weixin whitebox artwork and native controls on public preview.
+Source SHA: 673b049fe328e178eb26b729adf3e11889376563
+Reason: verify unified real-person autonomous contact gating, silence policy, regression tests and public preview.
