@@ -1,28 +1,3 @@
 SullyOS development branch: remove-checkphone-vrworld-lifesim
-Source SHA: 387262f0bb00d29f2bfb6902deeae57da86dc9ec
-Reason: publish verified Meet story create/save/enter/reopen flow, non-destructive v74-to-v75 IndexedDB migration, chat-origin and shortcut routing fixes. Story regression CI: https://github.com/artibala866-cmd/SullyOS/actions/runs/41335155182
-
-Music together regression verification request:
-Source branch: remove-checkphone-vrworld-lifesim
-Source commit: 7c63836a28cc2943cab92f497c1ba9eae6ae3eb1
-Reason: verify unified Char invitation/acceptance, worker music directive parity and persisted listening state without changing other modules.
-
-Music together post-regression source verification:
-Source commit: d57b7c873dbac35932de92559fdfffa90516995e
-Reason: publish integrated immediate invitation responder and updated regression checks from the existing development branch.
-
-Music together latest-source verification:
-Source commit: b3f8e2007d074e387d35da45ce56e1f9a6865b07
-Reason: publish the newest post-test compatibility fixes for the immediate invitation responder.
-
-Music together post-build unblock verification:
-Source commit: ccb8c240c5200597b9b4f2869f8b861cb075a88f
-Reason: verify functional music release after fixing a one-character build-blocking URL regex.
-
-Music invitation selectable-card validation b17f3ee04e04fe4d68d4edb6b1ba343044d987b5
-Source: artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim
-Verify Chat invitation multi-select deletion, safe pending-state cleanup, explicit Char responses and play commands while together listening.
-
-Music invitation atomic deletion and realtime UI verification:
-Source commit: d6a6c520232dcf1443611372142042fa903a3cf9
-Reason: verify music invitation atomic card deletion, no phantom auto reply, AI-history tombstone exclusion, bounded AI retry, and phone-width checkbox screenshots.
+Source SHA: f7b96f41f865490aa3f96d95898b0455b9082a24
+Reason: visually verify Meet story editor dark gray save buttons (top and bottom) and live memory description card; preserve light theme and behavior. Regression: https://github.com/artibala866-cmd/SullyOS/actions/runs/41354674422
