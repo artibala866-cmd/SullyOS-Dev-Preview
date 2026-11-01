@@ -1,3 +1,4 @@
 SullyOS development branch: remove-checkphone-vrworld-lifesim
-Source SHA: 225309c21efdf3b6044ffa910147647548f4079f
-Reason: republish the actual current development HEAD after verified Meet story integrity and dark mobile UI fixes (CI: https://github.com/artibala866-cmd/SullyOS/actions/runs/41360112264); concurrent unrelated code has also advanced.
+Source SHA: 562503a9246c1296a8bd50d1dc5a452dd4a01a81
+Reason: publish the verified 3D-home-only Q figure cabinet, preserving original starry styling and Home3D dream; verify the publicly served revision.
+Regression: https://github.com/artibala866-cmd/SullyOS/actions/runs/41361438798
