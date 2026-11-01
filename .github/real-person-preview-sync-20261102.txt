@@ -1,6 +1,7 @@
 Purpose: request independent test-site rebuild after real-person/autonomy integration audit.
 Source repository: artibala866-cmd/SullyOS
 Source branch: remove-checkphone-vrworld-lifesim
-Source SHA observed before preview dispatch: a39e2c432b1625c32beabbc222948f083ed44bf6
+Source SHA observed before preview dispatch: 2797c4de9cb03eb6b4abe1a179e309e4f0e29cca
 Note: the preview workflow checks out its own fresh source SHA and verifies preview-source.json. No formal production repo or branch is changed by this trigger.
 Follow-up verification: the first public deployment passed for df1ac3b88a5c28b383cdd62a8b70a017512d00a5; rebuild requested after concurrent same-branch chat-block updates.
+Additional preview verification: previous source a39e2c432b1625c32beabbc222948f083ed44bf6 reached the public site; a newer unrelated study-room commit landed after publication, so reverify the shared head.
