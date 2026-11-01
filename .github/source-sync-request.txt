@@ -1,3 +1,4 @@
 SullyOS development branch: remove-checkphone-vrworld-lifesim
-Source SHA: bc8ecc173f9ed81ce3953774520d1faf67ebd6b9
-Reason: complete Meet story deep audit: atomic central/character mirrors, guarded reroll identity, atomic event-box/floor archiving with rollback, visible history errors, Android theme storage guard, and actual Chromium screenshot validation. CI: https://github.com/artibala866-cmd/SullyOS/actions/runs/41360112264
+Source SHA: 225309c21efdf3b6044ffa910147647548f4079f
+Reason: verified cleanup of special-moments and deleted room-cabinet remnants; retain only Home3D Q figure and migrated dream. Publish preview and verify public preview-source.json matches source.
+Visual regression: https://github.com/artibala866-cmd/SullyOS/actions/runs/41359933900
