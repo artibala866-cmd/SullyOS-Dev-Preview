@@ -6,3 +6,7 @@ Music together regression verification request:
 Source branch: remove-checkphone-vrworld-lifesim
 Source commit: 7c63836a28cc2943cab92f497c1ba9eae6ae3eb1
 Reason: verify unified Char invitation/acceptance, worker music directive parity and persisted listening state without changing other modules.
+
+Music together post-regression source verification:
+Source commit: d57b7c873dbac35932de92559fdfffa90516995e
+Reason: publish integrated immediate invitation responder and updated regression checks from the existing development branch.
