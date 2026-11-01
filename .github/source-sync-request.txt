@@ -14,3 +14,7 @@ Reason: publish integrated immediate invitation responder and updated regression
 Music together latest-source verification:
 Source commit: b3f8e2007d074e387d35da45ce56e1f9a6865b07
 Reason: publish the newest post-test compatibility fixes for the immediate invitation responder.
+
+Music together post-build unblock verification:
+Source commit: ccb8c240c5200597b9b4f2869f8b861cb075a88f
+Reason: verify functional music release after fixing a one-character build-blocking URL regex.
