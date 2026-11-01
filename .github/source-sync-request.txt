@@ -18,3 +18,7 @@ Reason: publish the newest post-test compatibility fixes for the immediate invit
 Music together post-build unblock verification:
 Source commit: ccb8c240c5200597b9b4f2869f8b861cb075a88f
 Reason: verify functional music release after fixing a one-character build-blocking URL regex.
+
+Music invitation selectable-card validation b17f3ee04e04fe4d68d4edb6b1ba343044d987b5
+Source: artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim
+Verify Chat invitation multi-select deletion, safe pending-state cleanup, explicit Char responses and play commands while together listening.
