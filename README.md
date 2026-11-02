@@ -1,3 +1,13 @@
+## 2026-11-02 · 糯叽机心软判断系统安全移植验收
+
+- 唯一开发分支：`remove-checkphone-vrworld-lifesim`；本轮源码提交：`4c5213e60fe5c048fae704c6c7eaa5bd2cb3d4bc`。没有为开发新建分支或变更 SullyOS 的 master。
+- 原版 `runForgivenessCheck` 主要数据机制已落地：持续心软度、私有心声与状态、未发送草稿、独处小剧场（嵌套 JSON）和角色自主 stay/unblock 决策。
+- 彻底区分被拒收的私聊与角色真实收到的拉黑前最后 12 条对话：IndexedDB 倒序游标读取（不受 100 条拒收消息或记忆宫殿高水位挤占）。
+- 复拉黑不清空角色先前积累的心软度、草稿与独处片段；片段保留在角色资料中，私聊可折叠查看但不会伪装成对方发来的气泡。
+- 独立求原谅仍遵循原版 30 分钟冷却，不增加后台定时自动放人；原先双向送达和自主解封逻辑保持不变。
+- 核验：[CI #41373486250](https://github.com/artibala866-cmd/SullyOS/actions/runs/41373486250) 专项测试、完整构建、目标 TS、390px 真实 React 私聊及剧场视觉回归全部通过。
+- 公开站必须由 `preview-source.json.sourceCommit` 和上述 SHA 完全一致才能认定已发布。
+
 ## 2026-11-02 · 糯叽机角色自主解封闭环复核
 
 - 源码仍仅在原开发分支 `remove-checkphone-vrworld-lifesim`，本轮核心修复 `67c616edca243702120877ea283867a5d8975018`；本次预览采用含并行工作变更的完整源码 HEAD `447dfb1892d73348729e69cd07c46b5443329360`。
