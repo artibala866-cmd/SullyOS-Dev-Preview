@@ -1,3 +1,11 @@
+## 2026-11-02 · 心软判断系统安全移植补齐：解封来源与关系记忆
+
+- 本轮最后专项提交：`e6ccad1c4d6e8ed2f764d871ccf41c91b119c369`，测试站构建源码采用开发分支当时 HEAD `f854753df8708acf78698bc5f1399485bcf17503`。
+- 源于糯叽机原版 `applyCharUnblockUser`：持久记录角色主动原谅（forgave）、现有见面当面和解（offline）、关闭权限（settings）的解封时间、来源和原因；复用糯米机已有角色资料及备份。
+- 解封后的正常私聊仍能记得和解经历，连 40 条历史事件裁剪也不会丢失；独立心软 AI 调用增设真实请求层的模拟 API 验收，覆盖 12 条拉黑前对话、拒收隔离、小剧场 JSON、网络及解析错误。
+- [CI #41375618340](https://github.com/artibala866-cmd/SullyOS/actions/runs/41375618340)：专项测试、跨功能测试、构建、目标 TypeScript 和真实手机宽度截图全部通过。
+- 未移植糯叽机独立小号、查手机或自动强制解封；公开测试站以验证日志中的 `preview-source.json.sourceCommit` 为准。
+
 ## 2026-11-02 · 糯叽机心软判断系统安全移植验收
 
 - 唯一开发分支：`remove-checkphone-vrworld-lifesim`；本轮源码提交：`4c5213e60fe5c048fae704c6c7eaa5bd2cb3d4bc`。没有为开发新建分支或变更 SullyOS 的 master。
