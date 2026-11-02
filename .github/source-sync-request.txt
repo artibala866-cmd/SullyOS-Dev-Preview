@@ -1,4 +1,5 @@
 SullyOS development branch: remove-checkphone-vrworld-lifesim
-Source SHA: aac61188f004bec3f97b91865716527c02708b4e
-Reason: verify the latest real-person M3 subject continuity integration, optional content plan, and chat auto-reply boundaries in the public test site.
-No production deployment and no new development branch.
+Source HEAD at request: 2ff0c34349c9ecf9fa86cc9f3460b68b485476e7
+Reason: publish custom phone wallpaper override and restore the original gray launcher fallback; include the wallpaper preview and upload retry regression.
+Testing: preview workflow includes utils/launcherWallpaper.test.ts before the production Vite build.
+No production deployment or new development branch.
