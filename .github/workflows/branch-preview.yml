@@ -150,6 +150,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Verify custom desktop wallpaper and original gray reset
+        run: pnpm exec vitest run utils/launcherWallpaper.test.ts
+
       - name: Verify Halloween annex is reachable and preserves saved rooms
         run: pnpm exec vitest run apps/room3d/halloweenActivity.test.js utils/room3dHalloweenActivityRoom.test.ts
 
