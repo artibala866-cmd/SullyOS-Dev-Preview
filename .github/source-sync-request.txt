@@ -1,4 +1,4 @@
 SullyOS development branch: remove-checkphone-vrworld-lifesim
-Source SHA: c7f159cb18101793edfca9f52bd3290eff6f39f2
-Reason: final 3D home-only figure cabinet with preserved dream and original visual; run complete CI gates and verify public Pages source SHA.
-Visual proof: https://github.com/artibala866-cmd/SullyOS/actions/runs/41361438798
+Source SHA: 9593742f40d02cd0f77c6fd978e891625576ca97
+Reason: verify private-chat real-person automatic reply continuity, do not interrupt the user's current topic or trigger unrelated character life reports.
+Source changes: scoped to existing user-turn reply and prompt assembly; no production deployment.
