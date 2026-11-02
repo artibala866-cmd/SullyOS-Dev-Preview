@@ -1,6 +1,5 @@
-SullyOS development branch: remove-checkphone-vrworld-lifesim
-Source SHA: ba4a2dee9e096a71635e92eff206ba5d52235532
-Reason: verify truthful role reply rhythms, newer-user-message ownership, and app-card auto reply provenance.
-Scope: existing real-person chat only; GitHub Pages preview is isolated from production.
-
-Scope of this check: cloud replies bound to actual user turns; newer sends invalidate old auto tasks but not manual chat or proactive AMSG; same-millisecond sends retain separate ownership.
+Development source: artibala866-cmd/SullyOS
+Existing branch: remove-checkphone-vrworld-lifesim
+Current source SHA: 690b116970e579933dc7286df343d6c764039971
+Verification scope: actual user-turn ownership for local and cloud automatic replies; cancel older automatic cloud runs when a newer user message is saved; preserve manual cloud chat and proactive AMSG.
+Source CI: https://github.com/artibala866-cmd/SullyOS/actions/runs/41379157179 (240 passing tests, build and targeted TS diagnostics).
