@@ -1,5 +1,4 @@
-Development source: artibala866-cmd/SullyOS
-Existing branch: remove-checkphone-vrworld-lifesim
-Current source SHA: 690b116970e579933dc7286df343d6c764039971
-Verification scope: actual user-turn ownership for local and cloud automatic replies; cancel older automatic cloud runs when a newer user message is saved; preserve manual cloud chat and proactive AMSG.
-Source CI: https://github.com/artibala866-cmd/SullyOS/actions/runs/41379157179 (240 passing tests, build and targeted TS diagnostics).
+Development branch: remove-checkphone-vrworld-lifesim
+Latest source revision: 9d0f7ebfce072987ebc5b68bf2e1ea38628fc54d
+Continuity verification after concurrent real-person topic-boundary commits: cloud automatic user-turn ownership, stale reply cancellation, exact user-burst and AMSG boundaries.
+The preview workflow must verify the public source SHA before concluding.
