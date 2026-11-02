@@ -1,3 +1,5 @@
+本次拉黑深度修复公开站最终同步校验：`b52cd283e0e260b1d7f3dc986d70de924cb4f421`（包含拉黑提交 `be8c26f87c174f814c7485b8ad0edb047e964a56`），其后并行开发窗口增加的真人感节奏与测试一并按现有部署规则构建。实际公开站以 `preview-source.json.sourceCommit` 为准。
+
 ## 2026-11-02 · 双向拉黑深度时序回归与预览同步
 
 - 源码仅在既有开发分支 `remove-checkphone-vrworld-lifesim` 更新，复核目标 `73abe6604840977f0f3836d55acb8dee9eead96b`；没有新建开发分支或修改 SullyOS 主分支。
