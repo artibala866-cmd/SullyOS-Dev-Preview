@@ -1,4 +1,4 @@
 SullyOS development branch: remove-checkphone-vrworld-lifesim
-Source SHA: f9f5b14ca47be60cb35c9b433f3dd855ecada99f
-Reason: verify latest real-person reply provenance, composer edit quiet window, and true response-vs-proactive guard.
-Production untouched; this triggers isolated development preview validation only.
+Source SHA: 73cb47e92930dae923becc827d59c4039e9af390
+Reason: verify live preview for real-person conversation engagement, M3 topic continuity and no mandatory self-report/follow-up.
+The preview checks out the existing source branch and verifies its public source SHA; no new branch or production release.
