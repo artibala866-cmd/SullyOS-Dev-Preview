@@ -1,4 +1,4 @@
 SullyOS development branch: remove-checkphone-vrworld-lifesim
-Source SHA: aac61188f004bec3f97b91865716527c02708b4e
-Reason: verify the latest real-person M3 subject continuity integration, optional content plan, and chat auto-reply boundaries in the public test site.
-No production deployment and no new development branch.
+Source HEAD at request: 3b1e1e4cc697d4c5acf55df2de15a615495e0f6b
+Reason: publish scoped fix removing only home-page-3 duplicated photo album frames and their three appearance controls. Keep home-page-1 filmstrip, home-page-2 Polaroid, saved assets and decorations unchanged.
+No production deployment or new development branch.
