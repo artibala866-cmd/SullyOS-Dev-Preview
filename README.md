@@ -1,3 +1,9 @@
+## 2026-11-04 · 查手机朋友圈封面仅点击展开 · 实机宽度截图验收同步
+
+- 源码唯一开发分支仍为 `remove-checkphone-vrworld-lifesim`，此次交互修复提交 `9a62c43377a549c8479ac967fe548e01189cfd9a`，当前触发时 HEAD 为 `9c29726fa80ff6522fc5b5f9ef01be6cbc7ff5c6`。
+- 进入页面保持折叠封面；仅点击背景才展开，展开后右下角出现“换封面”并调用本地图片选择器；下拉不再拉伸背景，保留朋友圈数据和角色封面持久化。
+- 已添加真实 React 390px 折叠态/点击态 Chrome 截图验收工作流。此 README 变更仅触发独立测试站现有构建，是否上线以公网 preview-source.json 的 sourceCommit 复核为准。
+
 ## 2026-11-04 · 查手机浏览器截图验收后重做搜索卡片
 
 - 源码既有分支 `remove-checkphone-vrworld-lifesim`，预览基准源提交 `eaef833162da928f4252a0ea1372f4bc9f7c5850`。
