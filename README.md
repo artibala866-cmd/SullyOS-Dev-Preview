@@ -1,3 +1,8 @@
+## 2026-11-04 · 朋友圈封面下拉跟手回弹精修 · 最终预览同步
+
+- 新增源码修补 `dd9ff5f94e2189ed6cb5d8723a2f0a8292748df9`（包含此前 `a6bb9bc3affe3f2263cf751dd2bdbd6d4bb88b77` 的封面 UI），修正拖动过程 transition 造成封面跟手滞后的问题。
+- 同步仍使用 SullyOS 既有 `remove-checkphone-vrworld-lifesim` 分支，保留原查手机存储、AI 生图和朋友圈数据逻辑；仅触发当前独立 Pages 测试站构建。实际发布以 `preview-source.json.sourceCommit` 为准。
+
 ## 2026-11-04 · 查手机朋友圈封面展开动画、换封面直达相册 · 测试站同步
 
 - 源码仍位于 `artibala866-cmd/SullyOS` 既有分支 `remove-checkphone-vrworld-lifesim`；本轮源码提交 `a6bb9bc3affe3f2263cf751dd2bdbd6d4bb88b77`。
