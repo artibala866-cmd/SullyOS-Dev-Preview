@@ -1,3 +1,11 @@
+## 2026-11-05 · 宝宝狗重复图标与开屏动画修复
+
+- 源码开发分支 `remove-checkphone-vrworld-lifesim`，同步目标提交 `08be1a8ac4939e92a0b6f0129eb01adbd7d76f2d`，未新建分支。
+- 移除与默认完全相同的「经典图标」选择；旧 `builtin:classic` 存档兼容为默认图标，原有自定义上传功能不变。
+- 更新暖心、夜空开屏为统一的宝宝狗手绘原图，去除旧夜空宇宙粒子与旧 Logo，简化动画、提高标题可读性并保持减少动态效果适配。
+- 已用用户提供的原图检查 390×844、320×568 手机尺寸的静态布局预览；正式 React 截图、构建和测试由 `baby-dog-brand-visual.yml` 工作流验收。
+- 本次 README 更新用于触发独立预览站的即时构建；是否上线仍以公开 `preview-source.json.sourceCommit` 为准。
+
 ## 2026-11-05 · 查手机电量规律模拟修复
 
 - 原开发分支 `remove-checkphone-vrworld-lifesim`，本次发布时源分支 HEAD `fbbe882a14b934e6209685dc04eb339dd82978b1`（含电量算法提交 `904d28264cc56967dd945d06fcee30851ba1f439`）。
