@@ -1,3 +1,10 @@
+## 2026-11-05 · 宝宝狗参考视频开屏：修复重叠眼睛、张嘴、左右翻转
+
+- 源项目现有分支 `remove-checkphone-vrworld-lifesim`，目标构建提交 `5313529bdb626307f3be8c1a1016ba12289b2616`；未建立分支。
+- 严格参照原猫视频 8.18 秒顺序：小到大、左右 dog 字样、Welcome home、原眼眨眼与眯眼/张嘴、左右翻转、恢复；小狗的真实墨线和「100%笨蛋」原字保留，不生成图片。
+- 原画眼睛嘴巴与替换表情互斥显示，胸章文字在左右翻转时保持正向。已通过 Chromium 多阶段逐帧截图与数据就绪/触摸跳过/减少动画检查；兼容旧 warm/classic 外观。
+- 实际发布仍以公开页面的 `preview-source.json.sourceCommit` 与当前开发分支 SHA 匹配为准。
+
 ## 2026-11-05 · 宝宝狗线稿开屏改版（按用户视频尺寸逐帧验收）
 
 - 正式开发来源 `artibala866-cmd/SullyOS` 的现有 `remove-checkphone-vrworld-lifesim` 分支，版本 `5bf56efb186675ccb6016ae5e54a6ee48fbfcf3f`；未新建分支。
