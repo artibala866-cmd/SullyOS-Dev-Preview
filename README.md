@@ -1,3 +1,9 @@
+## 2026-11-04 · 朋友圈封面全屏展开与右下角相册按钮 · 最终测试站发布
+
+- 源码：`artibala866-cmd/SullyOS` 既有 `remove-checkphone-vrworld-lifesim` 分支 `cb92c9d296e4f27c0d4b1a4cd95ebc42c52f6c2d`，包含此前进入时自动展开、下拉跟手拉伸和回弹。
+- 参照实际微信操作视频完善封面点击后二次大幅展开（覆盖屏幕大部分高度），展开后暂时隐藏头像昵称，右下角显示简洁图片图标和「换封面」，点击直接调用系统本地相册选择器；不改原生成与存档。
+- 此 README 更新只触发独立 Pages 工作流；公开上线状态以 GitHub Actions 及线上 `preview-source.json.sourceCommit` 核实。
+
 ## 2026-11-04 · 朋友圈封面下拉跟手回弹精修 · 最终预览同步
 
 - 新增源码修补 `dd9ff5f94e2189ed6cb5d8723a2f0a8292748df9`（包含此前 `a6bb9bc3affe3f2263cf751dd2bdbd6d4bb88b77` 的封面 UI），修正拖动过程 transition 造成封面跟手滞后的问题。
