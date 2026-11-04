@@ -1,3 +1,9 @@
+## 2026-11-04 · 私聊设置标题补充「生图」 · 同步测试站
+
+- 源分支：`remove-checkphone-vrworld-lifesim`，本次改动 `694051a80aa80ff1059bf8364228b4af6ea93faa`，待发布源 HEAD `694051a80aa80ff1059bf8364228b4af6ea93faa`。
+- 私聊设置折叠分组从「翻译与语音」更名为「生图、翻译与语音」，概要同步显示主动生图。
+- 仅更新文案，不改动其他设置或图片生成逻辑；上线以公开站 `preview-source.json.sourceCommit` 为准。
+
 ## 2026-11-04 · 三处主动生图设置 UI 统一 · 请求同步测试站
 
 - 源项目：`artibala866-cmd/SullyOS` 原开发分支 `remove-checkphone-vrworld-lifesim`，本次源码提交 `faf52a9e355b26983c4ad249b886ba42579a2ea9`；触发预览时源分支最新 HEAD `faf52a9e355b26983c4ad249b886ba42579a2ea9`。
