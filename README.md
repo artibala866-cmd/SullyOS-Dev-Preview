@@ -1,3 +1,10 @@
+## 2026-11-04 · 查手机微信支付交易卡片按真实微信样式重制
+
+- 按用户参照图将查手机微信支付服务号从普通消息气泡改为全宽白色支付卡片，包含商家名称、金额、成功状态、已有交易详情和时间；不修改虚构支付来源、金额及存储。特殊样式仅限 `service:微信支付`，不影响其他微信会话。
+- 对齐真实微信灰色聊天背景、顶部图标、时间分组、卡片外边距、底部键盘/账单/支付服务/优惠栏目；原有输入控件可通过底部键盘按钮重新展开，避免功能无故丢失。
+- 已建立 390px React 实际组件 Chromium 截图测试 `tests/wechat-pay-card-visual.*` 与测试工作流，原分支 `remove-checkphone-vrworld-lifesim` 现有 HEAD `8ae750f792c320cd65f5db05f8afd0506bb2d336`。
+- 本次触发独立预览站原有部署流程，上线以公开 `preview-source.json.sourceCommit` 实际核验为准。
+
 ## 2026-11-04 · 查手机微信支付服务号卡片 UI 复刻
 
 - 来源：`artibala866-cmd/SullyOS` 既有 `remove-checkphone-vrworld-lifesim` 分支，部署快照 HEAD `8ae750f792c320cd65f5db05f8afd0506bb2d336`。
