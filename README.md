@@ -1,3 +1,9 @@
+## 2026-11-04 · 查手机朋友圈封面展开动画、换封面直达相册 · 测试站同步
+
+- 源码仍位于 `artibala866-cmd/SullyOS` 既有分支 `remove-checkphone-vrworld-lifesim`；本轮源码提交 `a6bb9bc3affe3f2263cf751dd2bdbd6d4bb88b77`。
+- 查手机朋友圈进入时自动扩展封面、下拉弹性拉伸、右下角轻量「换封面」按钮直接唤起本地相册；保留原独立角色封面保存、恢复默认及长距离下拉刷新。
+- 本次 README 更新仅触发现有独立预览站的发布工作流，不新建分支、不修改正式站。是否发布成功以 GitHub Actions 与公开 `preview-source.json.sourceCommit` 为准。
+
 ## 2026-11-04 · 私聊设置标题补充「生图」 · 同步测试站
 
 - 源分支：`remove-checkphone-vrworld-lifesim`，本次改动 `694051a80aa80ff1059bf8364228b4af6ea93faa`，待发布源 HEAD `694051a80aa80ff1059bf8364228b4af6ea93faa`。
