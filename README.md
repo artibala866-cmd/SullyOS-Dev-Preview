@@ -1,3 +1,9 @@
+## 2026-11-04 · 三处主动生图设置 UI 统一 · 请求同步测试站
+
+- 源项目：`artibala866-cmd/SullyOS` 原开发分支 `remove-checkphone-vrworld-lifesim`，本次源码提交 `faf52a9e355b26983c4ad249b886ba42579a2ea9`；触发预览时源分支最新 HEAD `faf52a9e355b26983c4ad249b886ba42579a2ea9`。
+- 查手机朋友圈的生图权限入口移到查手机设置；群聊生图行对齐输入发送选项（含问号帮助）；私聊生图对齐消息翻译与语音的滑动开关。
+- 本次仅用于触发独立测试站既有发布工作流；是否上线以构建完成及公开 `preview-source.json.sourceCommit` 为准。
+
 ## 2026-11-04 · Spark 自由活动返回键修复 · 触发独立测试站更新
 
 - 来源：SullyOS 原有开发分支 `remove-checkphone-vrworld-lifesim`，源码提交 `975697a837cd0c19100999ec856eccfac3024a5d`。
