@@ -1,3 +1,10 @@
+## 2026-11-05 · 查手机电量规律模拟修复
+
+- 原开发分支 `remove-checkphone-vrworld-lifesim`，本次发布时源分支 HEAD `fbbe882a14b934e6209685dc04eb339dd82978b1`（含电量算法提交 `904d28264cc56967dd945d06fcee30851ba1f439`）。
+- 移除旧的 Math.random 决定电量起始和充电切换造成的跳变，改为稳定角色种子、精确小数电量、时间驱动的白天耗电与 23:00～07:00 规律充电；低电量阶段模拟白天补充充电，离线重开按时间累积。
+- 原 `sully_char_phone_power_v1` 电量存储键兼容保留，不动其他角色或查手机的设置/功能。
+- 新增 `utils/characterPhonePower.test.ts` 检验连续耗电、固定夜充、白天恢复、重复读取、旧数据兼容与角色隔离；专用 CI `character-phone-battery-regression.yml`，公开站以 `preview-source.json.sourceCommit` 为准。
+
 ## 2026-11-04 · 查手机微信个人资料 UI 统一与尾部说明删除
 
 - 本次在既有开发分支 `remove-checkphone-vrworld-lifesim` 修改，发布时源分支 HEAD `8fe260da73bb3b229f05740bab6f699286f52c38`，未新建分支。
