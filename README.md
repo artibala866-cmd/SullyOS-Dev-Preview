@@ -1,3 +1,11 @@
+## 2026-11-05 · 宝宝狗线稿开屏改版（按用户视频尺寸逐帧验收）
+
+- 正式开发来源 `artibala866-cmd/SullyOS` 的现有 `remove-checkphone-vrworld-lifesim` 分支，版本 `5bf56efb186675ccb6016ae5e54a6ee48fbfcf3f`；未新建分支。
+- 使用内置原图逐像素抽取手绘黑色线稿，去掉黄色填色、保留胸前「100%笨蛋」文字和其余轮廓。眼睛和嘴巴替换为同坐标可动的笔画，避免重影；实现眨眼及张嘴。
+- 参考视频：白底、中间线稿从极小平滑放大至宽约 185px；侧边小写 `dog`、下方纤细 `Welcome home.`；不添加其他装饰，不生图。
+- CI [41904705320](https://github.com/artibala866-cmd/SullyOS/actions/runs/41904705320) 已在实际 Chromium 进行入场、开口、结束及 390px / 320px 截图检查，通过正式构建。
+- 独立 GitHub Pages 以公开 `preview-source.json.sourceCommit` 匹配源码版本作为发布完成依据。
+
 ## 2026-11-05 · 同步纯白动态开屏及并行更新到最新测试站
 
 - 本次最终开发来源 `7cf365e03e375eabdbbd9e330a119d2f17747ea8`，包含宝宝狗白底 CSS 跳舞开屏提交 `a42d602f0c1e29072dcc6a854f8fd0d7cc550ec5`，并保留随后其他工作窗口的增量提交；不建立新分支，不覆盖其他人代码。
