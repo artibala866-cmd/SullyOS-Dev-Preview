@@ -90,6 +90,23 @@ jobs:
           from pathlib import Path
           from PIL import Image
 
+          # Recent source versions already include the final branding and both icon sets.
+          # Preserve those assets and cache-busting URLs rather than reapplying the legacy overlay.
+          source_html = Path('index.html').read_text(encoding='utf-8')
+          if '<title>宝宝狗</title>' in source_html:
+              for name in ('manifest.webmanifest', 'manifest-classic.webmanifest'):
+                  manifest = json.loads((Path('public') / name).read_text(encoding='utf-8'))
+                  if manifest.get('name') != '宝宝狗' or not manifest.get('icons'):
+                      raise RuntimeError(f'Incomplete native preview branding: {name}')
+                  for icon in manifest['icons']:
+                      asset = icon['src'].split('?', 1)[0]
+                      if not (Path('public') / asset).is_file():
+                          raise RuntimeError(f'Native preview icon missing: {asset}')
+              if './icons/baby-dog-180.png' not in source_html or not Path('public/icons/baby-dog-180.png').is_file():
+                  raise RuntimeError('Native preview Apple touch icon is missing')
+              print('Using the checked-in 宝宝狗 branding and icon sets.')
+              raise SystemExit(0)
+
           image = Image.open('.preview-branding/branding/baby-dog.webp').convert('RGB')
           icon_dir = Path('public/icons')
           icon_dir.mkdir(parents=True, exist_ok=True)
