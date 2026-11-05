@@ -1,3 +1,11 @@
+## 2026-11-06 · 羁绊商店实体票券所（独立黑白 UI）
+
+- 预览来源仍然是 `artibala866-cmd/SullyOS` 的现有 `remove-checkphone-vrworld-lifesim` 分支；未创建任何开发分支。
+- 商店改为浅灰白实体售票台，票券叠层/切角/撕线/出票口与横向换券动效，避免复用牵绊时光的胶片布局和愿望清单星空。
+- 独立卡包票夹、成功出牌盖章、任务打孔盖章票以及终极大奖封存证书。保留动态积分、角色出牌、兑换扣分、发送失败返还、自订卡编辑、分类、任务与大奖逻辑。
+- 配套 GitHub Actions `couples-ticketshop-visual.yml` 以真实 React 组件构建和 430/320px 手机截图验证，兑换/出牌的实际数据更新有自动断言。
+- 本 README 更新用于触发独立测试站立即检查现有源分支 HEAD；是否发布成功以公开 `preview-source.json.sourceCommit` 和该源码 SHA 完全一致为准。
+
 ## 2026-11-05 · 愿望清单去模板化星空舞台再设计
 
 - 唯一开发来源是 `artibala866-cmd/SullyOS` 的现有 `remove-checkphone-vrworld-lifesim` 分支，未建立新分支。
