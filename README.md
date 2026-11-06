@@ -1,3 +1,10 @@
+## 2026-11-07 · 从 BabyLink 1.1.10 APK 实际导入源码适配
+- 参考用户提供的 APK 构建文件直接分析：StImportUnlockModal、AddFriendPage、WorldBookPage 及 documentText 阅读模块；不分发/嵌入第三方 APK 字节。
+- 在原 remove-checkphone-vrworld-lifesim 分支新增 TXT/GBK/UTF16、DOCX/Word-Rtf 人设文档导入；旧版二进制 DOC 在可靠解析器落地前明确拒绝乱码，避免破坏已存角色。
+- Link 世界书独立 JSON 解析，保留 activation、keywords、enabled、priority、位置与群组，世界书重复正文不会重复保存。旧 Link 多角色包与剧情开场、已有记忆保持原有安全隔离。
+- 外部角色局部正则不再静默丢失：导入预览明确告知执行引擎不等价，不擅自执行外部脚本。
+- 已添加 linkImportDocuments / linkWorldbookImport 专项测试，继续由 GitHub Actions 验证后发布。正式站不变。独立测试站只从原分支最新 HEAD 构建，公开 preview-source.json 版本号为最终发布判据。
+
 ## 2026-11-07 · 见面横屏输入立绘比例稳定性
 
 - 对照 11 秒真实手机录屏，发现横屏输入键盘弹出后立绘显著变小，收起又跳回另一构图。
