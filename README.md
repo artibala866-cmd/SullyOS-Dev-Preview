@@ -1,3 +1,12 @@
+## 2026-11-06 · 酒馆 / Link 卡导入全链路二轮截图及数据保护复查
+
+- 现有源分支：`artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim`，仅在原分支修复，不创建独立分支。
+- 检查真实上传的 PNG 字节结构：CCv3 包含 13 条世界书与 26 条开场白；Link LSB 分享格式包含角色人设而无世界书、无开场白，用户原图不入库也不上传。
+- 真实 React 导入弹窗使用 Chrome DevTools 移动视口捕获 390×844、320×690、844×390 等 Tavern/Link 组合，自动断言模块可选状态、无横向溢出、确认按钮始终可见及勾选联动。
+- 根据第一轮实测截图修复缺省角色头像破图、320px 选择项文字挤压、窄屏说明过长；同时修复世界书同名误覆盖、旧 UID 跨目录误匹配、身份不同角色误合并，以及只导入世界书时改动人物姓名的隐蔽 bug。
+- 「人设／世界书／开场白」三个开关使用白名单控制落库；未勾选不修改该模块，重复内容跳过，禁止从原生卡扩散到本地私密配置。详细测试在 Tavern Character Card Import Regression 与 Character card import real browser screenshots。
+- 触发 Pages 重新检查并部署源分支当前最新 HEAD；公开站 `preview-source.json.sourceCommit` 必须等于构建使用的 commit SHA 才算完成，本说明不作为成功声明。
+
 ## 2026-11-06 · 羁绊商店改造后最终测试站刷新
 
 - 本次真实截图验证源分支：`3f8b906ba537757712d36925944d7c290a1c5b9d`；小屏适配保留所有积分并压缩机械出票台，其他两大场景不受改动。
