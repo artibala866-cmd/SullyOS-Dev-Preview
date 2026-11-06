@@ -179,7 +179,7 @@ jobs:
       # wide composer and stacked two-mode chooser (without a second outer column).
       # It also verifies sent voice reuses the original Char bar appearance.
       - name: Verify private chat voice UI parity, history and Android-safe fallback before publication
-        run: pnpm exec vitest run utils/userVoiceMessage.test.ts utils/userVoiceAudio.test.ts utils/privateChatRecording.test.ts utils/userVoiceMessage.wiring.test.ts utils/chatAutoReply.test.ts utils/chatKeyboardViewport.test.ts utils/emojiImport.test.ts utils/chatInputEmojis.test.ts
+        run: pnpm exec vitest run utils/userVoiceMessage.test.ts utils/userVoiceAudio.test.ts utils/privateChatRecording.test.ts utils/userVoiceMessage.wiring.test.ts utils/chatAutoReply.test.ts utils/chatKeyboardViewport.test.ts utils/emojiImport.test.ts utils/emojiDocumentImport.test.ts utils/pdfText.test.ts utils/chatInputEmojis.test.ts
 
       - name: Test memory palace summary error propagation and API reply compatibility
         run: pnpm exec vitest run utils/memoryPalace/extractionFeatureFlag.test.ts
