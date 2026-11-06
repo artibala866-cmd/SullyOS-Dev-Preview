@@ -1,0 +1,3 @@
+One-time sync request for the existing preview workflow.
+Feature: user-authored story opening saved into reusable character opening choices.
+Source branch: remove-checkphone-vrworld-lifesim.
