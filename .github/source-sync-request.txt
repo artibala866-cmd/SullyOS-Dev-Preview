@@ -1,4 +1,4 @@
 Development branch: remove-checkphone-vrworld-lifesim
-Latest source revision: 9f8eebc1146771def386c79cce7bf2056a371dce
-Update: fully inspected unified Meet background settings with 5 mobile screenshots, actual upload-state regression, stale data protection, direct opening fix and concise Chinese observation heading.
-Deploy current branch and verify public source revision.
+Audited source revision: 722ad18b074e6125984f16225e68bafc3302f3e7
+Change: Meet BGM playback ownership follows encounter ID; changing to manual song is preserved on exit. The real MusicApp BGM tab was Chromium-screenchecked at mobile width: empty, filled, multiple playlists, and create-bind-add sequence. Expanded configuration now appears under the selected playlist; horizontal tab scrollbar and redundant descriptions cleaned.
+Build and verify the public source revision.
