@@ -1,4 +1,4 @@
 Development branch: remove-checkphone-vrworld-lifesim
-Latest source revision: 6558faab6ee3850ce8fec636e107ed604ba34fb8
-Publish the audited five-scene switch fixes including unsupported-tag sanitization, opening selection, and regression checks.
-The preview workflow must verify the public source SHA before concluding.
+Source change included: 1a0b19d7b27f633c548f7bfe58797e01ad1ce49f
+Feature: Dedicated per-character Meet BGM playlists, automatic encounter playback and quiet no-config fallback.
+Sync the current development HEAD and verify the public source revision.
