@@ -1,4 +1,0 @@
-Manual source-sync trigger for the existing independent preview workflow.
-Source: artibala866-cmd/SullyOS branch remove-checkphone-vrworld-lifesim
-Reason: display selected story opening in the existing story-introduction editor.
-The preview workflow independently resolves the latest source commit.
