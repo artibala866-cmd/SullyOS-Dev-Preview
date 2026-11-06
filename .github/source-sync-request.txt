@@ -7,3 +7,4 @@ Verify PUBLIC source revision after deploy.
 2026-11-06: Publish latest story SillyTavern preset importer from remove-checkphone-vrworld-lifesim at fa1909554aaefb0ae3e371f2f06023fd021546eb. Source auto-resolved and verified by the Pages workflow.
 2026-11-07: Re-publish audited Tavern story preset importer at 485814797175b4d4af9623a6b732873cda6c3061 (mobile UI panel cleanup, macro-safe import, system-message squash, regression screenshots).
 2026-11-07: Publish Tavern story importer runtime compatibility (live char/user macro binding, setvar-rich rules, thinking/content/details preservation), with original story UI and existing branch.
+2026-11-07: Deploy final Tavern macro and thinking preservation audit from SullyOS dev branch at 228c965d8854e9274ca3736408b60ee99e2a4e52; preserve full thinking and dynamic char/user resolution.
