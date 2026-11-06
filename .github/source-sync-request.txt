@@ -1,4 +1,4 @@
 Development branch: remove-checkphone-vrworld-lifesim
-Latest source revision: e9a9e77d3a5a4bc9b2927f26af40194450cb8b26
-Publish audited Meet settings: consolidated default and scene backgrounds, concurrent-save protection, direct-visit blank opening, hidden sensing control tags, mobile removal hit targets, and real-component screenshot tests.
-Verify the public source revision after deployment.
+Latest source revision: 9f8eebc1146771def386c79cce7bf2056a371dce
+Update: fully inspected unified Meet background settings with 5 mobile screenshots, actual upload-state regression, stale data protection, direct opening fix and concise Chinese observation heading.
+Deploy current branch and verify public source revision.
