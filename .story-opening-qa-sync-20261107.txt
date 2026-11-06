@@ -1,2 +1,0 @@
-Temporary sync trigger for latest SullyOS source branch remove-checkphone-vrworld-lifesim.
-Verification: user-authored story opening bookmark, restore, and archive compatibility.
