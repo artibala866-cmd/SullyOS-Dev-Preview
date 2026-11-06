@@ -1,4 +1,4 @@
 Development branch: remove-checkphone-vrworld-lifesim
-Latest source revision: 9d0f7ebfce072987ebc5b68bf2e1ea38628fc54d
-Continuity verification after concurrent real-person topic-boundary commits: cloud automatic user-turn ownership, stale reply cancellation, exact user-burst and AMSG boundaries.
+Latest source revision: 9fe114f0d6854333e0a97bce1bf8f9d1c00b5183
+Publish the new DateApp five-scene background configuration (outdoor, bedroom, bathroom, kitchen, work) to the existing SullyOS-Dev-Preview test site.
 The preview workflow must verify the public source SHA before concluding.
