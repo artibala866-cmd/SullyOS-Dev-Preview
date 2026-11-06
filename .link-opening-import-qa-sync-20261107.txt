@@ -1,0 +1,4 @@
+One-time request to sync the existing SullyOS development source branch.
+Source branch: remove-checkphone-vrworld-lifesim
+Target feature: Link native opening imports, ID preservation, Story editor compatibility.
+Source snapshot when requested: e64089dd43bb62033623a0e984bb3b81206db428
