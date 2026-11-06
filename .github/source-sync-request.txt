@@ -1,4 +1,4 @@
 Development branch: remove-checkphone-vrworld-lifesim
-Latest source revision: 9fe114f0d6854333e0a97bce1bf8f9d1c00b5183
-Publish the new DateApp five-scene background configuration (outdoor, bedroom, bathroom, kitchen, work) to the existing SullyOS-Dev-Preview test site.
+Latest source revision: 60837de3da3bb0c82fe3165e02c1ece039d6b2a1
+Publish verified DateApp scene fixes: initial encounter switching, blob background guard coverage, and scene playback regression tests.
 The preview workflow must verify the public source SHA before concluding.
