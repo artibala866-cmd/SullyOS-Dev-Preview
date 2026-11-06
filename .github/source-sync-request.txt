@@ -1,4 +1,4 @@
 Development branch: remove-checkphone-vrworld-lifesim
-Latest source revision: 60837de3da3bb0c82fe3165e02c1ece039d6b2a1
-Publish verified DateApp scene fixes: initial encounter switching, blob background guard coverage, and scene playback regression tests.
+Latest source revision: 6558faab6ee3850ce8fec636e107ed604ba34fb8
+Publish the audited five-scene switch fixes including unsupported-tag sanitization, opening selection, and regression checks.
 The preview workflow must verify the public source SHA before concluding.
