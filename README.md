@@ -1,3 +1,11 @@
+## 2026-11-06 · 见面横竖屏立绘与输入区自适应
+
+- 修复见面立绘模式：横屏小高度使用人物靠左、台词与输入靠右的紧凑布局，避免人物头部被裁、台词框抢占画面。
+- 竖屏的台词与输入区分离，开启输入时自动压缩文字区域；结合 visualViewport 避让 Android 软键盘。展开菜单时只让选项滚动，保留顶部按钮。
+- 场景设置的立绘预览改为匹配手机横竖屏比例，放大立绘与会话共享定位与顶部锚点，尽量防止头部越出屏幕。
+- GitHub Actions 见面回归 `42180878806` 通过：目标 TypeScript、Vitest、Vite 构建，以及 Chromium 横屏两尺寸与竖屏输入、键盘模拟、放大立绘的实际截图检查。
+- 源码始终在既有 `remove-checkphone-vrworld-lifesim` 分支，本次修复提交为 `37d0b0d2cd03d07c7071ca363ffd62b326d1910e`，部署检查时源分支 HEAD 为 `308a1cf444c5cf8bf21ca8a35a6f291781b81648`。
+- 本 README 的变更只触发独立预览站检查并部署最新源码，是否真正上线以公开 `preview-source.json.sourceCommit` 和 Pages 工作流成功状态为准；不影响正式站。
 ## 2026-11-06 · 羁绊商店实体票券所（独立黑白 UI）
 
 - 预览来源仍然是 `artibala866-cmd/SullyOS` 的现有 `remove-checkphone-vrworld-lifesim` 分支；未创建任何开发分支。
