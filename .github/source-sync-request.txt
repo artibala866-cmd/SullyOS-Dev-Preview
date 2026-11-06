@@ -1,4 +1,4 @@
 Development branch: remove-checkphone-vrworld-lifesim
-Source change included: 1a0b19d7b27f633c548f7bfe58797e01ad1ce49f
-Feature: Dedicated per-character Meet BGM playlists, automatic encounter playback and quiet no-config fallback.
-Sync the current development HEAD and verify the public source revision.
+Update source revision: 07b86c70730da0bae1858a3ff69bb0d83e70d80d
+Requested change: collapse duplicate default/background setup into one six-slot Meet scene grid, preserve existing default and per-scene images, remove English and redundant explanations; retain sprite URL entry within sprite section.
+Verify the public site source revision before completion.
