@@ -1,3 +1,3 @@
 Preview rebuild requested for SullyOS/remove-checkphone-vrworld-lifesim
-Minimum source revision: d96d69eaa2cc55af1d902dd725b2aa34e8e3b606
-Reason: baby-dog splash tempo and textured expression QA
+Minimum source revision: 27b401867d42e8337a046114445a076c2e4d870d
+Reason: restore original baby-dog opening in full; discard unauthorized redesigned animation
