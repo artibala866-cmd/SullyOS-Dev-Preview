@@ -1,4 +1,4 @@
 Development branch: remove-checkphone-vrworld-lifesim
-Update source revision: 07b86c70730da0bae1858a3ff69bb0d83e70d80d
-Requested change: collapse duplicate default/background setup into one six-slot Meet scene grid, preserve existing default and per-scene images, remove English and redundant explanations; retain sprite URL entry within sprite section.
-Verify the public site source revision before completion.
+Latest source revision: e9a9e77d3a5a4bc9b2927f26af40194450cb8b26
+Publish audited Meet settings: consolidated default and scene backgrounds, concurrent-save protection, direct-visit blank opening, hidden sensing control tags, mobile removal hit targets, and real-component screenshot tests.
+Verify the public source revision after deployment.
