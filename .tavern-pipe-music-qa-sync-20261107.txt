@@ -1,3 +1,0 @@
-One-off source sync request for existing development branch remove-checkphone-vrworld-lifesim.
-Fix generic, structured multiline 【media|...|https://...mp3|】 and its paired bracket variants.
-Source commit: 0578cb48a6c18d3882b3e2c3530d428aef163e4a
