@@ -1,3 +1,12 @@
+## 2026-11-07 · TXT / Word / PDF 导入兼容 + 个人档案文件入口
+
+- 来源主分支：`artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim`；本轮同步目标源 HEAD：`9c4530e3fd09020d37c2d5e0f6c476bdc362a836`。
+- 角色人设、世界书、用户个人档案统一文本提取；DOCX 与常见 TXT 编码保持兼容，PDF 使用站点内置 PDF.js/Worker 按页读取。
+- 防止 PDF 过页数截断、超过字符上限、损坏或伪装文件，以及扫描 PDF 无文字时误报成功；旧二进制 DOC 明确提示需转换。
+- 个人档案原有设计中增加小型导入按钮；导入预览提供追加/替换且默认追加，重复内容不叠加，保存操作阻止并发切换身份。
+- 20 个测试文件 / 294 项测试、TypeScript 专项检查与生产构建通过；真实 Chromium 浏览器对 PDF 人设/世界书与个人档案按钮进行 320px、390px、横屏截图验收；修正确认按钮不可见的样式缺陷。
+- 不新建开发分支，不修改正式站。仅当公开 `preview-source.json.sourceCommit` 与当前源 HEAD 匹配，才算发布同步成功。
+
 ## 2026-11-07 · 最终源码同步：角色卡备注字段与误匹配深度复测
 
 - 本次最终源码 SHA `5d8fe076aa36372f639ea5b2b312e49acc3dd32e`（来源 `SullyOS@remove-checkphone-vrworld-lifesim`）。
