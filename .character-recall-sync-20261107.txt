@@ -1,0 +1,4 @@
+Trigger independently built SullyOS-Dev-Preview publishing for character message recall.
+Source branch: artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim
+Source commit with actual MessageItem screenshot regression: 9c4530e3fd09020d37c2d5e0f6c476bdc362a836
+This marker changes only the preview publisher's metadata; the workflow checks out the latest source commit for the page.
