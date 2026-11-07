@@ -1,0 +1,3 @@
+Requested source branch: remove-checkphone-vrworld-lifesim
+Story history fix source commit: eaaed7fb3baffb25cda597ff25135a3b80069629
+Preview deployment is performed by branch-preview.yml; this marker triggers the existing workflow without changing app files.
