@@ -1,0 +1,6 @@
+Deploy latest dev branch including story opening TXT/DOCX multi-file import and natural filename sorting.
+Source repo: artibala866-cmd/SullyOS
+Source branch: remove-checkphone-vrworld-lifesim
+Feature commit: 6941e117bea7f07e40b64891db37f8e5bd68b1df
+Mobile actual editor screenshots: 320x844 and 390x844, verified TXT and DOCX multi-selection and natural 1,2,10 ordering.
+Dedicated GitHub Actions regression: 42360308137 SUCCESS.
