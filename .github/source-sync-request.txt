@@ -26,3 +26,4 @@ Verify PUBLIC source revision after deploy.
 2026-11-07: five supplied Tavern preset formats checked, CSS and safe HTML fallback fixed, legacy preset-switch protected; latest successful 4-dialect Chromium screenshot verified. Sync latest source 1484299b98867303dfa0aa9bd7ac83d6af95ed43.
 2026-11-07: Tavern preset 373-row professional editor auto-categories from explicit author dividers, mobile search/quick edit, no prompt mutations, screenshots and regression. Source fa672b8edd244af104672412f2f926b96cb6c4da.
 2026-11-07: final safe Tavern preset auto-browse groups, fast prompt search/direct edit, native UI untouched; 373-prompt regression and mobile screenshots. Source f50b6ee65ad33f6e2f839ec7e24a3956c67817ef.
+2026-11-07: final screenshot cleanup: hide empty "move to group" selector on derived Tavern categories; audited 373-row direct editing and native UI preserved. Source 38953a74d2e5b28f215d5efc1512ab14bcec266a.
