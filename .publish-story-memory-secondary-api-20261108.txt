@@ -1,0 +1,6 @@
+糯米机剧情独立记忆副 API，本次测试站同步：
+源码分支 remove-checkphone-vrworld-lifesim，不新建分支。
+功能含：剧情设置 03 / Memory 区域副 API；API 预设读取、当前故事独立快照、事件盒总结、重新总结、独立向量提取、转角色记忆、剧情真实陪伴记忆提取。主剧情正文及其他 App API 保持独立。副 API 异常不静默回退昂贵主 API。
+最后用户可见更正提交：9c15b1709ca92428488937804b411f732dbbf63e。
+专项测试：Story memory-only secondary API QA，Chromium 7 场景真实组件截图。
+由现有 branch-preview.yml 拉取最新源码及通过原有门禁后部署，最终以公开 preview-source.json 为准。
