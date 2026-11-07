@@ -6,3 +6,5 @@
 
 此文件仅触发已存在的 branch-preview.yml 发布流程。工作流会在实际运行时拉取开发分支的最新 HEAD、执行原有回归及构建并写出 preview-source.json。没有新建分支、没有更改正式站或部署配置。
 必须以最终线上 preview-source.json.sourceCommit 及独立 Pages 工作流的公开站点核验成功为发布依据。
+
+终检修复：手机截图发现列表某一行会被 flex 压缩截断，已在原源分支提交 d20d62dcdcc25f20f33bfd1941743409889329a3。请下一轮部署采用当前源 HEAD（至少包含该提交），并在公开 preview-source.json 校验。
