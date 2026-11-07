@@ -1,6 +1,5 @@
-Non-obstructing Story Theater reader final audit.
-Source: artibala866-cmd/SullyOS
+Non-obstructing Story Theater reader verified screenshot build.
+Source repo: artibala866-cmd/SullyOS
 Existing branch: remove-checkphone-vrworld-lifesim
-Source commit: fd3e844ede7ddc1b6f46ba89a4353e164b48f84e
-Inline header floor counter and quick preset, archive-preserving scroll, late-font bottom anchoring, expanded-header alignment.
-Run UI regression, CJK screenshots and public revision verification.
+Expected commit: 0babdf4061de15f13117ced53f7a48ff63f91dbb
+Floor indicator and quick preset docked into header; latest navigation limited to scroll container; realistic screenshot fixtures use real header button after font loading.
