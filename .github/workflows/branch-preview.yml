@@ -272,7 +272,7 @@ jobs:
           done
           if [ "$ready" != true ]; then cat /tmp/story-import-vite.log; exit 1; fi
           browser="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
-          for focus in search preset; do
+          for focus in search preset single; do
             "$browser" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --no-first-run \
               --window-size=390,844 --virtual-time-budget=30000 \
               --dump-dom "http://127.0.0.1:5179/story-import-ux-visual.html?focus=${focus}" > "/tmp/story-import-ux-${focus}.html"
