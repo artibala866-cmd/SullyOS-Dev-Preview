@@ -1,4 +1,7 @@
-Source branch: remove-checkphone-vrworld-lifesim
-Expected source head: 57b8227c77581546588e99891f7a81c41443d198
-Continuous scroll floor progress synced after font loading and content reflow.
-Run full screenshot and publication verification.
+Story reader visual polish and regression audit
+Source: artibala866-cmd/SullyOS
+Existing branch: remove-checkphone-vrworld-lifesim
+Expected source head: b839d326964556ea8cd00a40d2e984cb71711166
+Move reading floor progress and quick preset from floating overlays into header.
+Preserve reader location while expanding archived floors; constrain jump-to-latest to reading scroll container.
+Verify full tests and all four real-component mobile screenshots before publication.
