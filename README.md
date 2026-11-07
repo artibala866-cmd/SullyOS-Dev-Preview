@@ -1,3 +1,12 @@
+## 2026-11-07 · 见面横竖屏立绘配置独立保存
+
+- 根据用户的真实手机录屏，定位竖屏上下 -10% 在横屏因舞台比例、顶部锚点不同导致错位的原因。
+- 保留角色已有竖屏 `spriteConfig`；新增独立横屏 `spriteConfigLandscape`，旧角色默认保留原放大倍率但使用中性水平/垂直偏移，避免强行套用竖屏位移。
+- 见面设置加入竖屏/横屏预览切换，两套大小、左右、上下滑杆独立保存；旋转屏幕后自动使用对应设置，阅读模式与输入键盘逻辑不改。
+- 补齐独立横屏位置的仅媒体备份导出/恢复兼容，避免备份重进丢失。
+- 新增真实 DateSettings/DateSession React 浏览器回归：原角色旧数据、竖屏 -10%、横屏单独位置、保存重进、放大、手机多尺寸及实际截图。
+- 本次构建只读取 SullyOS 原开发分支 `remove-checkphone-vrworld-lifesim`，部署触发时源 HEAD 为 `e90fedab115aa54b477bd0b4d2aa5fccdb3df3df`；最终发布以线上 `preview-source.json.sourceCommit` 与构建公开校验通过为准。
+
 ## 2026-11-07 · BabyLink 导入全链路终检 / 公开站最新源代码同步
 
 - 源分支 `remove-checkphone-vrworld-lifesim` 最新验收 SHA：`356984754e48278214ffb832f14c5186de5deef9`。
