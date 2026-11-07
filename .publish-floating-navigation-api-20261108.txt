@@ -1,0 +1,8 @@
+独立测试站同步触发 · 糯米机 iOS 风格悬浮导航 / 原界面快捷切换 API
+
+源仓库：artibala866-cmd/SullyOS
+原有开发分支：remove-checkphone-vrworld-lifesim
+本次悬浮窗样式及截图验收更新源 SHA：b78935977a7fa4f7679a950dd1dcf49f2c655345
+
+此文件仅触发已存在的 branch-preview.yml 发布流程。工作流会在实际运行时拉取开发分支的最新 HEAD、执行原有回归及构建并写出 preview-source.json。没有新建分支、没有更改正式站或部署配置。
+必须以最终线上 preview-source.json.sourceCommit 及独立 Pages 工作流的公开站点核验成功为发布依据。
