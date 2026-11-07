@@ -1,3 +1,10 @@
+## 2026-11-07 · BabyLink 1.1.10 文档导入与世界书二轮最终测试站同步
+
+- 本轮已按 APK 原始 JS 导入逻辑适配 TXT、DOCX 人设文档、Link 世界书 JSON、与原角色增量导入兼容；不执行未适配的角色局部正则脚本。
+- 世界书与文档新增单元回归通过；`Tavern Character Card Import Regression` 本轮完成过生产构建。
+- 实际 React 导入确认弹窗视觉验收：`Character card import real browser screenshots` 运行 `42315653638`，10 个模拟场景全部通过，含 Link / Tavern / TXT 人设及 320px、390px 与横屏视口。
+- 上一次成功预览站部署的源码版本较旧，此 README 更新只用于让独立预览站从现有开发分支最新 HEAD 重建；公开 `preview-source.json.sourceCommit` 须与源 HEAD 匹配。禁止新建 Git 分支，正式站不受影响。
+
 ## 2026-11-07 · 从 BabyLink 1.1.10 APK 实际导入源码适配
 - 参考用户提供的 APK 构建文件直接分析：StImportUnlockModal、AddFriendPage、WorldBookPage 及 documentText 阅读模块；不分发/嵌入第三方 APK 字节。
 - 在原 remove-checkphone-vrworld-lifesim 分支新增 TXT/GBK/UTF16、DOCX/Word-Rtf 人设文档导入；旧版二进制 DOC 在可靠解析器落地前明确拒绝乱码，避免破坏已存角色。
