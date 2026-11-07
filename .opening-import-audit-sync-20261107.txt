@@ -1,0 +1,3 @@
+One-time preview source refresh for audited existing branch remove-checkphone-vrworld-lifesim.
+Audit: preserve story greeting IDs during reorder, repeated same-title imports and handmade scene merges; verify card import and story editor mobile layouts.
+Source snapshot at trigger: 235d4a7494693d38e329efa5eab55b888b44041d.
