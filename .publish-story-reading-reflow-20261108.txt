@@ -1,5 +1,5 @@
-Non-obstructing Story Theater reader verified screenshot build.
-Source repo: artibala866-cmd/SullyOS
-Existing branch: remove-checkphone-vrworld-lifesim
-Expected commit: 0babdf4061de15f13117ced53f7a48ff63f91dbb
-Floor indicator and quick preset docked into header; latest navigation limited to scroll container; realistic screenshot fixtures use real header button after font loading.
+Story import and extended reading user-path audit
+Original branch: remove-checkphone-vrworld-lifesim
+Source head: b306cc7579ca6d09e4741a363582dca81c0d1aef
+Check batch preset selection/locking; 40-opening search and TXT/DOCX duplicates; long opener warning and archived history behavior.
+Exercise real mobile import workflows and 120-floor reading with screenshots; publish only on passing verification.
