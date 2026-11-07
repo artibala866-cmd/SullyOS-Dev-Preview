@@ -185,7 +185,7 @@ jobs:
         run: pnpm exec vitest run utils/memoryPalace/extractionFeatureFlag.test.ts
 
       - name: Verify imported SillyTavern presets before publishing
-        run: pnpm exec vitest run utils/storyTheaterHtml.test.ts utils/storyTheaterHtmlUI.test.tsx utils/storyTheaterRealDialectAudit.test.ts utils/storyTavernCategories.test.ts utils/storySillyTavernImport.test.ts utils/storyTavernAuthorSections.test.ts utils/storyQuickPresetPanel.test.tsx utils/storyPresetImportAudit.test.ts utils/storyPresetImportUi.test.tsx utils/storyTheater.test.ts utils/storyReadingScroll.wiring.test.ts
+        run: pnpm exec vitest run utils/storyTheaterHtml.test.ts utils/storyTheaterHtmlUI.test.tsx utils/storyTheaterRealDialectAudit.test.ts utils/storyTavernCategories.test.ts utils/storySillyTavernImport.test.ts utils/storyTavernAuthorSections.test.ts utils/storyQuickPresetPanel.test.tsx utils/storyPresetImportAudit.test.ts utils/storyPresetImportUi.test.tsx utils/storyTheater.test.ts utils/storyReadingScroll.wiring.test.ts utils/storyOpeningDocumentImport.test.ts utils/storyImportExperience.wiring.test.ts
 
       - name: Check story import TypeScript diagnostics
         shell: bash
@@ -244,6 +244,43 @@ jobs:
             }
             grep -q 'data-story-floor="26"' "/tmp/story-reading-${mode}-${focus}.html"
           done
+      - name: Exercise imported story setup in real mobile browser
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/story-import-ux-shots
+          pnpm exec vite --host 127.0.0.1 --port 5179 --strictPort > /tmp/story-import-vite.log 2>&1 &
+          pid="$!"
+          trap 'kill "$pid" 2>/dev/null || true' EXIT
+          ready=false
+          for attempt in $(seq 1 45); do
+            if curl -fsS http://127.0.0.1:5179/story-import-ux-visual.html > /dev/null; then ready=true; break; fi
+            sleep 1
+          done
+          if [ "$ready" != true ]; then cat /tmp/story-import-vite.log; exit 1; fi
+          browser="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          for focus in search preset; do
+            "$browser" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --no-first-run \
+              --window-size=390,844 --virtual-time-budget=9000 \
+              --dump-dom "http://127.0.0.1:5179/story-import-ux-visual.html?focus=${focus}" > "/tmp/story-import-ux-${focus}.html"
+            grep -q 'data-story-import-ux-ready="true"' "/tmp/story-import-ux-${focus}.html" || {
+              echo "Import UX failed: ${focus}"
+              grep -o '<output[^>]*>[^<]*</output>' "/tmp/story-import-ux-${focus}.html" || true
+              grep -o 'data-story-import-ux-error="[^"]*"' "/tmp/story-import-ux-${focus}.html" || true
+              exit 1
+            }
+            "$browser" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --no-first-run \
+              --window-size=390,844 --virtual-time-budget=9000 \
+              --screenshot="/tmp/story-import-ux-shots/import-${focus}.png" \
+              "http://127.0.0.1:5179/story-import-ux-visual.html?focus=${focus}"
+          done
+      - name: Upload story import UX screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: story-import-ux-mobile
+          path: /tmp/story-import-ux-shots/*.png
+          retention-days: 5
+
       - name: Upload real story reading screenshots
         uses: actions/upload-artifact@v4
         with:
