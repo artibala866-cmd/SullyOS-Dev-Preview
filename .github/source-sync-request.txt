@@ -21,3 +21,4 @@ Verify PUBLIC source revision after deploy.
 2026-11-07: full five-user-Tavern-preset theater audit, scoped HTML safety, real Ako [Header] display adapter, independent Episode/draft/microlist, CSS separation, regression and mobile screenshots. Source 682b2f54756c0de3e6ac72fbfc4589e8dbc0f1ac.
 2026-11-07: final screenshot-led fix for Pluto/Mur empty collapsed theater height, safe HTML attribution and five preset dialect regression; publish verified source 10bf186d40efd12af76234811b261e3a391eabcb.
 2026-11-07: post-audit legacy message source detection when switching story presets, safe five-dialect renderers and compact appendix screenshot fix; publish source 7531cb73f1721c54468a0051237480740bb1e0ce.
+2026-11-07: final UI wording correction without new controls, safe-html theater mini-card and old-message preset switch compatibility. Source 91096e777e0e066f61dee64a00f4b188fd3b526c.
