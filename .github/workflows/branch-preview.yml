@@ -230,7 +230,20 @@ jobs:
               --screenshot="/tmp/story-mobile-shots/story-${mode}-${focus}.png" \
               "http://127.0.0.1:5178/story-reading-scroll-visual.html?mode=${mode}&focus=${focus}"
           done
-          test "$(find /tmp/story-mobile-shots -name '*.png' | wc -l)" -eq 4
+          "$browser" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --no-first-run \
+            --window-size=390,844 --virtual-time-budget=11000 \
+            --screenshot="/tmp/story-mobile-shots/story-novel-120-floors.png" \
+            "http://127.0.0.1:5178/story-reading-scroll-visual.html?mode=novel&focus=middle&count=120"
+          test "$(find /tmp/story-mobile-shots -name '*.png' | wc -l)" -eq 5
+          "$browser" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --no-first-run \
+            --window-size=390,844 --virtual-time-budget=11000 --dump-dom \
+            "http://127.0.0.1:5178/story-reading-scroll-visual.html?mode=novel&focus=middle&count=120" > /tmp/story-reading-120-floors.html
+          grep -q 'data-story-scroll-ready="true"' /tmp/story-reading-120-floors.html || {
+            echo 'Long running 120-floor story scroll failed'
+            grep -o '<output[^>]*>[^<]*</output>' /tmp/story-reading-120-floors.html || true
+            exit 1
+          }
+          grep -q 'data-story-floor="120"' /tmp/story-reading-120-floors.html
           for item in "novel:top" "novel:middle" "novel:latest" "dark:middle"; do
             mode="${item%%:*}"
             focus="${item##*:}"
