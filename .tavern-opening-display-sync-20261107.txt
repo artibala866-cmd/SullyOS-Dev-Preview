@@ -1,0 +1,2 @@
+One-time preview sync for existing SullyOS source branch remove-checkphone-vrworld-lifesim.
+Feature: author request markers and HTML/CSS styling separated from real Tavern story opening prose; source remains intact; original Link and handmade openings remain unchanged.
