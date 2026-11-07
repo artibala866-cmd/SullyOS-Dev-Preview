@@ -1,0 +1,4 @@
+Source: artibala866-cmd/SullyOS
+Branch: remove-checkphone-vrworld-lifesim
+Continuous reading and sync floor progress commit: fa35abf5d506750a891974b74dc3ebba9ad7f357
+Run browser screenshot tests and verify public preview commit.
