@@ -280,6 +280,11 @@ jobs:
               echo "Import UX failed: ${focus}"
               grep -o '<output[^>]*>[^<]*</output>' "/tmp/story-import-ux-${focus}.html" || true
               grep -o 'data-story-import-ux-error="[^"]*"' "/tmp/story-import-ux-${focus}.html" || true
+              grep -o '<vite-error-overlay[^>]*>' "/tmp/story-import-ux-${focus}.html" || true
+              echo '--- browser DOM tail ---'
+              tail -c 2500 "/tmp/story-import-ux-${focus}.html" || true
+              echo '--- Vite error log ---'
+              tail -n 80 /tmp/story-import-vite.log || true
               exit 1
             }
             "$browser" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --no-first-run \
