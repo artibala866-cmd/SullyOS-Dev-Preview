@@ -1,3 +1,13 @@
+## 2026-11-07 · TXT / Word / PDF 深度回归后的公开测试站同步
+
+- 当前源：`artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim`，最后核对源提交 `2f30e87b1f722da3358907824fdc7105ce780845`。
+- 用户档案：实际 IndexedDB 验证追加、替换、重复跳过、取消、保存失败恢复、身份切换保护、页面刷新后读取、保留用户手写缩进及生图/分角色头像等独立资料。
+- 角色人设：TXT/DOCX/PDF 格式不串入神经链接备注，增量更新会保护本地手动修改过的人设；旧版不确定来源不自动覆盖。
+- 世界书：来源文件的更新保留原记录 ID，严格识别旧数据，避免同名文档误覆盖；Link JSON+TXT+PDF+DOCX 一批导入后，损坏 Word 的另一批不会导致部分保存。
+- Word RTF：修复 GBK 中文转义字节被静默删除，剔除字体表和颜色表。旧二进制 DOC、扫描型 PDF、超长文档返回清晰失败提示，绝不假装成功。
+- 真实 React Chromium 视觉检查包括 320px、390px、横屏及明确的确认/选中态；没有新增无关卡片说明或额外功能页。
+- 仅在既有分支提交，不创建独立分支，不触碰正式站；以公开 `preview-source.json.sourceCommit` 对齐实际源码为准。
+
 ## 2026-11-07 · PDF / Word / TXT 全链路复核后再同步
 
 - 核对源分支 `artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim`，此次同步目标源提交 `ce1e1bcdbc41fd7d04c7da4c7f715df65457db4d`。
