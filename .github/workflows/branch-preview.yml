@@ -198,6 +198,12 @@ jobs:
           fi
           echo 'Story preset importer TypeScript diagnostics clean.'
 
+      - name: Install Chinese fonts for accurate text snapshots
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-noto-cjk
+          fc-list :lang=zh family | head -n 5
+
       - name: Capture real story session mobile screenshots
         shell: bash
         run: |
@@ -225,6 +231,11 @@ jobs:
               "http://127.0.0.1:5178/story-reading-scroll-visual.html?mode=${mode}&focus=${focus}"
           done
           test "$(find /tmp/story-mobile-shots -name '*.png' | wc -l)" -eq 4
+          "$browser" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --no-first-run \
+            --window-size=390,844 --virtual-time-budget=6500 --dump-dom \
+            "http://127.0.0.1:5178/story-reading-scroll-visual.html?mode=novel&focus=middle" > /tmp/story-reading-dom.html
+          grep -q 'data-story-scroll-ready="true"' /tmp/story-reading-dom.html
+          grep -q 'data-story-floor="26"' /tmp/story-reading-dom.html
       - name: Upload real story reading screenshots
         uses: actions/upload-artifact@v4
         with:
