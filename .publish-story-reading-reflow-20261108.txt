@@ -1,5 +1,6 @@
-Story import and extended reading user-path audit
-Original branch: remove-checkphone-vrworld-lifesim
-Source head: b306cc7579ca6d09e4741a363582dca81c0d1aef
-Check batch preset selection/locking; 40-opening search and TXT/DOCX duplicates; long opener warning and archived history behavior.
-Exercise real mobile import workflows and 120-floor reading with screenshots; publish only on passing verification.
+Story user-flow QA: opening and preset import; long continuous reading.
+Source: artibala866-cmd/SullyOS
+Existing branch: remove-checkphone-vrworld-lifesim
+Expected source head: b15604932124a20f60ba42d9a2965c00d6908afa
+Case coverage: bulk preset selection, 39 opening search, duplicate docs, locked concurrent imports, 120 floors, safe mirror edits, shared-preset deletion, screenshots.
+Deploy to latest public SullyOS-Dev-Preview only when all checks succeed.
