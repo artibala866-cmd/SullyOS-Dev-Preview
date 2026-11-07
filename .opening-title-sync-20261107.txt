@@ -1,0 +1,2 @@
+Request refresh of existing SullyOS preview from existing source branch remove-checkphone-vrworld-lifesim.
+Feature: story opening title automatically fills new story name; manual names remain unchanged.
