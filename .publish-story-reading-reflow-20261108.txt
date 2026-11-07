@@ -1,6 +1,6 @@
-Story reader final overlay fix
+Non-obstructing Story Theater reader final audit.
 Source: artibala866-cmd/SullyOS
-Branch: remove-checkphone-vrworld-lifesim
-Expected head: 32ff020c02a3b5b71a5c5a83a9254095b7c70d48
-Header-integrated floor progress + quick preset; corrected scroll isolation, archive anchoring and delayed font reflow.
-Capture and validate top, middle, latest, dark real-component mobile screenshots before publishing.
+Existing branch: remove-checkphone-vrworld-lifesim
+Source commit: fd3e844ede7ddc1b6f46ba89a4353e164b48f84e
+Inline header floor counter and quick preset, archive-preserving scroll, late-font bottom anchoring, expanded-header alignment.
+Run UI regression, CJK screenshots and public revision verification.
