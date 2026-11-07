@@ -185,7 +185,7 @@ jobs:
         run: pnpm exec vitest run utils/memoryPalace/extractionFeatureFlag.test.ts
 
       - name: Verify imported SillyTavern presets before publishing
-        run: pnpm exec vitest run utils/storyTheaterHtml.test.ts utils/storyTheaterHtmlUI.test.tsx utils/storyTheaterRealDialectAudit.test.ts utils/storyTavernCategories.test.ts utils/storySillyTavernImport.test.ts utils/storyTavernAuthorSections.test.ts utils/storyQuickPresetPanel.test.tsx utils/storyPresetImportAudit.test.ts utils/storyPresetImportUi.test.tsx utils/storyTheater.test.ts
+        run: pnpm exec vitest run utils/storyTheaterHtml.test.ts utils/storyTheaterHtmlUI.test.tsx utils/storyTheaterRealDialectAudit.test.ts utils/storyTavernCategories.test.ts utils/storySillyTavernImport.test.ts utils/storyTavernAuthorSections.test.ts utils/storyQuickPresetPanel.test.tsx utils/storyPresetImportAudit.test.ts utils/storyPresetImportUi.test.tsx utils/storyTheater.test.ts utils/storyReadingScroll.wiring.test.ts
 
       - name: Check story import TypeScript diagnostics
         shell: bash
@@ -197,6 +197,40 @@ jobs:
             exit 1
           fi
           echo 'Story preset importer TypeScript diagnostics clean.'
+
+      - name: Capture real story session mobile screenshots
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/story-mobile-shots
+          pnpm exec vite --host 127.0.0.1 --port 5178 --strictPort > /tmp/story-mobile-vite.log 2>&1 &
+          server_pid="$!"
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          ready=false
+          for attempt in $(seq 1 60); do
+            if curl -fsS http://127.0.0.1:5178/story-reading-scroll-visual.html > /dev/null; then
+              ready=true
+              break
+            fi
+            sleep 1
+          done
+          if [ "$ready" != true ]; then cat /tmp/story-mobile-vite.log; exit 1; fi
+          browser="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          for item in "novel:top" "novel:middle" "novel:latest" "dark:middle"; do
+            mode="${item%%:*}"
+            focus="${item##*:}"
+            "$browser" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --no-first-run \
+              --window-size=390,844 --virtual-time-budget=6500 \
+              --screenshot="/tmp/story-mobile-shots/story-${mode}-${focus}.png" \
+              "http://127.0.0.1:5178/story-reading-scroll-visual.html?mode=${mode}&focus=${focus}"
+          done
+          test "$(find /tmp/story-mobile-shots -name '*.png' | wc -l)" -eq 4
+      - name: Upload real story reading screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: story-reading-mobile-screenshots
+          path: /tmp/story-mobile-shots/*.png
+          retention-days: 5
 
       - name: Build Vite site for GitHub Pages
         shell: bash
