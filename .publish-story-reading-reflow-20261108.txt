@@ -1,0 +1,4 @@
+Source branch: remove-checkphone-vrworld-lifesim
+Expected source head: 57b8227c77581546588e99891f7a81c41443d198
+Continuous scroll floor progress synced after font loading and content reflow.
+Run full screenshot and publication verification.
