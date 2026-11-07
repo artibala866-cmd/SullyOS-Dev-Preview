@@ -1,3 +1,11 @@
+## 2026-11-07 · PDF / Word / TXT 全链路复核后再同步
+
+- 核对源分支 `artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim`，此次同步目标源提交 `ce1e1bcdbc41fd7d04c7da4c7f715df65457db4d`。
+- 个人档案、角色人设、世界书的 TXT / Word / PDF 导入已经完成；PDF.js 在需要时才加载，拒绝损坏、假格式、扫描无文字、超页数、超长内容，避免静默截断。
+- 实际浏览器 PDF 回归正常，23 幅移动/横屏截图审查通过；确认按钮对比度及追加/替换选中状态已二次修复。
+- 20 个相关测试文件 294 项测试通过，专项 TS 检查和 Vite 生产构建成功；用户原存档与 A/B 切换数据保持原有隔离。
+- 所有修改仍在原开发分支；预览站重新部署后需验证 `preview-source.json.sourceCommit` 与 HEAD 一致。正式站未触及。
+
 ## 2026-11-07 · TXT / Word / PDF 导入兼容 + 个人档案文件入口
 
 - 来源主分支：`artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim`；本轮同步目标源 HEAD：`9c4530e3fd09020d37c2d5e0f6c476bdc362a836`。
