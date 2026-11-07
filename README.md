@@ -1,3 +1,13 @@
+## 2026-11-07 · BabyLink 全链路导入二次深度验收
+
+- 来源：`artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim`，在原分支直接修复，不建立新分支。
+- 对照上传的 BabyLink 1.1.10 APK 实际 WorldBookPage 模块，完善 Link JSON 世界书结构别名、整本文本回退、来源 ID、配置变更和误判保护；保留旧版 Sully/Tavern 世界书解析。
+- 新增 `DB.importWorldbooksSmartAtomic` 与 OSContext 原子导入同步：多文件先解析完毕，随后整批事务写入；读取数据库实时条目去重、来源更新、保护手改、同步角色挂载；失败整批回滚，不显示虚假的成功提示。
+- 文档与世界书 JSON 使用不同大小上限，修复过去超过 200 万字符世界书 JSON 被误拒绝；GBK、UTF-16 兼容保持。
+- 真实用户操作回归：链接/酒馆角色卡、TXT 人设、Link 世界书 JSON+TXT 批量、手机 320px/390px/横屏；在原 UI 中修正仅窄屏头部换行，不新增无关按钮。
+- 单元与集成回归：`42318531966`，17 个测试文件 234 项通过，TypeScript 专项检查及生产构建通过；视觉结果见最新 `Character card import real browser screenshots` 运行记录。
+- 强制以公开站 `preview-source.json.sourceCommit` 核对独立测试站是否部署本次最新版。正式站未修改。
+
 ## 2026-11-07 · BabyLink 1.1.10 文档导入与世界书二轮最终测试站同步
 
 - 本轮已按 APK 原始 JS 导入逻辑适配 TXT、DOCX 人设文档、Link 世界书 JSON、与原角色增量导入兼容；不执行未适配的角色局部正则脚本。
