@@ -185,7 +185,7 @@ jobs:
         run: pnpm exec vitest run utils/memoryPalace/extractionFeatureFlag.test.ts
 
       - name: Verify imported SillyTavern presets before publishing
-        run: pnpm exec vitest run utils/storySillyTavernImport.test.ts utils/storyPresetImportAudit.test.ts utils/storyPresetImportUi.test.tsx utils/storyTheater.test.ts
+        run: pnpm exec vitest run utils/storyTheaterHtml.test.ts utils/storySillyTavernImport.test.ts utils/storyPresetImportAudit.test.ts utils/storyPresetImportUi.test.tsx utils/storyTheater.test.ts
 
       - name: Check story import TypeScript diagnostics
         shell: bash
