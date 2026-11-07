@@ -1,0 +1,3 @@
+One-time preview refresh of existing SullyOS branch remove-checkphone-vrworld-lifesim.
+QA: preserve selected legacy lore through cast switching; refuse ambiguous IDs; clean invalid selections; distinguish duplicate names; mobile list viewport.
+No new source branch or UI component.
