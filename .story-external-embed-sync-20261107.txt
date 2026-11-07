@@ -1,2 +1,0 @@
-One-time preview refresh of the existing SullyOS development branch remove-checkphone-vrworld-lifesim.
-Verify generic external media widgets in story greetings are hidden non-destructively, including Spotify audio tracks, decorated images, map embeds, and safe Link native openings.
