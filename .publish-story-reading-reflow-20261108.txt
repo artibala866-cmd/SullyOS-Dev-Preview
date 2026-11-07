@@ -1,7 +1,6 @@
-Story reader visual polish and regression audit
+Story reader final overlay fix
 Source: artibala866-cmd/SullyOS
-Existing branch: remove-checkphone-vrworld-lifesim
-Expected source head: b839d326964556ea8cd00a40d2e984cb71711166
-Move reading floor progress and quick preset from floating overlays into header.
-Preserve reader location while expanding archived floors; constrain jump-to-latest to reading scroll container.
-Verify full tests and all four real-component mobile screenshots before publication.
+Branch: remove-checkphone-vrworld-lifesim
+Expected head: 32ff020c02a3b5b71a5c5a83a9254095b7c70d48
+Header-integrated floor progress + quick preset; corrected scroll isolation, archive anchoring and delayed font reflow.
+Capture and validate top, middle, latest, dark real-component mobile screenshots before publishing.
