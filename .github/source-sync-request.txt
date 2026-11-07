@@ -22,3 +22,4 @@ Verify PUBLIC source revision after deploy.
 2026-11-07: final screenshot-led fix for Pluto/Mur empty collapsed theater height, safe HTML attribution and five preset dialect regression; publish verified source 10bf186d40efd12af76234811b261e3a391eabcb.
 2026-11-07: post-audit legacy message source detection when switching story presets, safe five-dialect renderers and compact appendix screenshot fix; publish source 7531cb73f1721c54468a0051237480740bb1e0ce.
 2026-11-07: final UI wording correction without new controls, safe-html theater mini-card and old-message preset switch compatibility. Source 91096e777e0e066f61dee64a00f4b188fd3b526c.
+2026-11-07: completed screenshot-driven Pluto/Mur short iframe and nested details padding fix, oversized HTML fallback, legacy saved-output detection; source fc3330d276b26919c4e679fc6370b737f133f9f1.
