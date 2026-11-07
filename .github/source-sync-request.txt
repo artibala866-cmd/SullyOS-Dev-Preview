@@ -23,3 +23,4 @@ Verify PUBLIC source revision after deploy.
 2026-11-07: post-audit legacy message source detection when switching story presets, safe five-dialect renderers and compact appendix screenshot fix; publish source 7531cb73f1721c54468a0051237480740bb1e0ce.
 2026-11-07: final UI wording correction without new controls, safe-html theater mini-card and old-message preset switch compatibility. Source 91096e777e0e066f61dee64a00f4b188fd3b526c.
 2026-11-07: completed screenshot-driven Pluto/Mur short iframe and nested details padding fix, oversized HTML fallback, legacy saved-output detection; source fc3330d276b26919c4e679fc6370b737f133f9f1.
+2026-11-07: five supplied Tavern preset formats checked, CSS and safe HTML fallback fixed, legacy preset-switch protected; latest successful 4-dialect Chromium screenshot verified. Sync latest source 1484299b98867303dfa0aa9bd7ac83d6af95ed43.
