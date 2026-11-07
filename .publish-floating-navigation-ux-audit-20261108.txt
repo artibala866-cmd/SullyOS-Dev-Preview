@@ -1,0 +1,6 @@
+糯米机悬浮窗用户视角专项验收后独立测试站同步。
+源：artibala866-cmd/SullyOS 的既有 remove-checkphone-vrworld-lifesim 分支。
+已完成代码：备份 API 预设导入容错（防空配置、丢失字段、重复 ID、整份错误覆盖）；快捷切换地址格式检验；保存失败禁止假成功；独立角色 API 优先级提醒；键盘收缩恢复；菜单外点击不穿透剧情。
+该功能修复的至少一个最终源码提交：5d97d65e043d73ce29ff6aaf37c6e7ccd43d9f75。
+CI 验收：源仓库 GitHub Actions 42424232153 通过 TypeScript、预设和浮窗专项测试及 10 张真实 React/Chromium 移动截图与互动断言。
+仅触发测试站原有 branch-preview.yml，同步时自动读取当前开发分支最新 HEAD，不新建分支，不修改原站或发布配置。上线必须由公开 preview-source.json.sourceCommit 校验实际发布源码。
