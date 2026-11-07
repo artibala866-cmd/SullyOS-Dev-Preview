@@ -1,0 +1,3 @@
+One-time preview sync from SullyOS existing branch remove-checkphone-vrworld-lifesim.
+Remove complete <wb_lore> and other structurally auxiliary metadata blocks from Story opening prose, as well as <!-- route: N -->.
+Source: 619165bc7770bea19dc12c3b9773269d0d3b3c4f
