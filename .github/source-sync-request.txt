@@ -16,3 +16,4 @@ Verify PUBLIC source revision after deploy.
 2026-11-07: Final exact code with refined Tavern mini-theater vs plot-options warning detection. Source 4349930908a3b0c8fc2c28ac7135604b9c8bf590.
 2026-11-07: SillyTavern regex/HTML story audit. Keep Akover sidestory and Pluto RandomTheater as inert collapsed story annexes; retain native mini-theater, no imported script execution. Source cfafc277ef72e2cc02ee68c8b7459282b90a11ee.
 2026-11-07: Publish safe Tavern theater HTML compatibility from source d2f8721e8d8705735cfc2a9384c67a705ef73a08; gate on nested details, sanitizer, StoryOutput UI, portrait/landscape screenshots.
+2026-11-07: final structured and HTML-only native mini theater compatibility, sanitized browser sandbox, nested details, CSS security and real mobile screenshots. Source: d686f88177488aee700ef16b4da200cb4345cdc0.
