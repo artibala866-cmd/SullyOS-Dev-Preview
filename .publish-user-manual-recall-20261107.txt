@@ -1,0 +1,6 @@
+Trigger the latest SullyOS preview release for complete two-sided private message recall.
+Source repository: artibala866-cmd/SullyOS
+Source branch: remove-checkphone-vrworld-lifesim
+Source commit with tested manual recall feature: 841524a0e2c6f7b76feac26fec26055c50645e39
+Workflow must verify deployed public /preview-source.json commit.
+Real ChatModals click and 320px/390px screenshot tests passed, along with underlying DB regression.
