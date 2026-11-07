@@ -1,3 +1,0 @@
-One-time preview refresh from existing branch remove-checkphone-vrworld-lifesim.
-Generic paired markup/HTML/bracket/status/code-fence envelopes removed entirely from imported Story openings. Only prose outside wrappers is retained; original source cards unchanged. Author note injections removed from AI story context.
-Source: f6f969412f35b77584e9d9f88f56a8d470f521e5
