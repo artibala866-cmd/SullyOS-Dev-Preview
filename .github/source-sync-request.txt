@@ -11,3 +11,4 @@ Verify PUBLIC source revision after deploy.
 2026-11-07: Retry stalled Pages deployment for Tavern macro and thinking-preservation release after all import tests, type checks and build passed; verify source SHA at public preview.
 2026-11-07: Final audited Tavern Chat Completion preset compatibility: a8d45f1c6989a3e6abb31429936353cabc6ac9a0. Includes plain presets, placeholders, non-macro {0} wrappers, scoped variables and identity-safe history; omit regex/JS extensions.
 2026-11-07: Audited four independent SillyTavern Chat Completion dialects (Pluto/Akover/Mur/Janus), scoped globalvar, random alternatives, legacy continuation macro, lowercase tags and missing-variable warnings. Publish source 60cb4f8741f66e75b293db85de2c174fcfbf80aa.
+2026-11-07 regex-and-mini-theater-audit: source 0fb9afc0cbd813a83fc89e27c0c66e75e46aa5b8; verify imported preset regex exclusion and safe HTML-only mini-theater notices on official preview.
