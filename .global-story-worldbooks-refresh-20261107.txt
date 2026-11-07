@@ -1,3 +1,0 @@
-Refresh the existing SullyOS story preview from the existing branch remove-checkphone-vrworld-lifesim.
-Global worldbook sandbox: allow picking any global book before choosing characters, retain IDs across cast/mask changes, read only explicitly selected books into each story.
-Latest verified source trigger: 8b92d950ceba1253ffc12bbdbfbee13ff73f548f.
