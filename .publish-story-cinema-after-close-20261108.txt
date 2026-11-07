@@ -1,0 +1,4 @@
+Requested visual-fix preview refresh for SullyOS development branch remove-checkphone-vrworld-lifesim.
+Source commit at request: 015f04df0b46abfcffcb13782d135fc942f4a648
+Scope: story cinema theme remains visible after closing appearance modal; plain skin unchanged.
+Visual fixture: story-reading-scroll-visual.html?mode=cinema&focus=middle
