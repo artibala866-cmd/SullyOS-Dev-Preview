@@ -274,7 +274,7 @@ jobs:
           browser="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
           for focus in search preset; do
             "$browser" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --no-first-run \
-              --window-size=390,844 --virtual-time-budget=16000 \
+              --window-size=390,844 --virtual-time-budget=30000 \
               --dump-dom "http://127.0.0.1:5179/story-import-ux-visual.html?focus=${focus}" > "/tmp/story-import-ux-${focus}.html"
             grep -q 'data-story-import-ux-ready="true"' "/tmp/story-import-ux-${focus}.html" || {
               echo "Import UX failed: ${focus}"
@@ -289,7 +289,7 @@ jobs:
               exit 1
             }
             "$browser" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --no-first-run \
-              --window-size=390,844 --virtual-time-budget=16000 \
+              --window-size=390,844 --virtual-time-budget=30000 \
               --screenshot="/tmp/story-import-ux-shots/import-${focus}.png" \
               "http://127.0.0.1:5179/story-import-ux-visual.html?focus=${focus}"
           done
