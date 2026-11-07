@@ -1,0 +1,6 @@
+Trigger updated SullyOS-Dev-Preview publication after full character-recall audit.
+Source repository: artibala866-cmd/SullyOS
+Source branch: remove-checkphone-vrworld-lifesim
+Audited code commit: 274a8ec64621079eaa3f38af74ed883275c9eac5
+Source advanced via concurrent non-overlapping work; preview workflow checks out latest branch head and verifies /preview-source.json.
+All recall parser / IndexedDB / Chromium 320px and 390px regression checks succeeded.
