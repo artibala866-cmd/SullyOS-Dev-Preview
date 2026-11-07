@@ -231,11 +231,19 @@ jobs:
               "http://127.0.0.1:5178/story-reading-scroll-visual.html?mode=${mode}&focus=${focus}"
           done
           test "$(find /tmp/story-mobile-shots -name '*.png' | wc -l)" -eq 4
-          "$browser" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --no-first-run \
-            --window-size=390,844 --virtual-time-budget=6500 --dump-dom \
-            "http://127.0.0.1:5178/story-reading-scroll-visual.html?mode=novel&focus=middle" > /tmp/story-reading-dom.html
-          grep -q 'data-story-scroll-ready="true"' /tmp/story-reading-dom.html
-          grep -q 'data-story-floor="26"' /tmp/story-reading-dom.html
+          for item in "novel:top" "novel:middle" "novel:latest" "dark:middle"; do
+            mode="${item%%:*}"
+            focus="${item##*:}"
+            "$browser" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --no-first-run \
+              --window-size=390,844 --virtual-time-budget=6500 --dump-dom \
+              "http://127.0.0.1:5178/story-reading-scroll-visual.html?mode=${mode}&focus=${focus}" > "/tmp/story-reading-${mode}-${focus}.html"
+            grep -q 'data-story-scroll-ready="true"' "/tmp/story-reading-${mode}-${focus}.html" || {
+              echo "Real-component visual audit failed: ${item}"
+              grep -o '<output[^>]*>[^<]*</output>' "/tmp/story-reading-${mode}-${focus}.html" || true
+              exit 1
+            }
+            grep -q 'data-story-floor="26"' "/tmp/story-reading-${mode}-${focus}.html"
+          done
       - name: Upload real story reading screenshots
         uses: actions/upload-artifact@v4
         with:
