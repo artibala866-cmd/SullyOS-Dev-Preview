@@ -1,3 +1,12 @@
+## 2026-11-07 · BabyLink 导入全链路终检 / 公开站最新源代码同步
+
+- 源分支 `remove-checkphone-vrworld-lifesim` 最新验收 SHA：`356984754e48278214ffb832f14c5186de5deef9`。
+- 原始 APK 世界书 JSON 别名、旧版标准世界书防误判、世界书 32MB JSON 和 TXT/DOCX 分离大小限制、世界书更新与角色挂载同步均已做数据级回归。
+- 世界书多文件入库使用一个 IndexedDB 事务；损坏文件无写入、异常事务回滚、重复与并发导入无副本、用户手动编辑不被自动覆盖。
+- 234 项代码和真实 IndexedDB 回归通过，TypeScript 专项检查通过，生产构建通过（源仓库运行 42318531966）。
+- 13 组实际 React Chromium 手机/横屏导入截图及真实勾选操作全部通过（源仓库运行 42318704930），特别复查世界书 320px 标题不换行及没有多余新 UI。
+- 只部署独立测试站，不更改正式站，不创建新开发分支。请通过公开 `preview-source.json.sourceCommit` 核对本轮发布。
+
 ## 2026-11-07 · BabyLink 全链路导入二次深度验收
 
 - 来源：`artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim`，在原分支直接修复，不建立新分支。
