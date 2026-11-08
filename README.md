@@ -1,3 +1,10 @@
+## 2026-11-08 · API 失败扣费与重复发送安全巡检（补充记忆宫殿）
+- 从现有唯一源码分支 `artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim` 构建，目标提交 `17c5c011dd7fb12aaf38ce3f401ebd40ee054daf`。
+- 角色独立 API、记忆宫殿文字副 API／Embedding／Rerank 测试连接均改成只读 /models；不再偷偷发送生成请求。
+- 聊天情绪评估失败不会重新以非流式付费调用，主聊天失败不额外启动评估；通用 POST/付费向量 5xx／断流不自动重复请求。网络/鉴权等含糊错误不触发 Claude/MCP 兼容重发。
+- 外部记忆清洗单批校验失败不再自动进行第二次计费生成；原文保留由用户决定是否再次提交，UI 文案同步。
+- 只读预览源码，正式站与云端 Worker 不动。发布结果依公开 `preview-source.json.sourceCommit` 校验。
+
 ## 2026-11-08 · 检查 API 失败时的重复扣费风险（免费检测与付费重试保护）
 
 - 本次仅从 `artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim` 重建，最终源码提交 `75f5c9bcbebb3104b922abd225befc9f23ef5d53`。
