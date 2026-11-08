@@ -1,0 +1,3 @@
+导航球快捷操作弹窗：仅换成与悬浮球相同的深灰半透明颜色、同步文字控件对比度，布局尺寸与交互不变。
+源码既有分支：remove-checkphone-vrworld-lifesim
+源码 commit: af2cd093c03c48d813efe44e0d0ea940a7445ea9
