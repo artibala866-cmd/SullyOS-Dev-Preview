@@ -1,0 +1,3 @@
+仅颜色修改：快捷悬浮窗深灰半透明，与悬浮球相同背景rgba(52,56,66,.63)。原有模糊、圆角、尺寸、位置、布局、交互保持不变。
+源码分支 remove-checkphone-vrworld-lifesim
+目标提交 0cdf4bc02eff6184bb1731f47f61b1cadaf21572
