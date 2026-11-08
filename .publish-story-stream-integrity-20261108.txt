@@ -1,0 +1,4 @@
+SullyOS source branch remove-checkphone-vrworld-lifesim
+Requested release source commit: eabee15a752f0aaec51b0c3780c3a13cf649d5e1
+Fix accepted requests across in-app navigation and reject incomplete upgraded SSE scene responses before DB persistence.
+Regression: real browser navigation and reentry, singleflight, SSE premature EOF, compatible [DONE] handling.
