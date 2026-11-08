@@ -1,6 +1,6 @@
 ## 2026-11-08 · 检查 API 失败时的重复扣费风险（免费检测与付费重试保护）
 
-- 本次仅从 `artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim` 重建，预期源码提交 `17f449aa4b3de2e05e7b1c019278ca223c8c3824`。
+- 本次仅从 `artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim` 重建，最终源码提交 `75f5c9bcbebb3104b922abd225befc9f23ef5d53`。
 - 角色独立 API「测试连接」曾发送付费 `POST /chat/completions`，现改只读 `GET /models`；普通设置的测试此前已修复。
 - `safeFetchJson` 不再对 POST 等可能付费的请求自动重发（含 `/responses`、`/images`、`/embeddings`）；情绪评估流式失败不再自动补一遍非流式请求，主回复正常收到内容前不启动附加情绪请求。
 - Claude 502、MCP 401/403、网络断流等不触发兼容层自动二次计费；仅明确 400/422 参数不支持的校验错误保留兼容处理。识图/生图实际模型测试明确提示可能计费。
