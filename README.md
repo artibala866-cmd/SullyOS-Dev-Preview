@@ -1,6 +1,6 @@
 ## 2026-11-08 · 见面剧情上游过滤与扣费无正文修复同步
 
-- 源仓库仍为 `artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim`，本次请求重建时的目标提交为 `1437256b30934cdfa74bed9259fac8a0fb62b65c`。不创建开发分支，不触碰正式站。
+- 源仓库仍为 `artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim`，本次重建复核目标提交为 `a46fa903761b01b0045057450967fbbccc23e386`（补齐兼容回归测试文案）。不创建开发分支，不触碰正式站。
 - 修复剧情在中转返回原始 SSE 却无终止信号时误存半截正文；HTTP 200 但 content_filter / 剧情输出截断不再误作成功生成，保留输入 token 用量并明确可能已计费。
 - 本条仅触发独立预览站原有 GitHub Actions 读取最新源分支并重新构建；最终是否成功仍以工作流及公开 `preview-source.json.sourceCommit` 核实，不将提交等同已发布。
 
