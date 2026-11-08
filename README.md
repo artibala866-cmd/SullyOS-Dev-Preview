@@ -1,3 +1,9 @@
+## 2026-11-08 · API 连通性测试禁止产生付费生成
+
+- 目标源码：`artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim`，校验目标版本 `8947a117bfe13635d9f6df9307073bc3e83a9d62`。
+- 系统设置的“测试连接”之前会直接 POST /chat/completions 发送 Hi，可能在前端报 Failed to fetch 后仍被中转计费。现改为单次只读 GET /models，失败/超时绝不偷偷回退到可扣费的生成接口；区分列表可达与实际出字未验证。
+- 无独立分支，无 API Key 外传给额外代理。公开测试站是否同步仍须以 `preview-source.json.sourceCommit` 最终校验。
+
 ## 2026-11-08 · 见面剧情上游过滤与扣费无正文修复同步
 
 - 源仓库仍为 `artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim`，本次重建复核目标提交为 `a46fa903761b01b0045057450967fbbccc23e386`（补齐兼容回归测试文案）。不创建开发分支，不触碰正式站。
