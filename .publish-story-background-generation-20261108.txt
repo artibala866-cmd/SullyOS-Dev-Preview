@@ -1,0 +1,5 @@
+Requested preview publication for the existing SullyOS development branch remove-checkphone-vrworld-lifesim.
+Source commit: 79fff4a2b47052fa60d41f22aaf8d0947170c2ad
+Change: keep Meet theater generation running across in-app navigation, reject duplicate submissions, persist completed reply, and restore progress when returning.
+Review source test: test/fixtures/story-background-visual.html; utils/storyTheaterBackground.test.ts.
+No new development branches were created.
