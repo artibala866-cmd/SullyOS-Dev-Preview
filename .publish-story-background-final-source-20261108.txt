@@ -1,0 +1,5 @@
+Requested latest SullyOS development build.
+Branch: remove-checkphone-vrworld-lifesim
+Source: d90d905749a20a2ee1572ff146364d7f376485ce
+Changes: app-local background generation lifetime, guarded completion storage, duplicate-request lock, reentry status, early SSE termination rejection.
+Real browser regression: 1 model request, request alive outside story, persisted and rendered after reentry.
