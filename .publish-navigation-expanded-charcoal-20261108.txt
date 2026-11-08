@@ -1,0 +1,2 @@
+快捷操作悬浮窗配色与展开状态悬浮球一致：rgba(52,56,66,.78)，背景保持半透明，布局尺寸模糊交互完全不变。
+来源：remove-checkphone-vrworld-lifesim @ bf9f5409416edf9958e72a857c8185ecb15cd269
