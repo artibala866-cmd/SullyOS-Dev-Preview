@@ -1,0 +1,4 @@
+2026-11-08 剧情记忆副API真实使用体验复核、共享角色记忆隔离、同站点限流提示、失败归档单轮去重、防超长摘要、导入坏预设兼容、非流式传输独立。
+仅从 SullyOS 源码现有 remove-checkphone-vrworld-lifesim 分支构建，不新建源码分支。
+目标源码提交：0e1e5b5c5af9687a824c169a4d5b89a698be8694
+此文件仅用于触发既有 branch-preview 工作流同步。最终以测试站公开 preview-source.json 检查为准。
