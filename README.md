@@ -1,3 +1,9 @@
+## 2026-11-08 · 补充：事件盒重新整合失败不再自动二次扣费
+
+- 最终源码目标 `artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim`：`73daf2bbcf60454c11bd906da661660c31125bf1`。
+- 手动重新整合事件盒时，推理泄漏或结构校验失败会原样保留旧总结，不再自动发送第二份昂贵的生成请求；同步更新测试。
+- 原有完整源码从同一分支构建，不改历史记录、正式站或云端 Worker；仅以公开 `preview-source.json.sourceCommit` 对齐确认本次测试站交付。
+
 ## 2026-11-08 · API 失败扣费与重复发送安全巡检（补充记忆宫殿）
 - 从现有唯一源码分支 `artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim` 构建，目标提交 `17c5c011dd7fb12aaf38ce3f401ebd40ee054daf`。
 - 角色独立 API、记忆宫殿文字副 API／Embedding／Rerank 测试连接均改成只读 /models；不再偷偷发送生成请求。
