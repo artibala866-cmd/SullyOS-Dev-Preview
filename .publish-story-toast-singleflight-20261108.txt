@@ -1,0 +1,5 @@
+Source repository: artibala866-cmd/SullyOS
+Source branch: remove-checkphone-vrworld-lifesim
+Source SHA: bcd11b4f62ee1f3e37d68d4bfb2d33a857a4198a
+Goal: one toast visible at a time; coalesce repeated identical notices; show next toast only after previous one disappears; suppress story-generation toast on touch-scroll.
+Tests: utils/toastSequencer.test.ts; utils/storyToast.wiring.test.ts.
