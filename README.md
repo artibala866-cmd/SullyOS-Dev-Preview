@@ -1,3 +1,11 @@
+## 2026-11-08 · 检查 API 失败时的重复扣费风险（免费检测与付费重试保护）
+
+- 本次仅从 `artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim` 重建，预期源码提交 `17f449aa4b3de2e05e7b1c019278ca223c8c3824`。
+- 角色独立 API「测试连接」曾发送付费 `POST /chat/completions`，现改只读 `GET /models`；普通设置的测试此前已修复。
+- `safeFetchJson` 不再对 POST 等可能付费的请求自动重发（含 `/responses`、`/images`、`/embeddings`）；情绪评估流式失败不再自动补一遍非流式请求，主回复正常收到内容前不启动附加情绪请求。
+- Claude 502、MCP 401/403、网络断流等不触发兼容层自动二次计费；仅明确 400/422 参数不支持的校验错误保留兼容处理。识图/生图实际模型测试明确提示可能计费。
+- 公开测试站必须以 `preview-source.json.sourceCommit` 核对完成。无新开发分支，不修改正式站或云端部署配置。
+
 ## 2026-11-08 · API 连通性测试禁止产生付费生成
 
 - 目标源码：`artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim`，校验目标版本 `8947a117bfe13635d9f6df9307073bc3e83a9d62`。
