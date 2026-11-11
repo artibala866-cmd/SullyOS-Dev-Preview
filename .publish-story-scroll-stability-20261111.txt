@@ -1,5 +1,5 @@
 Source: artibala866-cmd/SullyOS
 Branch: remove-checkphone-vrworld-lifesim
-Requested source head: 3ad6ab264cb0ed0400df5cab9271ac1b8b02e9dc
-Change: stabilize long story reading; prevent reflow-triggered scroll snapping, throttle progress updates, exercise Chromium 120-floor touch reflow regression.
+Requested source head: b62f4d895b13fa3372c0c4e722d9197691a363d8
+Change: fix long-story scroll bounce, preserve action-button auto-follow, and run Chromium 120-floor stability audit.
 Preview URL: https://artibala866-cmd.github.io/SullyOS-Dev-Preview/
