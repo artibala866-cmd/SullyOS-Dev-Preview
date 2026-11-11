@@ -1,0 +1,4 @@
+Publish latest self-use UI / concise copy source.
+Source branch: remove-checkphone-vrworld-lifesim
+Source SHA: 61041b8c9bd068185fcd717730673a5ee296443d
+Memory Palace excluded.
