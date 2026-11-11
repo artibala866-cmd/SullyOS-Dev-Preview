@@ -1,0 +1,2 @@
+Publish current remove-checkphone-vrworld-lifesim story reader bug fixes, including 8c6e9ac46975e79b197af9d86da297ee8bc93b16.
+Verification: long 72-floor HTML iframe touch scroll plus synchronous scroll indicator after layout and suspended requestAnimationFrame.
