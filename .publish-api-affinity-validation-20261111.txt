@@ -1,0 +1,1 @@
+Latest existing SullyOS dev branch after fixing optional archive affinity display name: preserve the character ID and never restore old API parameter/error limits. Publish exact current source SHA.
