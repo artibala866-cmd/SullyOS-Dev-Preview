@@ -1,0 +1,6 @@
+Source: artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim
+Source head at trigger: f1312474d9b7102d50f86ca0d1acd27cb7a7a3b5
+Includes original user-save data loss repair: 251be88da18453582a09cff214d881c45ffa40bf
+Includes stale screenshot fixture repair: 02fd41a828a6939d12218de241af3c6f0f05c4d4
+Site: https://artibala866-cmd.github.io/SullyOS-Dev-Preview/
+Independent preview branch remains main; no new branches.
