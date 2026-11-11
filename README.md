@@ -1,3 +1,10 @@
+## 2026-11-11 · 糯叽机炼金正则：剧情与见面独立生效、线上 HTML 互动完整显示
+
+- 预览源代码：`artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim`，目标源码提交 `36c6006a734a9860549210ed0d1bc0176aa4665f`。
+- 导入时分别勾选线下剧情／见面，剧情预设只约束剧情；见面不用预设；不会额外调用 AI。
+- 线上 HTML 保留原文件沙盒内本地交互，继续阻止访问应用数据与网络 API；卡片根据真实高宽测量，窄屏等比缩放而不直接裁切。
+- 此提交只用于触发独立测试站构建，最终以公网 `preview-source.json` 和部署工作流的源码 SHA 对齐核验。
+
 ## 2026-11-08 · 补充：事件盒重新整合失败不再自动二次扣费
 
 - 最终源码目标 `artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim`：`73daf2bbcf60454c11bd906da661660c31125bf1`。
