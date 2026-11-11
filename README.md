@@ -1,3 +1,9 @@
+## 2026-11-11 · 剧情长楼层静止闪动修复
+
+- 预览源码：`artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim`，发布触发时 HEAD：`d5cce4c5d154d2c825ddac1ee24ad7ea17a71342`。
+- 修复 HTML 卡片含 `100vh` 时 iframe 自身高度反复增长的循环；只调整卡片测量，保留剧情现有滚动方案。
+- 本次包含真实 HTML 沙盒高度反馈回归测试，以公网 `preview-source.json` 为最终版本依据。
+
 ## 2026-11-11 · 剧情首次定位与正则闪动修复
 
 - 预览源：`artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim`，触发时 HEAD：`27e011c4dbbfe6b87e6ede2be8869ca2a624ac9c`。
