@@ -1,0 +1,5 @@
+Preview deploy request: concise self-use UI, no long technical help copy.
+Source: artibala866-cmd/SullyOS, branch remove-checkphone-vrworld-lifesim
+Latest observed source commit: 0b0d375424f8bd5c2e8c6ca882160872c49f0ce8
+Excluded: Memory Palace.
+Verification URL: https://artibala866-cmd.github.io/SullyOS-Dev-Preview/
