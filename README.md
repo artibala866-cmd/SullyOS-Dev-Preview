@@ -1,3 +1,9 @@
+## 2026-11-11 · 剧情首次定位与正则闪动修复
+
+- 预览源：`artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim`，触发时 HEAD：`27e011c4dbbfe6b87e6ede2be8869ca2a624ac9c`。
+- 首次进入在历史正文排版完成后定位到最新回复；正则楼层一次提交，减少闪现。
+- 保留原有上下滑动事件与惯性算法；此提交用于触发独立测试站同步。
+
 ## 2026-11-11 · 糯叽机炼金正则：剧情与见面独立生效、线上 HTML 互动完整显示
 
 - 预览源代码：`artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim`，目标源码提交 `36c6006a734a9860549210ed0d1bc0176aa4665f`。
