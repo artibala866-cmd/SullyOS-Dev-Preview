@@ -1,3 +1,9 @@
+## 2026-11-11 · 正则生效设置收纳，减少空白区域
+
+- 源码来自现有开发分支 `remove-checkphone-vrworld-lifesim`；本次目标提交 `8667f3d4f55e8ceb4b2f8aee7ad775bd270cdff8`。
+- 不再让“生效范围 / 线下位置”两个单独大卡片占据编辑页；统一收进「更多设置」，折叠时显示当前范围摘要。
+- 保留线上 / 线下 / 剧情 / 见面分别勾选和原有正则匹配、替换、保存逻辑。以独立测试站公网源码 SHA 校验发布。
+
 ## 2026-11-11 · 正则编辑界面轻量排版优化
 
 - 来源：`artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim`，目标最低源码版本 `6d0e95923b48eb32a5e15cfb0dcc012d9c13ba2d`。
