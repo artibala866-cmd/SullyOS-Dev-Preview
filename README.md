@@ -1,3 +1,9 @@
+## 2026-11-11 · 正则编辑界面轻量排版优化
+
+- 来源：`artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim`，目标最低源码版本 `6d0e95923b48eb32a5e15cfb0dcc012d9c13ba2d`。
+- 仅修改规则编辑页呈现：缓和生效开关视觉、统一留白与输入框，长分组字段按窄屏单列；保留现有范围逻辑、正则替换、真实预览、保存和删除。
+- 仅触发独立开发测试站构建，不修改正式站。
+
 ## 2026-11-11 · 剧情长楼层静止闪动修复
 
 - 预览源码：`artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim`，发布触发时 HEAD：`d5cce4c5d154d2c825ddac1ee24ad7ea17a71342`。
