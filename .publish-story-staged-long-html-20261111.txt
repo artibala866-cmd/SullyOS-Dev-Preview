@@ -1,0 +1,4 @@
+Independent preview deployment request.
+Source: artibala866-cmd/SullyOS @ 5b9b98fc4a2970dfb7343461c428217937c4875b
+Branch: remove-checkphone-vrworld-lifesim
+Changes: staged first paint, memoized saved floor output, per-frame message routing, keyed story session, regression tests.
