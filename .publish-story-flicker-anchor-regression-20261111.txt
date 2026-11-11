@@ -1,0 +1,3 @@
+Independent preview refresh: source branch remove-checkphone-vrworld-lifesim
+Source commit at dispatch: 824d5c64f7c8864431bd3393cc9151aa69534bed
+Includes long-story iframe reflow anchoring, no-scroll-steal gesture handoff, and updated real-component visual checks.
