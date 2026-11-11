@@ -1,0 +1,4 @@
+Integrated real-player interaction QA for private Chat + Character Phone + Character Schedule + Real Person replies.
+Source branch: artibala866-cmd/SullyOS/remove-checkphone-vrworld-lifesim
+Source HEAD at trigger: 1e6c6818d7bda09b6a89b6ad36ef743c0d111c26
+No real user data or credentials used.
