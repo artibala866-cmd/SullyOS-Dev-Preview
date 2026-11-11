@@ -1,0 +1,7 @@
+SullyOS-Dev-Preview publication request
+Feature: remove redundant Import and New Rule buttons from the Story Regex empty state; retain header actions.
+Source repository: artibala866-cmd/SullyOS
+Source branch: remove-checkphone-vrworld-lifesim
+Minimum source commit: 674b5e6f3821e02a53162cefdc82357c245644aa
+Published URL: https://artibala866-cmd.github.io/SullyOS-Dev-Preview/
+Purpose: trigger the existing preview workflow to rebuild the current development branch without changing deployment configuration.
