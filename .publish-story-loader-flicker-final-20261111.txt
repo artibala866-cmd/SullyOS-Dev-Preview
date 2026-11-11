@@ -1,0 +1,5 @@
+Preview rollout on the independent GitHub Pages test site.
+Source branch: remove-checkphone-vrworld-lifesim
+Source commit before dispatch: e139568475dad8f881ef432eb4ab15f6f0c43240
+Includes long-story stage-gating, memoized card rendering, single iframe event bus, scene isolation and regression checks.
+Deployment workflow validates published preview-source.json against selected source commit.
