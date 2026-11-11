@@ -1,0 +1,1 @@
+Trigger latest existing-branch preview rebuild after API parameter/error compatibility audit (long SSE completion, final usage, multiline frames, story archive validation). Source: artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim. No changes to production deployment.
