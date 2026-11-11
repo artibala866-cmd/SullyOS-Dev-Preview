@@ -1,5 +1,5 @@
 Source: artibala866-cmd/SullyOS
 Branch: remove-checkphone-vrworld-lifesim
-Requested source head: 9d4473d90267aba0dbebb4b09a5372845e13aeac
-Change: fix large-story nested HTML touch scrolling and iframe height reflow, with 72-floor mobile touch audit.
+Requested source head: 27e011c4dbbfe6b87e6ede2be8869ca2a624ac9c
+Fix: nested story HTML touch handoff, full-height cards, stable layout, last-floor jump control; 72-floor realistic swipe QA.
 Preview URL: https://artibala866-cmd.github.io/SullyOS-Dev-Preview/
