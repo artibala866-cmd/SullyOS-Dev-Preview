@@ -1,0 +1,5 @@
+Final one-time publish request for self-use uncluttered interface.
+Source branch: remove-checkphone-vrworld-lifesim
+Source commit observed: 72abe715b7eca038f44a541485a95f8244a7a4f1
+Memory Palace excluded from UI edits.
+Target: https://artibala866-cmd.github.io/SullyOS-Dev-Preview/
