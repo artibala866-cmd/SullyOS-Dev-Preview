@@ -1,0 +1,4 @@
+Rebuild after removing long helper text and updating browser fixture assertions.
+Source: artibala866-cmd/SullyOS remove-checkphone-vrworld-lifesim
+Latest verified source head: fe5391f190ededdfb71a96c21db0a0d5b4bb57f8
+Target: https://artibala866-cmd.github.io/SullyOS-Dev-Preview/
