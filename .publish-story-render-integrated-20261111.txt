@@ -1,0 +1,5 @@
+Publish exact integrated development branch source to official test site.
+Source repo: artibala866-cmd/SullyOS
+Source branch: remove-checkphone-vrworld-lifesim
+Confirmed source head: 1fad95bd9460c66ab239a1e439cf813d207ef083
+Verified fixes: staged initial long-story rendering, memoized rich floors, single iframe resize dispatcher, per-entry reset, correct offline regex scopes.
