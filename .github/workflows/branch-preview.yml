@@ -199,10 +199,22 @@ jobs:
           echo 'Story preset importer TypeScript diagnostics clean.'
 
       - name: Install Chinese fonts for accurate text snapshots
+        shell: bash
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq fonts-noto-cjk
-          fc-list :lang=zh family | head -n 5
+          set -euo pipefail
+          # The preview must not stop publishing when Ubuntu's temporary APT
+          # mirror is down. Prefer the CJK font already present on the runner.
+          if [ -n "$(fc-list :lang=zh family | head -n 1)" ]; then
+            echo 'Using preinstalled Chinese font.'
+          elif timeout 8s getent hosts security.ubuntu.com >/dev/null 2>&1; then
+            if ! timeout 75s sudo apt-get update -qq ||
+               ! timeout 75s sudo apt-get install -y -qq fonts-noto-cjk; then
+              echo '::warning::Ubuntu font mirror unavailable. Proceeding with system font fallback.'
+            fi
+          else
+            echo '::warning::Ubuntu font mirror DNS unavailable. Proceeding with system font fallback.'
+          fi
+          fc-list :lang=zh family | head -n 5 || true
 
       - name: Capture real story session mobile screenshots
         shell: bash
