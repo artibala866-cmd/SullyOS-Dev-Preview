@@ -1,5 +1,5 @@
 Trigger independent SullyOS development preview.
 Source repo: artibala866-cmd/SullyOS
 Source branch: remove-checkphone-vrworld-lifesim
-Requested source head: a9ea4c4a89c0b86bfebeeb7c07a3c910265793c7
-Scope: fix story history reload, configurable 20-floor windows, archived body on-demand, stable iframe measurements.
+Requested source head: 7f022354f8f1c61a33b66997a0c6f960ddd1deae
+Scope: configurable 20-floor story paging, isolated archive expansion, lazy old body loading, stable reader geometry, corrected story tests.
