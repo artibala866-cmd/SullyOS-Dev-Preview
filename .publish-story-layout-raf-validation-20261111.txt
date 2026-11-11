@@ -1,0 +1,2 @@
+Rebuild independent preview from latest remove-checkphone-vrworld-lifesim after updating RAF fallback regression assertion and long-story layout fixes.
+Source SHA at dispatch: 662efdaa1aab791bedfc0c18eb7d1b805d9c5ca7.
