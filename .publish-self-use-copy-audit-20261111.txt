@@ -1,0 +1,6 @@
+Self-use UI cleanup and prompt de-duplication
+Source branch: remove-checkphone-vrworld-lifesim
+Observed head: 9a7dbb1bdd13759cb5e763c1fc065840928e05d1
+Branding: keep 宝宝狗
+Exclude Memory Palace
+Preview: https://artibala866-cmd.github.io/SullyOS-Dev-Preview/
