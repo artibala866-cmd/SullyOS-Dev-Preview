@@ -1,0 +1,5 @@
+Independent SullyOS development preview publication request.
+Source: artibala866-cmd/SullyOS
+Branch: remove-checkphone-vrworld-lifesim
+Minimum source commit containing the identity switch safeguard: 251be88da18453582a09cff214d881c45ffa40bf
+Check preview-source.json.sourceCommit after successful workflow. No production branch or new branch created.
