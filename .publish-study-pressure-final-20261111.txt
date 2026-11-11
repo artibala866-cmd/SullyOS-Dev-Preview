@@ -1,0 +1,5 @@
+Latest current branch source for 宝宝狗 preview
+Source repo: artibala866-cmd/SullyOS
+Source branch: remove-checkphone-vrworld-lifesim
+Source head at trigger: 43d8b68f5da2571bfbc935fdad04964eb8e49d9d
+Includes study room real browser pressure QA, 240 mock PDF courses and 420 mock quizzes; these are test-only fixtures.
