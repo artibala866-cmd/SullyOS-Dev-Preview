@@ -1,0 +1,4 @@
+Self-use concise UI copy and permanent AGENTS rule.
+Source branch: remove-checkphone-vrworld-lifesim
+Source commit at trigger: f1312474d9b7102d50f86ca0d1acd27cb7a7a3b5
+Do not modify Memory Palace UI.
