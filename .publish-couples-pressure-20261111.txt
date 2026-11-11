@@ -1,0 +1,5 @@
+Source: artibala866-cmd/SullyOS
+Branch: remove-checkphone-vrworld-lifesim
+Source commit: a431cf97e51fc3b870725545fe4b80d53115fa92
+Purpose: refresh the existing 宝宝狗 test preview after Couples Space high-pressure QA.
+Tests: 32 passed, Chromium 320px and 390px passed.
