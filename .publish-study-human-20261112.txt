@@ -1,0 +1,6 @@
+Human-flow learning room QA delivery
+Source: artibala866-cmd/SullyOS
+Existing branch: remove-checkphone-vrworld-lifesim
+Source at release trigger: c74857a4d308e19eb4ccf49f633321dd70ccd92a
+Corrections: cached PDF offline reading and graded quiz navigation.
+Human scenario CI: GitHub actions study-room-human.yml (no real player data)
