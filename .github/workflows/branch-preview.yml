@@ -249,6 +249,7 @@ jobs:
             fi
             if [ "$mode" = selected ]; then
               grep -q 'data-selected-count="6"' "/tmp/worldbook-bulk-$mode.html"
+              grep -q 'data-long-press-selected="true"' "/tmp/worldbook-bulk-$mode.html"
             fi
             "$browser" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --no-first-run               --window-size=390,844 --virtual-time-budget=16000               --screenshot="/tmp/worldbook-bulk-shots/worldbook-$mode.png" "$url"
           done
