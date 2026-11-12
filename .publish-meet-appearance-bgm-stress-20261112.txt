@@ -1,0 +1,3 @@
+Requested source branch: remove-checkphone-vrworld-lifesim
+Source commit: dd371afe59fdfd98e3138c526ab6de617cea8a86
+Purpose: publish Meet appearance race and BGM rebinding fixes to the existing development preview.
