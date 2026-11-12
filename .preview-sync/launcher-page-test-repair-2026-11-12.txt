@@ -1,0 +1,3 @@
+sourceBranch=remove-checkphone-vrworld-lifesim
+sourceSha=93a15a04b68c7d1e15151931507564f062a0f671
+reason=real-mobile-launcher-page-navigation-regression
