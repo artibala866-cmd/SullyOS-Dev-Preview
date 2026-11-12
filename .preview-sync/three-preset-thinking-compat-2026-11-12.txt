@@ -1,5 +1,6 @@
 Source: artibala866-cmd/SullyOS
 Branch: remove-checkphone-vrworld-lifesim
-Minimum source commit: 1b5dbde51daf357f3572908703037a9eeb9bb727
-Included three-preset thinking display fix: f0e10e9460ab9f859c795b5f0a940b423660d31b
-Purpose: sync the latest combined development branch changes to independent test site; preserve source tests and public SHA verification.
+Minimum source commit: b528f75a9bb87fb43d8b7a9998301f1353f4444c
+Included three-preset thinking and Lachesis wine display repair: f0e10e9460ab9f859c795b5f0a940b423660d31b
+Source build blocker repaired: characters OSContext provider property.
+Purpose: publish latest source to independent preview with its normal tests and public SHA verification.
