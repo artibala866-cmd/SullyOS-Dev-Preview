@@ -1,0 +1,2 @@
+Publish current SullyOS development branch to the existing independent preview site.
+Source commit including Tavern preset format compatibility and visual gate tolerance: 4bf1245ed3ab6e4e799f77dd52e5c69b9c675944
