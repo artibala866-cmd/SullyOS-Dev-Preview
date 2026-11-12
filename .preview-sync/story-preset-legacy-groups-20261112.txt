@@ -1,6 +1,6 @@
 Source branch: remove-checkphone-vrworld-lifesim
-Source commit: 85a7ad4648d9dfe6650ed42af48f19185021f9a5
-Audit: New imports give baibaiToolkit explicit group membership priority over overlapping legacy entryGrouping ranges.
-Migration: Existing imports with only partial legacy grouping are repaired in-place and deduplicated; IDs, original text, enabled states and original order remain unchanged.
-Test: import grouping, old preset persistence, original author controls, mobile editor screenshots.
-Preview: Check preview-source.json against this source commit before claiming completion.
+Source commit: 9830148fcaa087a860b92b9e492bbc86eb60b09a
+Audit: Migrate partial older category indexes in-place, keep existing prompt text and toggles unchanged.
+Format: Reject stale entryGrouping bounds overlapping baibaiToolkit category membership.
+Typecheck: Strict TypeScript metadata callback annotations.
+Test: Imported SillyTavern and mobile component regression before publishing.
