@@ -1,0 +1,7 @@
+WeChat / Character Phone unusually realistic human pressure tests and fixes.
+Source repo: artibala866-cmd/SullyOS
+Existing source branch: remove-checkphone-vrworld-lifesim
+Source HEAD: 92a2ad303f151e0ca8000183c7ae5a65dae0900f
+Includes WeChat NPC manual AI conversation replay protection, old-message recovery, private-search consistency, Moments/wallet/avatar/settings chaos regression.
+Validation: 153 targeted tests and production build; live Chromium multistep real-user tests including no-bill mock API.
+No new branch; publish to existing independent test site.
