@@ -40,3 +40,4 @@ Verify PUBLIC source revision after deploy.
 2026-11-07 universal author controls: inspect novel, non-supplied Tavern names, literal title structure, metadata entryGrouping, custom local/global variables and API-visible selected content; no code execution or new UI. Source ad2fb15ed10492c6ff55dacd76a0a16075f17a7f.
 2026-11-07: Live Story Theater Quick Preset now uses source-author Tavern groups and actual original prompt enabled states, scoped to current entry; unknown-author and native mobile screenshots, compiled AI-payload persistence tests. Source de88e50b07a377e559225b660434ddbeb61f503a.
 2026-11-12 世界书搜索/长按多选/批量导出/删除/手机截图审查，锁定最新源码 0052bd9f95477b17894e74516aea1fe3c818a0b。
+2026-11-12 世界书搜索修复：日记 + 日记本一次显示、全选和批量删除、12条以上不漏。源码 74cdb5b753dbe51ee1fc4392ec7371524e49599e。
