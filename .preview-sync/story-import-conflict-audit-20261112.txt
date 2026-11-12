@@ -1,6 +1,6 @@
 Source branch: remove-checkphone-vrworld-lifesim
-Source commit: 75dbbfd09c1e591af4664480aa73c2f645bbf3d0
-Import: Source-identical imports reuse IDs; source changes require explicit keep/replace/copy/cancel choice.
-Audit: Item counts, original enabled flags, unlisted prompts, skipped regex/scripts, warnings preserved.
-Author choices: Only explicitly exclusive source options close peers; stackable options remain enabled; clicking active option can resolve inherited multiple-on conflicts.
-Source original text, order, disabled flags and existing story links preserved until deliberate replacement.
+Source commit: ba272422be7d435118f99f7b0d20fb8dbaf6ce7b
+Features: User-reviewed overwrite/keep/copy/cancel import conflicts; persisted import compatibility audit; conservative explicit author one-of selection.
+Regression: Exact reimports of old presets upgrade audit and warnings even when original categories are already present, without touching original prompt text or enabled states.
+Additional one-of fix: User deliberate click resolves inherited multiple active single-choice entries while import remains unchanged.
+Public preview-source.json must exactly match ba272422be7d435118f99f7b0d20fb8dbaf6ce7b.
