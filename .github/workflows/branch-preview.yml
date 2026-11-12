@@ -398,8 +398,10 @@ jobs:
           done
           if [ "$ready" != true ]; then cat /tmp/story-preset-ux-vite.log; exit 1; fi
           browser="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
-          for focus in inspect returned; do
-            url="http://127.0.0.1:5184/test/fixtures/story-preset-import-audit.html?dialect=unseen&theme=light&focus=${focus}"
+          for focus in inspect returned structure-hidden structure added; do
+            dialect=unseen
+            if [[ "$focus" == structure* || "$focus" == added ]]; then dialect=edge; fi
+            url="http://127.0.0.1:5184/test/fixtures/story-preset-import-audit.html?dialect=${dialect}&theme=light&focus=${focus}"
             "$browser" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --no-first-run \
               --window-size=390,844 --virtual-time-budget=23000 --dump-dom "$url" > "/tmp/story-preset-${focus}.html"
             grep -q 'data-story-preset-audit-ready="true"' "/tmp/story-preset-${focus}.html" || {
