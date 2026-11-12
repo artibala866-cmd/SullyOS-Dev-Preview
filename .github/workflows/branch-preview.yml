@@ -2,7 +2,7 @@ name: SullyOS independent development preview
 
 # Isolated publishing repository: this workflow never writes to SullyOS.
 # Source: artibala866-cmd/SullyOS at remove-checkphone-vrworld-lifesim.
-# Preview rebuild includes the corrected Tavern importer and original-text mobile audit.
+# Preview rebuild checks both nested legacy order defaults and safely disabled uncertain imports.
 on:
   push:
     branches: [main]
