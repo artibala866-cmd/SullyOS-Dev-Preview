@@ -1,4 +1,4 @@
 Source: artibala866-cmd/SullyOS
 Branch: remove-checkphone-vrworld-lifesim
-Minimum source commit: 2f65c581bf15081d3958f7a504ca69689d0ed73f
-Purpose: rerun isolated preview build and story dialect tests for three uploaded SillyTavern CoT protocols (thinking, blend, ECoT comments), preserving original prompt and story history.
+Minimum source commit: f0e10e9460ab9f859c795b5f0a940b423660d31b
+Purpose: revalidate three imported presets' thinking boundaries and Lachesis <wine> theater isolation after failed preview regression test.
