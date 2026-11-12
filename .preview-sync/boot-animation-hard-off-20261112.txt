@@ -1,4 +1,4 @@
 Source: artibala866-cmd/SullyOS
 Branch: remove-checkphone-vrworld-lifesim
-Source commit: b528f75a9bb87fb43d8b7a9998301f1353f4444c
+Source commit: 5e0636a12b9f9f3e8c49e8a231f17350a00e0ede
 Reason: Retry preview after fixing OSContext TypeScript mapping; verify disabled startup screenshots.
