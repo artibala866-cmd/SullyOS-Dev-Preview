@@ -1,6 +1,6 @@
 Source branch: remove-checkphone-vrworld-lifesim
-Source commit: bf9414ee6d1ce91d1312d8c918fb14634f45a34e
-Audit: Old imported MoM preset groups are merged with partial older entryGrouping indexes.
-Migration: Original ID, timestamps, authored switches, order and original text preserved.
-Regression: Source author selector and IndexedDB persistence tests passed.
-Deployment: the independent preview workflow must verify preview-source.json.
+Source commit: 85a7ad4648d9dfe6650ed42af48f19185021f9a5
+Audit: New imports give baibaiToolkit explicit group membership priority over overlapping legacy entryGrouping ranges.
+Migration: Existing imports with only partial legacy grouping are repaired in-place and deduplicated; IDs, original text, enabled states and original order remain unchanged.
+Test: import grouping, old preset persistence, original author controls, mobile editor screenshots.
+Preview: Check preview-source.json against this source commit before claiming completion.
