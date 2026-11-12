@@ -1,6 +1,7 @@
-Journal calendar interior refinement
+Journal interior full-height white revision, 2026-11-12
 Source: artibala866-cmd/SullyOS
 Branch: remove-checkphone-vrworld-lifesim
-Source commits: 732b6e3abe686feec37bb409b3c3f44c10453da3, e753d79007e0718184e5601d3c1eec47dd51df28, 04b1a1694523ed6fae36835c1b68b2916bd09830
-UI: reduce excessive paper framing, consistent warm-neutral notebook page, keep interactions
-Visual QA: 390x844 and 320x640 static mobile browser screenshot preview, tested no horizontal overflow
+Observed source head: 2ea4f71a0370775ea9f74ca49147132909daccce
+Feature commits: 7b972a0a6abb0869a8b6e1b0ebf41afac467a99e, 6ac283d76ac95b22d964a40027519fec7cfb49d3
+Static screenshot verification: 320, 349 viewport; empty, two entries, 24 entries, long name; full-height background white; no horizontal overflow.
+No new branch.
