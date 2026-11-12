@@ -1,0 +1,5 @@
+Journal index editorial refinement publish verification
+Existing source branch: remove-checkphone-vrworld-lifesim
+Source head: da14bfa0c0649e4a29ed98879fda7754b5f756f5
+Real component screenshots: journal-index-real-component-mobile Actions artifact, 5 states PASS
+No source branches created
