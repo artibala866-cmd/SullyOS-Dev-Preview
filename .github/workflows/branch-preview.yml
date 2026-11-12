@@ -167,6 +167,19 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Verify complete Neural Link character deletion
+        run: pnpm exec vitest run utils/deletedRoleResidue.test.ts utils/amsg2CharCleanup.test.ts
+
+      - name: Check character deletion TypeScript diagnostics
+        shell: bash
+        run: |
+          pnpm exec tsc --noEmit --pretty false > /tmp/character-deletion-tsc.log 2>&1 || true
+          grep -E '^(utils/(characterDeletionCascade|db|deletedRoleResidue)(\\.test)?\\.ts|context/OSContext\\.tsx|apps/Character\\.tsx)[(]' /tmp/character-deletion-tsc.log > /tmp/character-deletion-errors.log || true
+          if [ -s /tmp/character-deletion-errors.log ]; then
+            cat /tmp/character-deletion-errors.log
+            exit 1
+          fi
+
       - name: Verify Halloween annex is reachable and preserves saved rooms
         run: pnpm exec vitest run apps/room3d/halloweenActivity.test.js utils/room3dHalloweenActivityRoom.test.ts
 
