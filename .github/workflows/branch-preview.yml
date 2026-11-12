@@ -380,6 +380,42 @@ jobs:
           path: /tmp/story-import-ux-shots/*.png
           retention-days: 5
 
+      - name: Check original preset text inspector and exact return on mobile
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/story-preset-ux-shots
+          pnpm exec vite --host 127.0.0.1 --port 5184 --strictPort > /tmp/story-preset-ux-vite.log 2>&1 &
+          pid="$!"
+          trap 'kill "$pid" 2>/dev/null || true' EXIT
+          ready=false
+          for attempt in $(seq 1 45); do
+            if curl -fsS http://127.0.0.1:5184/test/fixtures/story-preset-import-audit.html > /dev/null; then ready=true; break; fi
+            sleep 1
+          done
+          if [ "$ready" != true ]; then cat /tmp/story-preset-ux-vite.log; exit 1; fi
+          browser="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          for focus in inspect returned; do
+            url="http://127.0.0.1:5184/test/fixtures/story-preset-import-audit.html?dialect=unseen&theme=light&focus=${focus}"
+            "$browser" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --no-first-run \
+              --window-size=390,844 --virtual-time-budget=23000 --dump-dom "$url" > "/tmp/story-preset-${focus}.html"
+            grep -q 'data-story-preset-audit-ready="true"' "/tmp/story-preset-${focus}.html" || {
+              echo "Preset source inspection failed: ${focus}"
+              grep -o '<output[^>]*>[^<]*</output>' "/tmp/story-preset-${focus}.html" || true
+              tail -n 60 /tmp/story-preset-ux-vite.log || true
+              exit 1
+            }
+            "$browser" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --no-first-run \
+              --window-size=390,844 --virtual-time-budget=23000 \
+              --screenshot="/tmp/story-preset-ux-shots/preset-${focus}.png" "$url"
+          done
+      - name: Upload preset original-text and return-position mobile screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: story-preset-ux-mobile
+          path: /tmp/story-preset-ux-shots/*.png
+          retention-days: 5
+
       - name: Upload real story reading screenshots
         uses: actions/upload-artifact@v4
         with:
