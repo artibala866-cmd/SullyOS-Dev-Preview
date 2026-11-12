@@ -383,7 +383,7 @@ jobs:
           path: /tmp/story-import-ux-shots/*.png
           retention-days: 5
 
-      # Regression audit: verify source-safe insert/reorder, original-text preview, and mobile screenshot evidence.
+      # Regression audit: verify source-safe insert/reorder, original-text preview, and five mobile states.
       - name: Check original preset text inspector and exact return on mobile
         shell: bash
         run: |
