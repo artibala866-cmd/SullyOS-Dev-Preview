@@ -1,4 +1,5 @@
 Source: artibala866-cmd/SullyOS
 Branch: remove-checkphone-vrworld-lifesim
-Minimum source commit: f0e10e9460ab9f859c795b5f0a940b423660d31b
-Purpose: revalidate three imported presets' thinking boundaries and Lachesis <wine> theater isolation after failed preview regression test.
+Minimum source commit: 1b5dbde51daf357f3572908703037a9eeb9bb727
+Included three-preset thinking display fix: f0e10e9460ab9f859c795b5f0a940b423660d31b
+Purpose: sync the latest combined development branch changes to independent test site; preserve source tests and public SHA verification.
