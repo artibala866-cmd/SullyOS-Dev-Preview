@@ -1,0 +1,6 @@
+Music human-chaos and listening-together pressure regression
+Source: artibala866-cmd/SullyOS
+Source branch: remove-checkphone-vrworld-lifesim
+Source commit at request: 6722155b73451b39a21602a8544eadb7f9ea87af
+Scope: out-of-order music search, cross-platform IDs, rapid playlist selection, cross-tab invitation races and concurrent character listening
+Deploy using existing independent development-preview GitHub Pages workflow.
