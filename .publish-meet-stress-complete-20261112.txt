@@ -1,0 +1,3 @@
+Refresh the existing preview from SullyOS/remove-checkphone-vrworld-lifesim.
+Include Meet portrait update and BGM rebinding race fixes, DateSession char.id compile fix, and latest source tests.
+Relevant commits: dd371afe59fdfd98e3138c526ab6de617cea8a86 and ccb812af29d8277dda72c83d2f1e8049feabea9f.
