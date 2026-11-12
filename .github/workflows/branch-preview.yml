@@ -2,7 +2,7 @@ name: SullyOS independent development preview
 
 # Isolated publishing repository: this workflow never writes to SullyOS.
 # Source: artibala866-cmd/SullyOS at remove-checkphone-vrworld-lifesim.
-# Preview rebuild checks both nested legacy order defaults and safely disabled uncertain imports.
+# Preview build validates current source importer, author-choice tests and mobile original-text screenshots.
 on:
   push:
     branches: [main]
