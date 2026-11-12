@@ -1,0 +1,6 @@
+Journal internal calendar notebook UI publish request
+Source repo: artibala866-cmd/SullyOS
+Source branch: remove-checkphone-vrworld-lifesim
+Feature commits: 1fe1b47748c7bdd4ec32704ec16f0526228e69ce, f1606ed50b97b5a4a34842c398a61daec2738bb9
+Testing: local static mobile layout snapshots for empty/list at 390px and 320px
+No new branches.
