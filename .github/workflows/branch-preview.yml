@@ -229,6 +229,34 @@ jobs:
           fi
           fc-list :lang=zh family | head -n 5 || true
 
+      - name: Capture real JournalApp index layout on mobile
+        shell: bash
+        run: |
+          set -euo pipefail
+          pnpm exec vite --host 127.0.0.1 --port 5182 --strictPort > /tmp/journal-index-vite.log 2>&1 &
+          server_pid="$!"
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          ready=false
+          for attempt in $(seq 1 60); do
+            if curl -fsS http://127.0.0.1:5182/tests/journal-index-visual.html > /dev/null; then ready=true; break; fi
+            sleep 1
+          done
+          if [ "$ready" != true ]; then cat /tmp/journal-index-vite.log; exit 1; fi
+          export CHROME_BIN="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          node scripts/journal-index-visual.mjs || {
+            tail -n 120 /tmp/journal-index-vite.log || true
+            exit 1
+          }
+
+      - name: Upload real JournalApp mobile screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: journal-index-real-component-mobile
+          path: /tmp/journal-index-shots/*.png
+          if-no-files-found: warn
+          retention-days: 7
+
       - name: Check and capture original Worldbook mobile UI
         shell: bash
         run: |
