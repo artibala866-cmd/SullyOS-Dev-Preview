@@ -1,0 +1,5 @@
+Purpose: publish and verify Worldbook touch-target separation and return-to-entry UX.
+Source: artibala866-cmd/SullyOS
+Branch: remove-checkphone-vrworld-lifesim
+Requested source HEAD: f36d58b2a4c16cf9f1f20f35d19762e6968cc448
+Browser test: scripts/worldbook-bulk-visual.mjs (touch, touch-small, many-return)
