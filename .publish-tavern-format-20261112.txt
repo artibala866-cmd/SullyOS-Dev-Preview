@@ -1,3 +1,2 @@
-Publish the latest existing SullyOS development branch to the independent preview site.
-Author-state-safe Tavern format import, resilient structural grouping and selector validation.
-Requested source commit: c79142c400cef4dd93179c948ea52a3fa9b0ed40
+Publish latest author-safe SillyTavern JSON compatibility to the existing test site.
+Verified source commit: 28d6b0f0bd7c59a948a1360cdc73937ed795c3a7
