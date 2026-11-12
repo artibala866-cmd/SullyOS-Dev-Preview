@@ -216,6 +216,50 @@ jobs:
           fi
           fc-list :lang=zh family | head -n 5 || true
 
+      - name: Check and capture original Worldbook mobile UI
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/worldbook-bulk-shots
+          pnpm exec vite --host 127.0.0.1 --port 5182 --strictPort > /tmp/worldbook-bulk-vite.log 2>&1 &
+          server_pid="$!"
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          ready=false
+          for attempt in $(seq 1 60); do
+            if curl -fsS http://127.0.0.1:5182/test/fixtures/worldbook-bulk-visual.html > /dev/null; then ready=true; break; fi
+            sleep 1
+          done
+          if [ "$ready" != true ]; then cat /tmp/worldbook-bulk-vite.log; exit 1; fi
+          browser="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          for mode in normal search selected; do
+            url="http://127.0.0.1:5182/test/fixtures/worldbook-bulk-visual.html?mode=$mode"
+            "$browser" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --no-first-run               --window-size=390,844 --virtual-time-budget=16000 --dump-dom "$url" > "/tmp/worldbook-bulk-$mode.html"
+            grep -q 'data-worldbook-visual-ready="true"' "/tmp/worldbook-bulk-$mode.html" || {
+              grep -o 'data-worldbook-visual-error="[^"]*"' "/tmp/worldbook-bulk-$mode.html" || true
+              tail -c 1200 "/tmp/worldbook-bulk-$mode.html" || true
+              exit 1
+            }
+            grep -q 'data-intro-present="false"' "/tmp/worldbook-bulk-$mode.html"
+            grep -q 'data-horizontal-overflow="false"' "/tmp/worldbook-bulk-$mode.html"
+            if [ "$mode" = normal ]; then
+              grep -q 'data-other-count="2"' "/tmp/worldbook-bulk-$mode.html"
+            else
+              grep -q 'data-match-count="6"' "/tmp/worldbook-bulk-$mode.html"
+              grep -q 'data-other-count="0"' "/tmp/worldbook-bulk-$mode.html"
+            fi
+            if [ "$mode" = selected ]; then
+              grep -q 'data-selected-count="6"' "/tmp/worldbook-bulk-$mode.html"
+            fi
+            "$browser" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --no-first-run               --window-size=390,844 --virtual-time-budget=16000               --screenshot="/tmp/worldbook-bulk-shots/worldbook-$mode.png" "$url"
+          done
+
+      - name: Upload Worldbook search and multiselect screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: worldbook-mobile-search-selection
+          path: /tmp/worldbook-bulk-shots/*.png
+          retention-days: 7
+
       - name: Capture real story session mobile screenshots
         shell: bash
         run: |
