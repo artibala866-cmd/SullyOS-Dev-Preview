@@ -41,3 +41,4 @@ Verify PUBLIC source revision after deploy.
 2026-11-07: Live Story Theater Quick Preset now uses source-author Tavern groups and actual original prompt enabled states, scoped to current entry; unknown-author and native mobile screenshots, compiled AI-payload persistence tests. Source de88e50b07a377e559225b660434ddbeb61f503a.
 2026-11-12 世界书搜索/长按多选/批量导出/删除/手机截图审查，锁定最新源码 0052bd9f95477b17894e74516aea1fe3c818a0b。
 2026-11-12 世界书搜索修复：日记 + 日记本一次显示、全选和批量删除、12条以上不漏。源码 74cdb5b753dbe51ee1fc4392ec7371524e49599e。
+世界书搜索修复截图/批量删除回归 CI Chrome 启动诊断重试：c82f26ad47e0e3b1b7882e95898719164da25336。
