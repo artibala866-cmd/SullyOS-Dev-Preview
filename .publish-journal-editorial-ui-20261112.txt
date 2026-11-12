@@ -3,3 +3,5 @@ Existing source branch: remove-checkphone-vrworld-lifesim
 Source head: da14bfa0c0649e4a29ed98879fda7754b5f756f5
 Real component screenshots: journal-index-real-component-mobile Actions artifact, 5 states PASS
 No source branches created
+
+Font-only diary excerpt tweak: source commit 29d36ec946bcef267852c38ee8f9b543b0fdc6a1. Verified one-line diff in apps/JournalApp.tsx; do not change other UI.
