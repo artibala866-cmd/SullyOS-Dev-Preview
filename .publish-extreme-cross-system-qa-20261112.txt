@@ -1,0 +1,4 @@
+Bizarre real-user pressure tests for chat/phone/schedule/real-person; double-send fix and 320px UI regression.
+Source branch: remove-checkphone-vrworld-lifesim
+Source commit: 8c2aaf19b02fdaed114e5a262b8e2deda187fda6
+All testing on disposable Chromium profile with stubbed loopback-only model; no user data or paid tokens.
