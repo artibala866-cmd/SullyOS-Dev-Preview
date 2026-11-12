@@ -1,0 +1,4 @@
+sourceRepo=artibala866-cmd/SullyOS
+sourceBranch=remove-checkphone-vrworld-lifesim
+sourceCommit=9c7f0bd53bf76962cacb9fd1c69427ae27c83b00
+reason=repair-shared-TypeScript-error-and-align-regressions
