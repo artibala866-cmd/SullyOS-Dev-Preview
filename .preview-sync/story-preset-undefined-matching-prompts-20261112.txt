@@ -1,0 +1,4 @@
+sourceRepo=artibala866-cmd/SullyOS
+sourceBranch=remove-checkphone-vrworld-lifesim
+sourceCommit=c79142c400cef4dd93179c948ea52a3fa9b0ed40
+reason=repair-undefined-matchingPrompts-in-story-preset-maker
