@@ -1,0 +1,6 @@
+2026-11-12 · 剧情真实游玩式压力测试交付
+来源：artibala866-cmd/SullyOS 的现有分支 remove-checkphone-vrworld-lifesim
+本次测试文件：utils/storyHumanChaosPressure.test.ts；自动检查：.github/workflows/story-human-chaos-pressure.yml
+覆盖：剧情新建与预设并发导入/重导入、两条剧情切换；240 楼持久化、归档、原文导出；多种正则作用场景/过滤时机/角色深度及导入导出；Chromium 长剧情 HTML 阅读。
+触发独立预览站从最新开发分支重建。创建记录时源 HEAD: 1fc1062bb2691d569f1313b32124e84ac31e58a1。最终以构建中源 SHA 和网站 preview-source.json 为准。
+不新建源代码分支，不修改正式站。
