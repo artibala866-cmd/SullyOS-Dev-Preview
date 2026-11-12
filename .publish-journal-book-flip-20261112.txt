@@ -4,3 +4,5 @@ Source branch: remove-checkphone-vrworld-lifesim
 Feature commits: 4b7c74e8dd2077f0afaf5747c6ab14455529672b, 2d0835a2e4d342474ab83afc0cc1928531e3e53c
 Source head observed: 08c919a6d8c93fbba7758294f617c9420fc17b1a
 Scope: UI only; preserve existing journal data and appearance.
+
+New independent run requested: previous run's deployment metadata had duplicate github-pages artifact names after retry.
