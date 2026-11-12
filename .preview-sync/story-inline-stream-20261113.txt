@@ -1,0 +1,5 @@
+Purpose: verify and publish inline streaming story preview
+Source branch: remove-checkphone-vrworld-lifesim
+Source commit: 11e8c657fe170fd9e2b4a9e571106e1229c8cf53
+Tests: utils/storyTheater.test.ts, test-site configured regression build
+This marker triggers existing independent preview workflow; no other deployment configuration changes.
