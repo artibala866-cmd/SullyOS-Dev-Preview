@@ -1,0 +1,4 @@
+Source repository: artibala866-cmd/SullyOS
+Source branch: remove-checkphone-vrworld-lifesim
+Requested source commit: 08c919a6d8c93fbba7758294f617c9420fc17b1a
+Reason: publish Meet character group readability and spacing fix after GitHub Pages artifact metadata conflict.
