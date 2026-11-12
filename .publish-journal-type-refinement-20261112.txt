@@ -1,0 +1,7 @@
+Journal typography refinement publish request
+Source repo: artibala866-cmd/SullyOS
+Existing branch: remove-checkphone-vrworld-lifesim
+Source head observed: 616814e4f2b186bc18d779d3ef3925fb64e73dc9
+Feature commit: c6631eea6078385891a39fcd277ae3c168f43524
+Screenshot QA: 349px, 390px, 320px, long name, empty list, 24 entries (local browser layout reconstruction; not live app)
+Keep pure white full-height journal UI.
