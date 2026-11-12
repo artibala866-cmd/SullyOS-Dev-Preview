@@ -168,6 +168,47 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Verify startup animation hard-off preference and cold-launch policy
+        run: pnpm exec vitest run utils/bootAnimationPolicy.test.ts
+
+      - name: Inspect boot animation TypeScript diagnostics
+        shell: bash
+        run: |
+          pnpm exec tsc --noEmit --pretty false > /tmp/boot-animation-tsc.log 2>&1 || true
+          grep -E '^(utils/bootAnimationPolicy(\.test)?\.ts|components/PhoneShell\.tsx|context/OSContext\.tsx)[(]' /tmp/boot-animation-tsc.log > /tmp/boot-animation-target-errors.log || true
+          if [ -s /tmp/boot-animation-target-errors.log ]; then
+            cat /tmp/boot-animation-target-errors.log
+            exit 1
+          fi
+
+      - name: Confirm disabled boot animation never mounts and capture real mobile screenshots
+        shell: bash
+        run: |
+          set -euo pipefail
+          pnpm exec vite --host 127.0.0.1 --port 5199 --strictPort > /tmp/boot-animation-vite.log 2>&1 &
+          server_pid="$!"
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          ready=false
+          for attempt in $(seq 1 90); do
+            if curl -fsS http://127.0.0.1:5199/ > /dev/null; then ready=true; break; fi
+            sleep 1
+          done
+          if [ "$ready" != true ]; then tail -n 100 /tmp/boot-animation-vite.log; exit 1; fi
+          export CHROME_BIN="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          node scripts/boot-animation-hard-off-visual.mjs || {
+            tail -n 100 /tmp/boot-animation-vite.log || true
+            exit 1
+          }
+
+      - name: Upload boot animation OFF and ON mobile screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: boot-animation-hard-off-mobile
+          path: /tmp/boot-animation-shots/*.png
+          if-no-files-found: warn
+          retention-days: 7
+
       - name: Verify complete Neural Link character deletion
         run: pnpm exec vitest run utils/deletedRoleResidue.test.ts utils/amsg2CharCleanup.test.ts
 
