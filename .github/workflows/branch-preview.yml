@@ -383,7 +383,7 @@ jobs:
           path: /tmp/story-import-ux-shots/*.png
           retention-days: 5
 
-      # Regression audit: preserves source order, author previews and hidden-slot edit paths.
+      # Regression audit: verify source-safe insert/reorder, original-text preview, and mobile screenshot evidence.
       - name: Check original preset text inspector and exact return on mobile
         shell: bash
         run: |
