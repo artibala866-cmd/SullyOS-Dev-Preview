@@ -1,0 +1,6 @@
+Source branch: remove-checkphone-vrworld-lifesim
+Source commit: bf9414ee6d1ce91d1312d8c918fb14634f45a34e
+Audit: Old imported MoM preset groups are merged with partial older entryGrouping indexes.
+Migration: Original ID, timestamps, authored switches, order and original text preserved.
+Regression: Source author selector and IndexedDB persistence tests passed.
+Deployment: the independent preview workflow must verify preview-source.json.
