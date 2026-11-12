@@ -1,2 +1,3 @@
-Publish current SullyOS development branch to the existing independent preview site.
-Source commit including Tavern preset compatibility and validated Worldbook visual test parser: 1fdacc38683205fd9bac516b834a6e2d93e4c5f7
+Publish the latest existing SullyOS development branch to the independent preview site.
+Author-state-safe Tavern format import, resilient structural grouping and selector validation.
+Requested source commit: c79142c400cef4dd93179c948ea52a3fa9b0ed40
