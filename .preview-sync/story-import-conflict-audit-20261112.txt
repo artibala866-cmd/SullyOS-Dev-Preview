@@ -1,0 +1,7 @@
+Source branch: remove-checkphone-vrworld-lifesim
+Source commit: 0e8c293a3f35b15d0ce44befcdbd8d49b8f25037
+Feature: Explicit source import conflict choice (keep old / overwrite same ID / separate copy).
+Feature: Persisted audit: exact source entries, enabled state count, unlisted entries, script/regex omissions.
+Feature: Only original-author explicit one-of declarations close related choices; stackable overlays remain independent.
+Regression: Source and IndexedDB unit tests, real React import UI, strict TypeScript, production build, mobile screenshots.
+Public verification: Must match preview-source.json against 0e8c293a3f35b15d0ce44befcdbd8d49b8f25037.
