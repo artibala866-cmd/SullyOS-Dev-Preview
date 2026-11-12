@@ -1,4 +1,4 @@
 Source repository: artibala866-cmd/SullyOS
 Source branch: remove-checkphone-vrworld-lifesim
-Requested source commit: 1a52e3733bc67a6026559e3b8557c7dd2b2e50a0
+Requested source commit: 3db17611ce57958788f4849e15a50dcf0cf1a98c
 Purpose: Rebuild latest preview after comprehensive character-deletion regression updates.
