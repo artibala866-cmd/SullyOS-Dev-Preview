@@ -1,5 +1,5 @@
 Trigger independent SullyOS development preview.
 Source repo: artibala866-cmd/SullyOS
 Source branch: remove-checkphone-vrworld-lifesim
-Requested source head: 8d4d4b592c401b132f1a413631e30492d4a52882
-Scope: restore original airy cinema reader spacing; remove nested archive cards and heavy paging button; keep generation, archive loading and scrolling unchanged.
+Requested source head: 3bed2ab5e6777169472a36275b7d06fee530552b
+Scope: adversarial story regression with rapid 20-floor paging, immediate archive close/reopen, stale read cancellation, old-save cross-story switching, and 240 rich-floor mobile reading.
