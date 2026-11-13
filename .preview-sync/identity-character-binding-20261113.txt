@@ -1,0 +1,2 @@
+Verified real UserApp identity binding 390/320 mobile screenshots and 25 tests.
+Source: artibala866-cmd/SullyOS@b2850fa856c6a93d1e0a1ac585e4c11da4d1fb05
