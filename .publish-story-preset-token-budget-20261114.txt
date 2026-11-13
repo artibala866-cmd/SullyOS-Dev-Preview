@@ -1,4 +1,5 @@
 Source repository: artibala866-cmd/SullyOS
 Source branch: remove-checkphone-vrworld-lifesim
-Requested source commit: ebbe5d8ef281271fe1c00ce49d0bfe51058ff411
-Purpose: trigger existing GitHub Pages preview workflow to build the token-budget fix.
+Required source commit: af47b80347c870d8c830fd35e2c1393e726d7d2f
+Includes: ebbe5d8ef281271fe1c00ce49d0bfe51058ff411
+Purpose: rerun existing Pages preview to include the quick-preset budget fix.
