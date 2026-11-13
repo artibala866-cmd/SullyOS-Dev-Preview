@@ -168,6 +168,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Verify identity switching preserves settings and 10 chat-background presets
+        run: pnpm exec vitest run utils/userSaves.test.ts utils/userSaveBackup.test.ts utils/decorationLibrary.test.ts
+
       - name: Verify retired desktop DIY data migration and import safety
         run: pnpm exec vitest run utils/retiredDesktopDecorations.test.ts
 
