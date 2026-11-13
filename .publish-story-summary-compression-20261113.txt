@@ -1,5 +1,5 @@
 Source: artibala866-cmd/SullyOS
 Branch: remove-checkphone-vrworld-lifesim
-Commit: b104834b7decabec994276a704426b9a602e1842
-Change: summarize story memory according to actual relevant facts, not arbitrary ten-turn or word-count quotas
-Reason: refresh existing independent test preview
+Commit: 6b7a391759dedf2cf268ce13d36638ef51d0591d
+Change: approved six-section event-box prompt, remove last-scene snapshots, record user author corrections, enforce final 100-1500 characters
+Reason: update the existing test preview without creating any branch
