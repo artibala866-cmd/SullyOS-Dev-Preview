@@ -1,0 +1,5 @@
+sourceRepository=artibala866-cmd/SullyOS
+sourceBranch=remove-checkphone-vrworld-lifesim
+sourceCommit=3af22f4f134725e2c7b31d57c5e1242385e08074
+scope=original author-choice prompt content inline editing; preserve source group return position
+checks=storyPresetImportUi.test.tsx; story-preset-import-audit mobile screenshots
