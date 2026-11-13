@@ -175,7 +175,7 @@ jobs:
         shell: bash
         run: |
           pnpm exec tsc --noEmit --pretty false > /tmp/retired-decorations-tsc.log 2>&1 || true
-          grep -E '^(apps/(Appearance|Launcher)\\.tsx|context/OSContext\\.tsx|utils/(retiredDesktopDecorations(\\.test)?|beautyPreview|beautyShareContract)\\.ts|types\\.ts)[(]' /tmp/retired-decorations-tsc.log > /tmp/retired-decorations-target-errors.log || true
+          grep -E '^(apps/(Appearance|Launcher)[.]tsx|context/OSContext[.]tsx|utils/(retiredDesktopDecorations([.]test)?|beautyPreview|beautyShareContract)[.]ts|types[.]ts)[(]' /tmp/retired-decorations-tsc.log > /tmp/retired-decorations-target-errors.log || true
           if [ -s /tmp/retired-decorations-target-errors.log ]; then
             cat /tmp/retired-decorations-target-errors.log
             exit 1
