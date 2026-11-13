@@ -256,6 +256,10 @@ jobs:
             tail -n 100 /tmp/boot-animation-vite.log || true
             exit 1
           }
+          node scripts/user-save-wardrobe-visual.mjs || {
+            tail -n 100 /tmp/boot-animation-vite.log || true
+            exit 1
+          }
 
       - name: Upload boot animation OFF and ON mobile screenshots
         if: always()
@@ -263,6 +267,15 @@ jobs:
         with:
           name: boot-animation-hard-off-mobile
           path: /tmp/boot-animation-shots/*.png
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Upload identity A/B chat-background wardrobe mobile screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: user-save-shared-wardrobe-mobile
+          path: /tmp/user-save-wardrobe-shots/*.png
           if-no-files-found: warn
           retention-days: 7
 
