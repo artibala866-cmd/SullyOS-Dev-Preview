@@ -169,7 +169,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Verify identity switch settings, deleted decoration tombstones and backup credential safety
-        run: pnpm exec vitest run utils/userSaves.test.ts utils/userSaveBackup.test.ts utils/decorationLibrary.test.ts
+        run: pnpm exec vitest run utils/userSaves.test.ts utils/userSaveBackup.test.ts utils/decorationLibrary.test.ts utils/userSaveCreatorDraft.test.ts utils/userProfilePersistence.test.ts
 
       - name: Verify identity character bindings and A/B private-profile separation
         run: pnpm exec vitest run utils/identityCharacterBinding.test.ts utils/userSaves.test.ts
