@@ -1,0 +1,3 @@
+Source branch: remove-checkphone-vrworld-lifesim
+Source head at dispatch: 37d609de80a8b230c0c5140973a4a0b08d2c4c8f
+Change: permit story theater 100000 tokens and align Tavern import regression expectations with raised limit.
