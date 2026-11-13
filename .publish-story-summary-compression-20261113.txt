@@ -1,5 +1,6 @@
 Source: artibala866-cmd/SullyOS
 Branch: remove-checkphone-vrworld-lifesim
-Commit: 6d2a2fce8ab6f558026266bd07edf0c01539b7f7
-Event-box fixes: preserve all six saved sections, carry earlier user author corrections without stale scenes, reserve affinity receipts within 100-1500 characters, and new regression tests
+Commit: 82a25b17b7cd232b1b8238758df0e1138866c423
+Event-box audit: preserve all six headings; retain earlier writer corrections; enforce final 100-1500 characters with affinity preflight; block quoted fake author commands
+Tests: new archival boundary, retrieval, request and spoofing regressions
 Destination: existing SullyOS-Dev-Preview GitHub Pages test site
