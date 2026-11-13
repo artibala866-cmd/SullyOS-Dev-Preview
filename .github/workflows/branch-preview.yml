@@ -256,7 +256,7 @@ jobs:
           fi
           fc-list :lang=zh family | head -n 5 || true
 
-      - name: Confirm disabled boot animation never mounts and capture real mobile screenshots
+      - name: Verify boot animation and identity wardrobe screenshots with safe Chrome shutdown
         shell: bash
         run: |
           set -euo pipefail
