@@ -171,6 +171,47 @@ jobs:
       - name: Verify identity switching preserves settings and 10 chat-background presets
         run: pnpm exec vitest run utils/userSaves.test.ts utils/userSaveBackup.test.ts utils/decorationLibrary.test.ts
 
+      - name: Verify identity character bindings and A/B private-profile separation
+        run: pnpm exec vitest run utils/identityCharacterBinding.test.ts utils/userSaves.test.ts
+
+      - name: Check identity binding TypeScript diagnostics
+        shell: bash
+        run: |
+          pnpm exec tsc --noEmit --pretty false > /tmp/identity-binding-tsc.log 2>&1 || true
+          grep -E '^(utils/identityCharacterBinding(\\.test)?\\.ts|hooks/useIdentityCharacterOptions\\.ts|components/user/PerCharAvatarPicker\\.tsx|tests/identity-character-binding-visual\\.tsx)[(]' /tmp/identity-binding-tsc.log > /tmp/identity-binding-errors.log || true
+          if [ -s /tmp/identity-binding-errors.log ]; then
+            cat /tmp/identity-binding-errors.log
+            exit 1
+          fi
+
+      - name: Verify and screenshot real archive binding UI at 390px and 320px
+        shell: bash
+        run: |
+          set -euo pipefail
+          pnpm exec vite --host 127.0.0.1 --port 5196 --strictPort > /tmp/identity-binding-vite.log 2>&1 &
+          server_pid="$!"
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          ready=false
+          for attempt in $(seq 1 70); do
+            if curl -fsS http://127.0.0.1:5196/tests/identity-character-binding-visual.html > /dev/null; then ready=true; break; fi
+            sleep 1
+          done
+          if [ "$ready" != true ]; then tail -n 100 /tmp/identity-binding-vite.log; exit 1; fi
+          export CHROME_BIN="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          node scripts/identity-character-binding-visual.mjs || {
+            tail -n 120 /tmp/identity-binding-vite.log || true
+            exit 1
+          }
+
+      - name: Upload verified archive identity binding mobile screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: identity-binding-real-archive-mobile
+          path: /tmp/identity-binding-shots/*.png
+          if-no-files-found: warn
+          retention-days: 7
+
       - name: Verify retired desktop DIY data migration and import safety
         run: pnpm exec vitest run utils/retiredDesktopDecorations.test.ts
 
