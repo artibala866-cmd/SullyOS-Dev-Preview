@@ -168,7 +168,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Verify identity switching preserves settings and 10 chat-background presets
+      - name: Verify identity switch settings, deleted decoration tombstones and backup credential safety
         run: pnpm exec vitest run utils/userSaves.test.ts utils/userSaveBackup.test.ts utils/decorationLibrary.test.ts
 
       - name: Verify identity character bindings and A/B private-profile separation
