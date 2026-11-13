@@ -1,0 +1,5 @@
+Preview publication request — story memory character count in existing metadata row.
+Source repository: artibala866-cmd/SullyOS
+Source branch: remove-checkphone-vrworld-lifesim
+Requested source commit: 53f49cf23b01954c0fe002309288f88adea9238b
+No preview workflow configuration or app UI files modified here.
