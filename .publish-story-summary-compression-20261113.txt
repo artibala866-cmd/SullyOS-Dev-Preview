@@ -1,5 +1,5 @@
 Source: artibala866-cmd/SullyOS
 Branch: remove-checkphone-vrworld-lifesim
-Commit: b48c5dbd68e3b71294bb57690aff934703d1ed64
-Change: compact story event-box memory summaries using shorthand while preserving causality, identity and scene continuity
-Reason: trigger the existing independent development preview publisher
+Commit: 45b21b56e1f661bc3435584f633d62fc4ac83fa8
+Change: simplify story event-box extraction for lightweight models; protect identity, knowledge, intent vs action, unfinished events, and final scene
+Reason: refresh the existing independent development preview publisher
