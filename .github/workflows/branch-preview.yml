@@ -212,6 +212,9 @@ jobs:
           if-no-files-found: warn
           retention-days: 7
 
+      - name: Verify photo slot isolation, last-image deletion and BlobRef persistence
+        run: pnpm exec vitest run utils/launcherWidgetSlots.test.ts utils/launcherWidgetsBlobRef.test.ts
+
       - name: Verify retired desktop DIY data migration and import safety
         run: pnpm exec vitest run utils/retiredDesktopDecorations.test.ts
 
@@ -219,7 +222,7 @@ jobs:
         shell: bash
         run: |
           pnpm exec tsc --noEmit --pretty false > /tmp/retired-decorations-tsc.log 2>&1 || true
-          grep -E '^(apps/(Appearance|Launcher)[.]tsx|context/OSContext[.]tsx|utils/(retiredDesktopDecorations([.]test)?|beautyPreview|beautyShareContract)[.]ts|types[.]ts)[(]' /tmp/retired-decorations-tsc.log > /tmp/retired-decorations-target-errors.log || true
+          grep -E '^(apps/(Appearance|Launcher)[.]tsx|context/OSContext[.]tsx|utils/(retiredDesktopDecorations([.]test)?|beautyPreview|beautyShareContract|launcherWidgetSlots([.]test)?|launcherWidgetsBlobRef[.]test)[.]ts|types[.]ts)[(]' /tmp/retired-decorations-tsc.log > /tmp/retired-decorations-target-errors.log || true
           if [ -s /tmp/retired-decorations-target-errors.log ]; then
             cat /tmp/retired-decorations-target-errors.log
             exit 1
