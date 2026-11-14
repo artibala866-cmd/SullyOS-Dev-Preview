@@ -1,4 +1,4 @@
 source_repo=artibala866-cmd/SullyOS
 source_branch=remove-checkphone-vrworld-lifesim
-source_commit=6517c5fb996ad3a3c37e7ed5202530a66159916a
-change=Remove all extra archive length guidance sent to the model; keep only the built-in 100-1500 writing instruction. No runtime hard-cap or author settings changed.
+source_commit=9aaf6c724d361a2c51ea416c0216f32f6ba90047
+change=Remove unsolicited archive length helper sentence from story settings UI. Preserve input label, value, behavior and all archive code.
