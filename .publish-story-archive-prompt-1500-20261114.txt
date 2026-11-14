@@ -1,4 +1,4 @@
 source_repo=artibala866-cmd/SullyOS
 source_branch=remove-checkphone-vrworld-lifesim
-source_commit=9aaf6c724d361a2c51ea416c0216f32f6ba90047
-change=Remove unsolicited archive length helper sentence from story settings UI. Preserve input label, value, behavior and all archive code.
+source_commit=c3b6a5c8927b6b7aaed4be9fb7607d565562ea20
+change=Wire the existing author-editable story archive save ceiling to post-response validation; retain the separate strict 100-1500 writing instruction and no automatic truncation.
