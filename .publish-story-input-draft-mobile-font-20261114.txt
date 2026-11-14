@@ -1,0 +1,3 @@
+Publish exact source commit: 456029fcc537bcce59314610a307dba2dfccdab3
+Source branch: remove-checkphone-vrworld-lifesim
+Verified story input draft autosave and restoration, real 320px/390px browser screenshots.
