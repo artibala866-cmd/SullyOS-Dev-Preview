@@ -1,0 +1,4 @@
+Source branch remove-checkphone-vrworld-lifesim
+Target source commit 13af981169da279683428dd86d5fb1d306325a5f
+Feature: preserve unsent story composer drafts per story when viewing vector memory or leaving the story. Clear only after successful story reply commit; remove on deletion.
+Real component mobile CI: 320px and 390px.
