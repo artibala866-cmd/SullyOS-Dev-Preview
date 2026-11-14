@@ -1,4 +1,4 @@
 source_repo=artibala866-cmd/SullyOS
 source_branch=remove-checkphone-vrworld-lifesim
-source_commit=c3b6a5c8927b6b7aaed4be9fb7607d565562ea20
-change=Wire the existing author-editable story archive save ceiling to post-response validation; retain the separate strict 100-1500 writing instruction and no automatic truncation.
+source_commit=8f6dde722942d7832c33b1263529a61f00295a4b
+change=Story archive regression fixes: no unrequested default hard cap; preflight impossible author cap before API; do not restore stale archive state during regression.
