@@ -1,5 +1,7 @@
 Story archive guidance control & complete-model-response safety
 Source branch: remove-checkphone-vrworld-lifesim
-Source commit: 7027d8a6bf0ad07fe1fcd7e63d66e362492babe0
+Source commit: d0dce7baedd0e7adf9512a7adfcc9507362b614a
 Summary: per-story editable archive advisory ceiling (0=unlimited), no hard 1500/3000 rejection or hard max_tokens 4096, full affinity preservation, long vector split and full recall.
 Validation: source archive/vector CI; preview workflow runs its existing build and UI checks.
+
+Follow-up: corrected test syntax; preview retest and publish latest source.
