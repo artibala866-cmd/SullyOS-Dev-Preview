@@ -1,0 +1,5 @@
+Purpose: publish story archive 3000-character save limit; 1500 remains only the requested model guidance.
+Source branch: remove-checkphone-vrworld-lifesim
+Source commit: aff32ac47983820b09da2ef7f71920e291e547f0
+Validation: utils/storyTheaterArchive.test.ts (source CI), independent preview build.
+Existing independent preview workflow triggered by this sync marker; no new branch or deployment configuration changes.
