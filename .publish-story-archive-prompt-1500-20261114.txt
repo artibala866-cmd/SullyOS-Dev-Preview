@@ -1,0 +1,4 @@
+source_repo=artibala866-cmd/SullyOS
+source_branch=remove-checkphone-vrworld-lifesim
+source_commit=c7ddda6c33f28165010cd30df59e9b428188bf64
+change=Story archive prompt requests no more than 1500 Chinese characters; runtime persistence and hard limits unchanged.
