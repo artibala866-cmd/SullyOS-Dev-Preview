@@ -15,3 +15,7 @@ Source commit: 84fee4b43e8132734c51dd5e351f9749ee7c35a8
 2026-11-15: Final story-memory source floor matching fix after quote mismatch QA.
 Source branch: remove-checkphone-vrworld-lifesim
 Minimum source commit: 74d6be2da123d7172ef68632f337682409007a4f
+
+2026-11-15: Final source archive evidence fix with TypeScript source-floor metadata.
+Source branch: remove-checkphone-vrworld-lifesim
+Source commit: d1b31f7ccb4c1c2bcc8c1007283f3e76a8becbe6
