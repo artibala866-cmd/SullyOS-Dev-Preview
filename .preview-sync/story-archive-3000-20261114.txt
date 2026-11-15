@@ -35,3 +35,7 @@ Source commit: b19c3e29476e162d97e2a245e55d2e1ea20a8679
 2026-11-15: Final player-mode regression: disabled automatic-memory switch cannot trigger additional API after the archive threshold; all prior story-memory changes retained.
 Source branch: remove-checkphone-vrworld-lifesim
 Source commit: b7a143f1d20067ac1faf0ec173bcd63ceb07fc66
+
+2026-11-16: User-video-driven story memory fix: readable chronological vector timeline, compact progressive disclosure, factual vs planned classification, story time separate from archive time, player-profile dedup and bounded system recall.
+Source branch: remove-checkphone-vrworld-lifesim
+Source commit: 84d70a7f1ced9531591f5d789bf496623a046848
