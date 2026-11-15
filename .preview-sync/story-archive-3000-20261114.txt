@@ -47,3 +47,7 @@ Source commit: a4ce781c6931b958f0262469cb532b20c6826620
 2026-11-16: Publish readable story vector cards, sourced scene times, and verified recall through the existing development preview.
 Source branch: remove-checkphone-vrworld-lifesim
 Source commit: 3ebc841ae544efc15b8437f3749aa2203b53761f
+
+2026-11-16: Publish source-checked plot details, Palace-style lookup before summary, and long-play validated continuation.
+Source branch: remove-checkphone-vrworld-lifesim
+Source commit: 85ac283b0913468c792b5c75b8051cd3f4724719
