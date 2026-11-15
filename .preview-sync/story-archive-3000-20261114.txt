@@ -7,3 +7,7 @@ Existing independent preview workflow triggered by this sync marker; no new bran
 2026-11-15: Rebuild the existing preview for story archive JSON/source validation fix.
 Source branch: remove-checkphone-vrworld-lifesim
 Minimum source commit: e84f271abd4bd513c3989e8e9583ceeb0258a916
+
+2026-11-15: Publish follow-up fix for the real-model third-quote mismatch and sourced incremental archive.
+Source branch: remove-checkphone-vrworld-lifesim
+Source commit: 84fee4b43e8132734c51dd5e351f9749ee7c35a8
