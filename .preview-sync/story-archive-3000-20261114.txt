@@ -31,3 +31,7 @@ Source commit: df971bdc0dd9351b3a50b7f7c1fcb0b3c921398b
 2026-11-15: Player-flow regression fixes: 91-floor multibatch chronology (including same-batch changes), planned/uncertain fact distinction, topic-specific historic recall, and actual story/vector archive UI.
 Source branch: remove-checkphone-vrworld-lifesim
 Source commit: b19c3e29476e162d97e2a245e55d2e1ea20a8679
+
+2026-11-15: Final player-mode regression: disabled automatic-memory switch cannot trigger additional API after the archive threshold; all prior story-memory changes retained.
+Source branch: remove-checkphone-vrworld-lifesim
+Source commit: b7a143f1d20067ac1faf0ec173bcd63ceb07fc66
