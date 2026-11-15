@@ -1,3 +1,9 @@
+## 2026-11-15 · 模型测试失败扣费防护修复
+
+- 测试源码：`artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim`，目标提交 `02f3ca845531cd865e9e0b3877015d3d54cfdd76`。
+- 保留「🧪 测试连接」真实生成验证，防止快速连点发送重复的付费请求，HTTP 200 空正文及仅推理内容不判为模型可用；不新增设置 UI，不改付费模式。
+- 触发现有测试站从源码原分支最新 HEAD 构建；线上以 `preview-source.json.sourceCommit` 校验。
+
 ## 2026-11-15 · 恢复系统设置原版模型测试连接
 
 - 现有源分支 `remove-checkphone-vrworld-lifesim` 已恢复原版「测试连接」的实际模型回复检测，不再以只读模型列表检查替代；源码提交 `c6378e9162c9d75a3136f4bb358b61633b78a7d4`。
