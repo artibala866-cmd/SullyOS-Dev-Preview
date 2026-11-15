@@ -55,3 +55,7 @@ Source commit: 85ac283b0913468c792b5c75b8051cd3f4724719
 2026-11-16: Publish final archived-evidence precision checks after the 54-turn browser regression.
 Source branch: remove-checkphone-vrworld-lifesim
 Source commit: 12d0404b300f22f3b6cf5a9555509d8adf9ac8d2
+
+2026-11-16: Publish narrative time recovery for older story cards and stable repeatable story recall after the 49-floor video audit.
+Source branch: remove-checkphone-vrworld-lifesim
+Source commit: 295b3f5e92c327e5fbc4f120048ce7ca6f0e05be
