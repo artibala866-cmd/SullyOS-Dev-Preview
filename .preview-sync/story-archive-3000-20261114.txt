@@ -23,3 +23,7 @@ Source commit: d1b31f7ccb4c1c2bcc8c1007283f3e76a8becbe6
 2026-11-15: Publish chronology and in-story time-source repair for narrative archives; no unrelated feature changes.
 Source branch: remove-checkphone-vrworld-lifesim
 Minimum source commit: fec74f62b3f97d26d8bd1dbf10685a97fe3b81f3
+
+2026-11-15: Memory Palace pattern applied to story-only archives: role/worldbook dedup, source safety, hybrid multi-spike vector/BM25 recall, and stable worldbook-style injection.
+Source branch: remove-checkphone-vrworld-lifesim
+Source commit: df971bdc0dd9351b3a50b7f7c1fcb0b3c921398b
