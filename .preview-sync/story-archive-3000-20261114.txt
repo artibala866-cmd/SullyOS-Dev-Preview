@@ -3,3 +3,7 @@ Source branch: remove-checkphone-vrworld-lifesim
 Source commit: aff32ac47983820b09da2ef7f71920e291e547f0
 Validation: utils/storyTheaterArchive.test.ts (source CI), independent preview build.
 Existing independent preview workflow triggered by this sync marker; no new branch or deployment configuration changes.
+
+2026-11-15: Rebuild the existing preview for story archive JSON/source validation fix.
+Source branch: remove-checkphone-vrworld-lifesim
+Minimum source commit: e84f271abd4bd513c3989e8e9583ceeb0258a916
