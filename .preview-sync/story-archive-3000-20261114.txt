@@ -39,3 +39,7 @@ Source commit: b7a143f1d20067ac1faf0ec173bcd63ceb07fc66
 2026-11-16: User-video-driven story memory fix: readable chronological vector timeline, compact progressive disclosure, factual vs planned classification, story time separate from archive time, player-profile dedup and bounded system recall.
 Source branch: remove-checkphone-vrworld-lifesim
 Source commit: 84d70a7f1ced9531591f5d789bf496623a046848
+
+2026-11-16: Final user-video regression: legacy plan/rumor classification, 19-node mobile vector panel, source-time separation and readable chronological recall.
+Source branch: remove-checkphone-vrworld-lifesim
+Source commit: a4ce781c6931b958f0262469cb532b20c6826620
