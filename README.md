@@ -1,3 +1,8 @@
+## 2026-11-15 · 模型测试失败原因与单次请求修复
+
+- 源码仍是 `SullyOS@remove-checkphone-vrworld-lifesim`，目标提交 `7478e9a95c4cc051e89d473e92df5bfbee7e7bbe`。只修设置里的「🧪 测试连接」：保持一次真实 Hi 回复检测，防止重复测试，解析具体失败原因、200 错误包、空回复、推理耗尽和流中断；不改全局失败请求或页面增添说明。
+- 当前 README 仅触发现有独立预览站构建。上线以 `preview-source.json.sourceCommit` 验证。
+
 ## 2026-11-15 · 模型测试失败扣费防护修复
 
 - 测试源码：`artibala866-cmd/SullyOS@remove-checkphone-vrworld-lifesim`，目标提交 `02f3ca845531cd865e9e0b3877015d3d54cfdd76`。
