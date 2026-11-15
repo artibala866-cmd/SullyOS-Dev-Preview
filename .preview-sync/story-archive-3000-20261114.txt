@@ -43,3 +43,7 @@ Source commit: 84d70a7f1ced9531591f5d789bf496623a046848
 2026-11-16: Final user-video regression: legacy plan/rumor classification, 19-node mobile vector panel, source-time separation and readable chronological recall.
 Source branch: remove-checkphone-vrworld-lifesim
 Source commit: a4ce781c6931b958f0262469cb532b20c6826620
+
+2026-11-16: Publish readable story vector cards, sourced scene times, and verified recall through the existing development preview.
+Source branch: remove-checkphone-vrworld-lifesim
+Source commit: 3ebc841ae544efc15b8437f3749aa2203b53761f
