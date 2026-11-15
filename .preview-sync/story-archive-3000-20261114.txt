@@ -27,3 +27,7 @@ Minimum source commit: fec74f62b3f97d26d8bd1dbf10685a97fe3b81f3
 2026-11-15: Memory Palace pattern applied to story-only archives: role/worldbook dedup, source safety, hybrid multi-spike vector/BM25 recall, and stable worldbook-style injection.
 Source branch: remove-checkphone-vrworld-lifesim
 Source commit: df971bdc0dd9351b3a50b7f7c1fcb0b3c921398b
+
+2026-11-15: Player-flow regression fixes: 91-floor multibatch chronology (including same-batch changes), planned/uncertain fact distinction, topic-specific historic recall, and actual story/vector archive UI.
+Source branch: remove-checkphone-vrworld-lifesim
+Source commit: b19c3e29476e162d97e2a245e55d2e1ea20a8679
