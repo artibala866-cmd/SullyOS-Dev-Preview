@@ -11,3 +11,7 @@ Minimum source commit: e84f271abd4bd513c3989e8e9583ceeb0258a916
 2026-11-15: Publish follow-up fix for the real-model third-quote mismatch and sourced incremental archive.
 Source branch: remove-checkphone-vrworld-lifesim
 Source commit: 84fee4b43e8132734c51dd5e351f9749ee7c35a8
+
+2026-11-15: Final story-memory source floor matching fix after quote mismatch QA.
+Source branch: remove-checkphone-vrworld-lifesim
+Minimum source commit: 74d6be2da123d7172ef68632f337682409007a4f
