@@ -59,3 +59,7 @@ Source commit: 12d0404b300f22f3b6cf5a9555509d8adf9ac8d2
 2026-11-16: Publish narrative time recovery for older story cards and stable repeatable story recall after the 49-floor video audit.
 Source branch: remove-checkphone-vrworld-lifesim
 Source commit: 295b3f5e92c327e5fbc4f120048ce7ca6f0e05be
+
+2026-11-16: Publish ordered story recall for saved archives with missing narrative dates.
+Source branch: remove-checkphone-vrworld-lifesim
+Source commit: b75efe85b96c700633f697c25f587e6c4228e3ec
