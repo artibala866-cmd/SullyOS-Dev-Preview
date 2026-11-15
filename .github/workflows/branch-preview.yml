@@ -331,13 +331,13 @@ jobs:
         run: pnpm exec vitest run utils/memoryPalace/extractionFeatureFlag.test.ts
 
       - name: Verify imported SillyTavern presets before publishing
-        run: pnpm exec vitest run utils/storyTheaterHtml.test.ts utils/storyTheaterHtmlUI.test.tsx utils/storyTheaterClockIsolation.test.tsx utils/storyTheaterRealDialectAudit.test.ts utils/storyTavernCategories.test.ts utils/storySillyTavernImport.test.ts utils/storyTavernAuthorSections.test.ts utils/storyQuickPresetPanel.test.tsx utils/storyPresetImportAudit.test.ts utils/storyPresetImportUi.test.tsx utils/storyTheater.test.ts utils/storyReadingScroll.wiring.test.ts utils/storyTheaterReply.test.ts utils/storyOpeningDocumentImport.test.ts utils/storyImportExperience.wiring.test.ts
+        run: pnpm exec vitest run utils/storyTheaterHtml.test.ts utils/storyTheaterHtmlUI.test.tsx utils/storyTheaterClockIsolation.test.tsx utils/storyTheaterRealDialectAudit.test.ts utils/storyRegexDisplay.count.test.ts utils/storyTavernCategories.test.ts utils/storySillyTavernImport.test.ts utils/storyTavernAuthorSections.test.ts utils/storyQuickPresetPanel.test.tsx utils/storyPresetImportAudit.test.ts utils/storyPresetImportUi.test.tsx utils/storyTheater.test.ts utils/storyReadingScroll.wiring.test.ts utils/storyTheaterReply.test.ts utils/storyOpeningDocumentImport.test.ts utils/storyImportExperience.wiring.test.ts
 
       - name: Check story import TypeScript diagnostics
         shell: bash
         run: |
           pnpm exec tsc --noEmit --pretty false > /tmp/story-import-tsc.log 2>&1 || true
-          grep -E '^(utils/storySillyTavernImport(\\.test)?\\.ts|utils/storyTheater\\.ts|components/date/story/(StoryTheater|StoryTheaterEditor)\\.tsx|types\\.ts)[(]' /tmp/story-import-tsc.log > /tmp/story-import-errors.log || true
+          grep -E '^(utils/storySillyTavernImport(\\.test)?\\.ts|utils/storyRegexDisplay(\\.count\\.test)?\\.ts|utils/storyTheater\\.ts|components/date/story/(StoryTheater|StoryTheaterEditor|StoryTheaterSession)\\.tsx|types\\.ts)[(]' /tmp/story-import-tsc.log > /tmp/story-import-errors.log || true
           if [ -s /tmp/story-import-errors.log ]; then
             cat /tmp/story-import-errors.log
             exit 1
@@ -441,6 +441,23 @@ jobs:
             exit 1
           }
           grep -q 'data-story-floor="120"' /tmp/story-reading-120-floors.html
+          # Actual mobile-width story rendering: never count reasoning, do not add
+          # a counter to user turns, and preserve both light/dark reader skins.
+          for mode in novel dark; do
+            fixture="http://127.0.0.1:5178/story-reading-scroll-visual.html?mode=${mode}&focus=latest&with-thinking=1"
+            "$browser" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --no-first-run \
+              --window-size=390,844 --virtual-time-budget=6500 --dump-dom "$fixture" \
+              > "/tmp/story-reading-${mode}-prose-count.html"
+            grep -q 'data-story-scroll-ready="true"' "/tmp/story-reading-${mode}-prose-count.html" || {
+              echo "Story prose counter mobile audit failed: ${mode}"
+              grep -o '<output[^>]*>[^<]*</output>' "/tmp/story-reading-${mode}-prose-count.html" || true
+              exit 1
+            }
+            grep -q 'data-story-prose-count="4"' "/tmp/story-reading-${mode}-prose-count.html"
+            "$browser" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --no-first-run \
+              --window-size=390,844 --virtual-time-budget=6500 \
+              --screenshot="/tmp/story-mobile-shots/story-${mode}-prose-count.png" "$fixture"
+          done
           for item in "novel:top" "novel:middle" "novel:latest" "dark:middle"; do
             mode="${item%%:*}"
             focus="${item##*:}"
