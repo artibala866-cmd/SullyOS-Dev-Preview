@@ -19,3 +19,7 @@ Minimum source commit: 74d6be2da123d7172ef68632f337682409007a4f
 2026-11-15: Final source archive evidence fix with TypeScript source-floor metadata.
 Source branch: remove-checkphone-vrworld-lifesim
 Source commit: d1b31f7ccb4c1c2bcc8c1007283f3e76a8becbe6
+
+2026-11-15: Publish chronology and in-story time-source repair for narrative archives; no unrelated feature changes.
+Source branch: remove-checkphone-vrworld-lifesim
+Minimum source commit: fec74f62b3f97d26d8bd1dbf10685a97fe3b81f3
