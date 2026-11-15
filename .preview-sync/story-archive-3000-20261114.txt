@@ -51,3 +51,7 @@ Source commit: 3ebc841ae544efc15b8437f3749aa2203b53761f
 2026-11-16: Publish source-checked plot details, Palace-style lookup before summary, and long-play validated continuation.
 Source branch: remove-checkphone-vrworld-lifesim
 Source commit: 85ac283b0913468c792b5c75b8051cd3f4724719
+
+2026-11-16: Publish final archived-evidence precision checks after the 54-turn browser regression.
+Source branch: remove-checkphone-vrworld-lifesim
+Source commit: 12d0404b300f22f3b6cf5a9555509d8adf9ac8d2
