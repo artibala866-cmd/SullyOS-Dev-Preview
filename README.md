@@ -1,3 +1,8 @@
+## 2026-11-15 · 恢复系统设置原版模型测试连接
+
+- 现有源分支 `remove-checkphone-vrworld-lifesim` 已恢复原版「测试连接」的实际模型回复检测，不再以只读模型列表检查替代；源码提交 `c6378e9162c9d75a3136f4bb358b61633b78a7d4`。
+- 本 README 更新仅触发原有独立测试站构建；最终上线以公开 `preview-source.json.sourceCommit` 为准。不创建分支，不增加界面标注。
+
 ## 2026-11-12 · 糯叽机炼金术原版对照最终补齐
 
 - 目标源：`f1d4a89f75b80d025d4fe00899f125542b407066`（现有 `remove-checkphone-vrworld-lifesim` 分支，未新建分支）。
