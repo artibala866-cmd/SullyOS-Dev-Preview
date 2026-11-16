@@ -71,3 +71,7 @@ Source commit: 1323a6dad6c33e05a9fb05d822c605f9c0381bbe
 2026-11-16: Publish story recall accuracy, archived-text recovery, edit conflict checks, and layered mobile return.
 Source branch: remove-checkphone-vrworld-lifesim
 Source commit: 961fc16dfc34f048dac25fbc721fedc80b231952
+
+2026-11-16: Publish recoverable malformed story archive batches and in-form progress and retry.
+Source branch: remove-checkphone-vrworld-lifesim
+Source commit: dc0bccbe4833fa5c69f9c11647345dbc594f5e21
