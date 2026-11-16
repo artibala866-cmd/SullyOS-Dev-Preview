@@ -63,3 +63,7 @@ Source commit: 295b3f5e92c327e5fbc4f120048ce7ca6f0e05be
 2026-11-16: Publish ordered story recall for saved archives with missing narrative dates.
 Source branch: remove-checkphone-vrworld-lifesim
 Source commit: b75efe85b96c700633f697c25f587e6c4228e3ec
+
+2026-11-16: Publish mobile story memory search, detail, archive navigation, and reader position preservation.
+Source branch: remove-checkphone-vrworld-lifesim
+Source commit: 1323a6dad6c33e05a9fb05d822c605f9c0381bbe
