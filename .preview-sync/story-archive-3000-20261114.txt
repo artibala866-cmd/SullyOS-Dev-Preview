@@ -67,3 +67,7 @@ Source commit: b75efe85b96c700633f697c25f587e6c4228e3ec
 2026-11-16: Publish mobile story memory search, detail, archive navigation, and reader position preservation.
 Source branch: remove-checkphone-vrworld-lifesim
 Source commit: 1323a6dad6c33e05a9fb05d822c605f9c0381bbe
+
+2026-11-16: Publish story recall accuracy, archived-text recovery, edit conflict checks, and layered mobile return.
+Source branch: remove-checkphone-vrworld-lifesim
+Source commit: 961fc16dfc34f048dac25fbc721fedc80b231952
