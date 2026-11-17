@@ -1,5 +1,5 @@
 Source repository: artibala866-cmd/SullyOS
 Source branch: remove-checkphone-vrworld-lifesim
-Source commit for preview: f9d80865d5be64414bd2891cb8979004689bb0ae
-Purpose: trigger final preview refresh after screenshot fixture was moved above other visual scenes, allowing all four bubble skins to be reviewed at mobile width.
-No production configuration or branches changed.
+Source commit for preview: 57eac9dcdda7b5caecd9a14f5f72e1784d4996e4
+Purpose: request existing preview workflow to publish final same-bubble bilingual translation and verified screenshot fixture.
+Only the existing preview repository/main and SullyOS development branch are used.
