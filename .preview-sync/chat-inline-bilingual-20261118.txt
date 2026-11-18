@@ -1,5 +1,5 @@
 Source repository: artibala866-cmd/SullyOS
 Source branch: remove-checkphone-vrworld-lifesim
-Source commit for preview: 53406c03d7f29ab7c262436b0b283ec077a3b380
-Purpose: repair stale message refresh, duplicate bubble animations and smooth-scroll flashes during multi-message replies; run real-React multi-bubble geometry checks with theme CSS.
-No extra repositories, branches or production updates.
+Source commit for preview: ce88cb84e387b640dccc89dded6df886cc4eefad
+Purpose: publish deep private-chat rendering audit fixes (memoized quote/recall/thinking refresh) and 320/390 multi-theme geometry verification.
+Verified: Chromium QQ regression + 8 scenario/size screenshots + dark mode; no new source branches or repositories.
