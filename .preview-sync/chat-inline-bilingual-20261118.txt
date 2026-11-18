@@ -1,5 +1,5 @@
 Source repository: artibala866-cmd/SullyOS
 Source branch: remove-checkphone-vrworld-lifesim
-Source commit for preview: 61a23b6caaabd58ca0076742adefa303959de6c4
-Purpose: deploy source-only model translation recovery (original + target text in one chat bubble) after chat regression and mobile screenshot tests passed.
-Only existing source development branch and preview repository main are used; no new branches or repositories.
+Source commit for preview: 53406c03d7f29ab7c262436b0b283ec077a3b380
+Purpose: repair stale message refresh, duplicate bubble animations and smooth-scroll flashes during multi-message replies; run real-React multi-bubble geometry checks with theme CSS.
+No extra repositories, branches or production updates.
