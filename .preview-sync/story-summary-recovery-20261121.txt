@@ -1,5 +1,5 @@
 Source: artibala866-cmd/SullyOS
 Branch: remove-checkphone-vrworld-lifesim
-Commit: ca0a0286f9f01ca24a22a6411abae53769c3d192
-Fix narrative rule misclassification and duplicate recovered memories; retain explicit passive/identity restrictions.
-Validation: 226 related regression tests passed; production build passed. Modified files have no TypeScript diagnostics; existing repository-wide diagnostics remain.
+Commit: 68c613b86241193e3b0c3334acd5491f98cb090c
+Fix cross-clause narrative rule misclassification and duplicate recovered memories while preserving the existing range of explicit ability restrictions.
+Validation: 226 related regression tests passed. Existing repository-wide TypeScript diagnostics are unchanged; modified files have no diagnostics.
