@@ -1,5 +1,5 @@
 Source: artibala866-cmd/SullyOS
 Branch: remove-checkphone-vrworld-lifesim
-Commit: eacb4cfad2a5a088ed151dc1d9ed5f418b91141c
-Fix copied narrative rule supplements, pre-save summary validation, and internal-key keyword fallback; filter legacy identifier tags without rewriting memories.
-Validation: 321 local related regression tests passed; production build passed; no new TypeScript diagnostics. Real memory UI checks and screenshots passed at 320px/390px in light/dark themes. Existing unrelated CI failures remain under baseline review.
+Commit: eead3cfe9a95cbf5c1353a6e6c50668d372beafe
+Fix narrative rule supplements, summary validation before archiving, and keyword/internal-key separation. Retain named identity evidence, time qualifiers and English rules. Legacy identifier tags are filtered without rewriting memories.
+Validation: 325 related local regression tests passed; production build passed; no new TypeScript diagnostics. 320px/390px real memory UI screenshots passed in light/dark themes; UI files unchanged in the compatibility follow-up. Existing unrelated CI failures have matching failures on the previous source revision.
