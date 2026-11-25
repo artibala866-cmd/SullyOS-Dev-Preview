@@ -1,3 +1,4 @@
+2026-11-26: Publish audited identity-base synchronization and non-billable API connectivity check. Source: artibala866-cmd/SullyOS@458590266ae22eb5853578311a5128c78051d5d1. Verify A/B/A/B identity sync, deletion tombstones, writer persona and split music histories, private chat isolation, GET /models-only billing safety, production build and exact public preview-source.json SHA.
 Development branch: remove-checkphone-vrworld-lifesim
 Latest source revision: 04c5795b42c963c5ba0dc1ceeb25cc4fb66c4e75
 Publish Meet landscape responsive fix: left-side sprite fully visible, compact right-side dialogue/input, scrollable operation menu, safe enlarged-sprite scaling, preserved portrait UI. Tested in real Chromium at 740x360 and 844x390.
