@@ -55,3 +55,4 @@ Verify PUBLIC source revision after deploy.
 2026-11-12 世界书 92条分页白块修复最后验收，包含最新酒馆导入修复及移动端截图：源 cc10cda6f4b9a70a8e3db2915655601ae4bbaea5。
 2026-11-12 大量世界书空白块最终验证：折叠组卸载+轻量卡片、92条第4/6页截图、最新剧情导入测试兼容 28d6b0f0bd7c59a948a1360cdc73937ed795c3a7。
 2026-11-26: Publish cross-identity shared character/worldbook synchronization fix from artibala866-cmd/SullyOS@e20e6e0c98dc438a090d80792e705fe3819328c3. Verify A/B addition/edit/deletion tests, per-identity chat/memory isolation, all-identity backup tombstones, and public preview-source.json SHA.
+2026-11-26: Re-run preview CI for identity shared-base sync after fixing backup test nesting and IndexedDB window event fixture. Source: artibala866-cmd/SullyOS@82ca3023e662ea61b68d8d14b0408f80bae68193.
