@@ -1,3 +1,5 @@
+2026-11-26: Retry Memory Palace API-check removal preview after build caught the shared Settings API preflight dependency. Restore the shared helper/tests used by apps/Settings.tsx; keep all MemoryPalaceApp preflight UI removed. Source: artibala866-cmd/SullyOS@2215978acc1fd158a966cd9da4a9e7fdf62d1e5c. Re-run full preview CI/build/deploy and verify public preview-source.json.
+
 2026-11-26: Publish Memory Palace cleanup from artibala866-cmd/SullyOS@e65bb422a8465e4e5054d984f29006a26fd1cce7. Remove secondary API, Embedding and Rerank /models check UI plus unused preflight helper/tests; retain all API configuration, save/preset flows and memory task calls. Run preview workflow tests/build and verify public preview-source.json.
 
 2026-11-26: Publish audited identity-base synchronization and non-billable API connectivity check. Source: artibala866-cmd/SullyOS@458590266ae22eb5853578311a5128c78051d5d1. Verify A/B/A/B identity sync, deletion tombstones, writer persona and split music histories, private chat isolation, GET /models-only billing safety, production build and exact public preview-source.json SHA.
