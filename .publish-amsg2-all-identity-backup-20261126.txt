@@ -1,0 +1,8 @@
+# AMSG2 per-identity backup verification trigger
+
+Source repository: artibala866-cmd/SullyOS
+Source branch: remove-checkphone-vrworld-lifesim
+Source commit: f195fb9d4b0cc71e39e99bd4ecf75e59607b89e3
+Target: this independent preview site only.
+Scope: opt-in export of each identity's own ActiveMsg 2.0 Worker connection, with explicit restore consent.
+Production master was not changed.
