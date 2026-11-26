@@ -2,7 +2,7 @@
 
 Source repository: artibala866-cmd/SullyOS
 Source branch: remove-checkphone-vrworld-lifesim
-Source commit: 4f2e10d2ad48077b0bc815f22732712b2fd577ac
+Source commit: 7e6ebd09a28d28c6e935840cbb673d89ff0b5378
 Target: this independent preview site only.
 Scope: per-identity AMSG2 Worker export/restore, explicit restore consent, blocked-open cleanup, and latest preview build verification.
 Production master was not changed.
