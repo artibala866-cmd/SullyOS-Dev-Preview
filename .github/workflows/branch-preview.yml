@@ -169,7 +169,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      # Request-level simulation asserts the final system message remains authoritative after depth-worldbook injection.
+      # Request-level simulation asserts the final system message remains authoritative after depth-worldbook injection; typecheck covers the same test files.
       - name: Verify identity relationship prompt, statistics and share-card isolation
         run: pnpm exec vitest run utils/contextWorldbook.test.ts utils/chatPrompts.test.ts utils/chatPrompts.identityRelationship.test.ts utils/chatRequestPayload.test.ts utils/characterStats.test.ts utils/characterCard.test.ts
 
