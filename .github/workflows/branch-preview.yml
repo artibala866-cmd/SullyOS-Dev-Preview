@@ -230,15 +230,15 @@ jobs:
         run: |
           set -euo pipefail
           pnpm exec vite --host 127.0.0.1 --port 5197 --strictPort > /tmp/identity-relationship-vite.log 2>&1 &
-          server_pid=\"$!\"
-          trap 'kill \"$server_pid\" 2>/dev/null || true' EXIT
+          server_pid="$!"
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
           ready=false
           for attempt in $(seq 1 70); do
             if curl -fsS http://127.0.0.1:5197/tests/character-identity-relationship-visual.html > /dev/null; then ready=true; break; fi
             sleep 1
           done
-          if [ \"$ready\" != true ]; then tail -n 100 /tmp/identity-relationship-vite.log; exit 1; fi
-          export CHROME_BIN=\"$(command -v google-chrome || command -v chromium || command -v chromium-browser)\"
+          if [ "$ready" != true ]; then tail -n 100 /tmp/identity-relationship-vite.log; exit 1; fi
+          export CHROME_BIN="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
           node scripts/character-identity-relationship-visual.mjs || {
             tail -n 120 /tmp/identity-relationship-vite.log || true
             exit 1
