@@ -41,6 +41,7 @@ jobs:
             exit 1
           fi
           echo "sha=$sha" >> "$GITHUB_OUTPUT"
+printf 'Source: %s / %s @ %s\n' "$source_repo" "$source_branch" "$sha" >> "$GITHUB_STEP_SUMMARY"
           url='https://artibala866-cmd.github.io/SullyOS-Dev-Preview/preview-source.json'
           published="$(curl -fsSL --max-time 12 "${url}?check=${GITHUB_RUN_ID}" 2>/dev/null | jq -r '(.sourceCommit // "") + ":" + (.brandingVersion // "")' 2>/dev/null || true)"
           if [[ "$published" == "$sha:baby-dog-v1" ]]; then
@@ -219,7 +220,7 @@ jobs:
         shell: bash
         run: |
           pnpm exec tsc --noEmit --pretty false > /tmp/identity-relationship-tsc.log 2>&1 || true
-          grep -E '^(types\\.ts|apps/Character\\.tsx|components/character/IdentityRelationshipField\\.tsx|utils/(context|chatPrompts|characterStats|userSaves|characterCard)(\\.test)?\\.ts|tests/character-identity-relationship-visual\\.tsx)[(]' /tmp/identity-relationship-tsc.log > /tmp/identity-relationship-errors.log || true
+          grep -E '^(types[.]ts|apps/Character[.]tsx|components/character/IdentityRelationshipField[.]tsx|utils/(context|chatPrompts|characterStats|userSaves|characterCard)([.]test)?[.]ts|tests/character-identity-relationship-visual[.]tsx)[(]' /tmp/identity-relationship-tsc.log > /tmp/identity-relationship-errors.log || true
           if [ -s /tmp/identity-relationship-errors.log ]; then
             cat /tmp/identity-relationship-errors.log
             exit 1
