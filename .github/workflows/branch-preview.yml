@@ -170,7 +170,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Verify identity relationship prompt, statistics and share-card isolation
-        run: pnpm exec vitest run utils/contextWorldbook.test.ts utils/chatPrompts.test.ts utils/characterStats.test.ts utils/characterCard.test.ts
+        run: pnpm exec vitest run utils/contextWorldbook.test.ts utils/chatPrompts.test.ts utils/chatPrompts.identityRelationship.test.ts utils/chatRequestPayload.test.ts utils/characterStats.test.ts utils/characterCard.test.ts
 
       - name: Verify identity switch settings, tombstones, backup credentials and proxy safety
         run: pnpm exec vitest run utils/userSaves.test.ts utils/userSaveBackup.test.ts utils/decorationLibrary.test.ts utils/userSaveCreatorDraft.test.ts utils/userProfilePersistence.test.ts
@@ -182,7 +182,7 @@ jobs:
         shell: bash
         run: |
           pnpm exec tsc --noEmit --pretty false > /tmp/identity-binding-tsc.log 2>&1 || true
-          grep -E '^(types[.]ts|apps/Character[.]tsx|utils/identityCharacterBinding([.]test)?[.]ts|hooks/useIdentityCharacterOptions[.]ts|components/(user/PerCharAvatarPicker|character/IdentityRelationshipField)[.]tsx|utils/(context|chatPrompts|characterStats|userSaves|characterCard)([.]test)?[.]ts|tests/(identity-character-binding|character-identity-relationship-visual)[.]tsx)[(]' /tmp/identity-binding-tsc.log > /tmp/identity-binding-errors.log || true
+          grep -E '^(types[.]ts|apps/Character[.]tsx|utils/identityCharacterBinding([.]test)?[.]ts|hooks/useIdentityCharacterOptions[.]ts|components/(user/PerCharAvatarPicker|character/IdentityRelationshipField)[.]tsx|utils/(context|chatPrompts|chatRequestPayload|characterStats|userSaves|characterCard)([.]identityRelationship)?([.]test)?[.]ts|utils/contextWorldbook[.]test[.]ts|tests/(identity-character-binding|character-identity-relationship-visual)[.]tsx)[(]' /tmp/identity-binding-tsc.log > /tmp/identity-binding-errors.log || true
           if [ -s /tmp/identity-binding-errors.log ]; then
             cat /tmp/identity-binding-errors.log
             exit 1
