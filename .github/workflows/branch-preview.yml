@@ -216,7 +216,7 @@ jobs:
           if-no-files-found: warn
           retention-days: 7
 
-      # The visual runner waits for document hydration before checking the shared field component.
+      # The visual runner waits for document hydration and checks the shared field with the existing uppercase label style.
       - name: Verify and screenshot Neural Link relationship field at 390px and 320px
         shell: bash
         run: |
