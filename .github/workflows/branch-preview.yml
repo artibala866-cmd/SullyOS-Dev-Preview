@@ -41,7 +41,7 @@ jobs:
             exit 1
           fi
           echo "sha=$sha" >> "$GITHUB_OUTPUT"
-printf 'Source: %s / %s @ %s\n' "$source_repo" "$source_branch" "$sha" >> "$GITHUB_STEP_SUMMARY"
+          printf 'Source: %s / %s @ %s\n' "$source_repo" "$source_branch" "$sha" >> "$GITHUB_STEP_SUMMARY"
           url='https://artibala866-cmd.github.io/SullyOS-Dev-Preview/preview-source.json'
           published="$(curl -fsSL --max-time 12 "${url}?check=${GITHUB_RUN_ID}" 2>/dev/null | jq -r '(.sourceCommit // "") + ":" + (.brandingVersion // "")' 2>/dev/null || true)"
           if [[ "$published" == "$sha:baby-dog-v1" ]]; then
