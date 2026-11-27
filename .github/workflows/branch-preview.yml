@@ -182,7 +182,7 @@ jobs:
         shell: bash
         run: |
           pnpm exec tsc --noEmit --pretty false > /tmp/identity-binding-tsc.log 2>&1 || true
-          grep -E '^(utils/identityCharacterBinding(\\.test)?\\.ts|hooks/useIdentityCharacterOptions\\.ts|components/user/PerCharAvatarPicker\\.tsx|tests/identity-character-binding-visual\\.tsx)[(]' /tmp/identity-binding-tsc.log > /tmp/identity-binding-errors.log || true
+          grep -E '^(types[.]ts|apps/Character[.]tsx|utils/identityCharacterBinding([.]test)?[.]ts|hooks/useIdentityCharacterOptions[.]ts|components/(user/PerCharAvatarPicker|character/IdentityRelationshipField)[.]tsx|utils/(context|chatPrompts|characterStats|userSaves|characterCard)([.]test)?[.]ts|tests/(identity-character-binding|character-identity-relationship-visual)[.]tsx)[(]' /tmp/identity-binding-tsc.log > /tmp/identity-binding-errors.log || true
           if [ -s /tmp/identity-binding-errors.log ]; then
             cat /tmp/identity-binding-errors.log
             exit 1
@@ -215,16 +215,6 @@ jobs:
           path: /tmp/identity-binding-shots/*.png
           if-no-files-found: warn
           retention-days: 7
-
-      - name: Check identity relationship TypeScript diagnostics
-        shell: bash
-        run: |
-          pnpm exec tsc --noEmit --pretty false > /tmp/identity-relationship-tsc.log 2>&1 || true
-          grep -E '^(types[.]ts|apps/Character[.]tsx|components/character/IdentityRelationshipField[.]tsx|utils/(context|chatPrompts|characterStats|userSaves|characterCard)([.]test)?[.]ts|tests/character-identity-relationship-visual[.]tsx)[(]' /tmp/identity-relationship-tsc.log > /tmp/identity-relationship-errors.log || true
-          if [ -s /tmp/identity-relationship-errors.log ]; then
-            cat /tmp/identity-relationship-errors.log
-            exit 1
-          fi
 
       - name: Verify and screenshot Neural Link relationship field at 390px and 320px
         shell: bash
